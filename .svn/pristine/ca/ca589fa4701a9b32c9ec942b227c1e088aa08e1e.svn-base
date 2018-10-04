@@ -1,0 +1,102 @@
+/* pages/mine/pubInfor/pubInfor.wxss */
+#buy{
+  position: absolute;
+  height: 300rpx;
+  width: 100%;
+}
+#buy-image{
+  width: 60rpx;
+  height: 76rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}    
+#pub-buy{
+  position: relative;
+  left: -47rpx;
+  top: -26rpx;
+}
+#buy-line{
+  width: 758rpx;
+  height: 4rpx;
+  position: relative;
+  left: 0;
+  top:10rpx;
+}
+#buy-kind{
+  position:relative;
+  left:-10rpx;
+  top:-20rpx;
+}
+#buy-price{
+   position:relative; 
+   top: -20rpx;
+   left: 300rpx;
+   color: red;
+   font-size: 28rpx;
+}
+#buy-info{
+  position: relative;
+  top: 60rpx;
+  font-size: 28rpx;
+}
+#buy-list-left{
+  position:relative;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+#buy-list-right{
+  position:relative;
+  left:420rpx;
+  top:-88rpx; 
+  margin-top: 10rpx;
+}
+#buy-line-foot{
+  width: 758rpx;
+  height: 4rpx;
+  position: relative;
+  left: 0;
+  top: 66rpx;
+}
+#buy-logal{
+  position: relative;
+}
+#buy-logal-square{
+   width: 100px;
+  height: 48rpx; 
+  border:1rpx solid #1195db;
+  border-radius: 10%;
+  margin-left: 10rpx;
+}
+#buy-logal-box{
+  padding: 4rpx;
+  width: 56rpx;
+  height: 40rpx;
+  background: #1195db;
+  border-right: 2rpx;
+}
+#buy-logal-letter{
+  line-height: 40rpx;
+  text-align: center; 
+  color: #fff;
+  font-size: 24rpx;
+  background: #1195db;
+  border: 2rpx solid #fff;
+  border-radius:50%;
+}
+#buy-logal-left{
+  position:relative;
+  top:-40rpx;
+  left:76rpx;
+  font-size: 24rpx;
+}
+ /* #mLogo-first{
+  margin-left: 0rpx;
+} */
+#buy-local-renl{
+  /* position: absolute;
+  right: 0;
+  top: 0; */
+  font-size: 40rpx;
+  color: #f66 ; 
+  border: 1px solid #f66;
+} 

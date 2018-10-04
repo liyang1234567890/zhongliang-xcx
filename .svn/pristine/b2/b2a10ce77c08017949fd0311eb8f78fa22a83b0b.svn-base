@@ -1,0 +1,8 @@
+<template name="empty">
+  <view class="empty-wrapper">
+    <view class="empty-image">
+      <image src='../../../mock/images/empty.png' mode='center'></image>
+    </view>
+    <view class="empty-text">{{text}}</view>
+  </view>
+</template>

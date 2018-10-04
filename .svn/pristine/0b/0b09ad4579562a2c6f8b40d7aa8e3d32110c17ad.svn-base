@@ -1,0 +1,11 @@
+
+<view class='msg'>
+  <view class='title'>公司简介</view>
+  <input placeholder='点击输入公司简介'></input>
+</view>
+
+<navigator>
+  <view class='setMsg'>
+    <view class='setText'>确定</view>
+  </view>
+</navigator>

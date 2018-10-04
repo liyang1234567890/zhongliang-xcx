@@ -1,0 +1,6 @@
+// pages/mine/recIntent/recIntent.js
+Page({
+  data: {
+    intention: []
+  }
+})

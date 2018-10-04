@@ -1,0 +1,26 @@
+<view class="search">
+      <view class="ipt-search">
+            <input name="ipt-search" placeholder="关键字：规格，交货地，品牌" placeholder-style="text-align:center;line-height:52rpx;" />
+      </view>
+      <view class="btn-search">
+            <button bindtap='search' >搜索</button>
+      </view>
+</view>
+<view class="history">
+      <view class="history-search">历史搜索</view>
+      <view class="delete">删除</view>
+</view>
+<view class="history-record">
+      <view class="history-comm">小米</view>
+      <view class="history-comm">绿化苗木</view>
+</view>
+<view class="hot">热门搜索</view>
+<view class="hot-search">
+      <view class="corns corn">黑龙江玉米</view>
+      <view class="corns cob">玉米棒</view>
+      <view class="corns wheat">小麦</view>
+</view>
+   
+   
+   
+     

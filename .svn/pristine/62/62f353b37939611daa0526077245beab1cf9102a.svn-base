@@ -1,0 +1,9 @@
+{
+    "navigationBarBackgroundColor": "#1195db",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "致富",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+  "component": true,
+  "usingComponents": {}
+}

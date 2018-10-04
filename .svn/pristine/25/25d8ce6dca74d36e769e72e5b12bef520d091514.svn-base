@@ -1,0 +1,36 @@
+<!--pages/free/free.wxml-->
+<view class='header' bindtap='toOrder'>
+<text class='ordername'>中粮订单</text>
+</view>
+<swiper class='swiper' indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+<block wx:for="{{swiper}}" wx:for-index="index">    
+        <swiper-item>    
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
+        </swiper-item>    
+      </block>    
+</swiper> 
+<view class='searchbox'>
+
+</view>
+<view class='bigChoose'>
+  <button class='kind'>品类</button>
+  <button class='area'>地区</button>
+
+</view>
+<view class='smallChoose'>
+  <view class='recommand'><image src='../../mock/images/icon/index_03.png' class='icon'></image><text class='smalltext'>推荐</text></view>
+  <view class='immediate'><image src='../../mock/images/icon/index_05.png' class='icon'></image><text class='smalltext'>即时</text></view>
+  <view class='history'><image src='../../mock/images/icon/index_07.png' class='icon'></image><text class='smalltext'>历史</text></view>
+  <view class='buy'><image src='../../mock/images/icon/index_09.png' class='icon'></image><text class='smalltext'>买</text></view>
+  <view class='sell'><image src='../../mock/images/icon/index_11.png' class='icon'></image><text class='smalltext'>卖</text></view>
+</view>
+<scroll-view>
+<view class='message'>
+
+<view class='sbkind'><image src='../../mock/images/icon/index_19.png' class='iconsellbuy'></image><view class='meskind'>玉米</view>
+</view>
+<view class='sbprice'>
+
+</view>
+</view>
+</scroll-view>

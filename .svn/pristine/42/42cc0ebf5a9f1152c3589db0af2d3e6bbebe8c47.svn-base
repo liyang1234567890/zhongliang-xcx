@@ -1,0 +1,55 @@
+// pages/free/exchange/exchange.js
+var util = require('../../../utils/util.js'); 
+Page({
+  data:{
+    array:[]
+  },
+  onLoad: function () {
+    var that = this;
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          //发起网络请求
+          wx.request({
+            url: `https://api.weixin.qq.com/sns/jscode2session?appid=wx10031d2233afbcba&secret=759c54e1f897391b2f9bfb07a0fb66fd&js_code=${res.code}&grant_type=authorization_code`,
+            success: function (res) {
+              that.setData({
+                openid: res.data.openid
+              })
+              console.log(res.data.openid)
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    }),
+      wx.request({
+      url: util.APP_HOST +'wcreditsexchange/getallwcreditsexchange',
+
+        success: function (res) {
+          console.log(res);
+          that.setData({
+            array:res.data.wcredits
+          })
+        }
+      })
+  },
+  toNavigate: function () {
+    
+    wx.navigateTo({
+      url: '../address/address',
+    })
+  },
+  changeColor: function(){
+    wx.showModal({
+      title: '确认兑换',
+      content: '',
+      success: function(){
+        wx.navigateTo({
+          url: '../address/address',
+        })
+      }
+    })
+  }
+})

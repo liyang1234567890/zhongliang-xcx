@@ -1,0 +1,5 @@
+<!--pages/rich/wantrich/wantrich.wxml-->
+<view>
+<view class='gloryList'>致富光荣榜</view>
+<view class='wantRich'>我要致富12</view>
+</view>

@@ -1,0 +1,313 @@
+<!--引入buy界面的button代码--Danile  -->
+<!--swiper start  -->
+<swiper class='swiper' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!--swiper end  -->
+
+<!--buy_product_detail start  -->
+<view class='buy_product_detail'>
+  <view class='product_detail_nav'>
+    <view class="group">
+      <block>
+         <image     class="detail_nav_img"src="../../../mock/images/index_29.png" mode="aspectFill">    </image>
+      </block>
+    </view>
+    <view class='product_detail_name'>玉米</view>
+    <view class='product_detail_price'>￥1400元/吨</view>
+  </view>
+  <view class='product_detail_message'>
+    <view class='message_type'>
+      品牌：东北玉米
+    </view>
+    <view class='message_count'>
+      数量：2000kg
+    </view>
+    <view class='message_site'>
+      交货地：黑龙江省 哈尔滨市宁安县
+    </view>
+    <view class='message_time'>
+      规格：自然干玉米水分14，霉变0.5，容重760
+    </view>
+  </view>
+  <view class='product_detail_time'>
+    <view class='group'>
+      <block >
+        <icon type="waiting" size="20"/>
+      </block>
+    </view>
+    {{time}}
+  </view>
+</view>
+<!--buy_product_detail end  -->
+
+<!-- sellers_Information  start-->
+<view class='sellers_Information'>
+  <view class='sellers_Information_details'>
+    <view class='sellers_message'>
+      <view class='sellers_message_name'>
+        <view class='sellers_message_left'>
+          <image     class="sellers_img"src="../../../mock/images/head.JPG" mode="aspectFill">  
+        </image> 
+        </view>
+        <view class='sellers_message_right'>
+          <view class='sellers_name'>李XX</view>
+          <view class='sellers_type'>综合经营</view>
+        </view>
+      </view>
+      <view class='sellers_phones'>
+        <view class='sellers_phones_left' bindtap="callService">
+          <image     class="sellers_phones_img"src="../../../mock/images/phone.png" mode="aspectFill">  
+        </image> 
+        </view>
+        <view class='sellers_phones_right'>
+          <button class='sellers_phones_btn' bindtap='callSeller'>卖家电话</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='sellers_Information_auto'>
+     <view class='auto_message'>
+      <image     class="sellers_auto_img"src="../../../mock/images/index_44.png" mode="aspectFill"> </image>  
+      个人
+    </view>
+     <view class='auto_message'>
+      <image     class="sellers_auto_img"src="../../../mock/images/index_45.png" mode="aspectFill">  </image> 
+     实名认证 
+    </view>
+    <view class='auto_message'>
+      <image     class="sellers_auto_img"src="../../../mock/images/index_29.png" mode="aspectFill">  </image> 
+      无央会员
+    </view>
+    <view class='auto_message'>
+      <image     class="sellers_auto_img"src="../../../mock/images/index_30.png" mode="aspectFill">  </image> 
+      贸易商
+    </view>  
+  </view>
+</view>
+
+<!-- sellers_Information  end -->
+
+<!-- Recommend start -->
+<view class='recommend_Information'>
+  <view class='recommend_title'>推荐</view>
+
+  <!--1  -->
+  <view class='recommend_category'>
+    <view class='recommend_category_title'>
+      <view class='category_left'>
+        <image class="detail_nav_img" src="../../../mock/images/index_29.png" mode="aspectFill">    </image>
+        <view class='category_left_name'>玉米</view>
+      </view>
+      <view class='category_right'>
+        ￥1400元/吨
+      </view>
+    </view>
+
+    <view class='recommend_category_message'>
+      <view class='category_left'>
+        <view class='category_left_message'>品牌：玉米</view>
+        <view class='category_left_message'>交货地：黑龙江省哈尔滨市...</view>
+        <view>
+        <view class='category_line3'>
+           <view class='category_line3_left'>
+           <image class="category_line3_img"mode="aspectFill"src="../../../mock/images/index_59.png"></image>
+          </view>
+          <view class='category_line3_right'>
+            <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_44.png"></image>
+          <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_45.png"></image>   
+          </view>     
+        </view>       
+       </view>
+      </view>
+      <view class='category_right'>
+        <view class='category_left_message'>数量：1000吨</view>
+        <view class='category_left_message'>规格：水分1.0</view>
+        <view class='category_left_message'>
+            <icon type="waiting" size="17"/>
+            {{hourMinute}}
+        </view>
+      
+      </view>
+    </view>  
+  </view>
+
+  <!--2  -->
+  <view class='recommend_category'>
+    <view class='recommend_category_title'>
+      <view class='category_left'>
+        <image class="detail_nav_img" src="../../../mock/images/index_29.png" mode="aspectFill">    </image>
+        <view class='category_left_name'>玉米</view>
+      </view>
+      <view class='category_right'>
+        ￥1400元/吨
+      </view>
+    </view>
+
+    <view class='recommend_category_message'>
+      <view class='category_left'>
+        <view class='category_left_message'>品牌：玉米</view>
+        <view class='category_left_message'>交货地：黑龙江省哈尔滨市...</view>
+        <view>
+        <view class='category_line3'>
+           <view class='category_line3_left'>
+            <image class="category_line3_img"mode="aspectFill"src="../../../mock/images/index_59.png"></image>
+          </view>
+          <view class='category_line3_right'>
+            <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_44.png"></image>
+          <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_45.png"></image>   
+          </view>     
+        </view>       
+       </view>
+      </view>
+      <view class='category_right'>
+        <view class='category_left_message'>数量：1000吨</view>
+        <view class='category_left_message'>规格：水分1.0</view>
+        <view class='category_left_message'>
+            <icon type="waiting" size="17"/>
+            {{hourMinute}}
+        </view>
+      
+      </view>
+    </view>  
+  </view>
+
+  <!--3  -->
+    <view class='recommend_category'>
+    <view class='recommend_category_title'>
+      <view class='category_left'>
+        <image class="detail_nav_img" src="../../../mock/images/index_29.png" mode="aspectFill">    </image>
+        <view class='category_left_name'>玉米</view>
+      </view>
+      <view class='category_right'>
+        ￥1400元/吨
+      </view>
+    </view>
+
+    <view class='recommend_category_message'>
+      <view class='category_left'>
+        <view class='category_left_message'>品牌：玉米</view>
+        <view class='category_left_message'>交货地：黑龙江省哈尔滨市...</view>
+        <view>
+        <view class='category_line3'>
+           <view class='category_line3_left'>
+           <image class="category_line3_img"mode="aspectFill"src="../../../mock/images/index_59.png"></image>
+          </view>
+          <view class='category_line3_right'>
+            <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_44.png"></image>
+          <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_45.png"></image>   
+          </view>     
+        </view>       
+       </view>
+      </view>
+      <view class='category_right'>
+        <view class='category_left_message'>数量：1000吨</view>
+        <view class='category_left_message'>规格：水分1.0</view>
+        <view class='category_left_message'>
+            <icon type="waiting" size="17"/>
+            {{hourMinute}}
+        </view>
+      
+      </view>
+    </view>  
+  </view>
+
+  <!--4  -->
+    <view class='recommend_category'>
+    <view class='recommend_category_title'>
+      <view class='category_left'>
+        <image class="detail_nav_img" src="../../../mock/images/index_29.png" mode="aspectFill">    </image>
+        <view class='category_left_name'>玉米</view>
+      </view>
+      <view class='category_right'>
+        ￥1400元/吨
+      </view>
+    </view>
+
+    <view class='recommend_category_message'>
+      <view class='category_left'>
+        <view class='category_left_message'>品牌：玉米</view>
+        <view class='category_left_message'>交货地：黑龙江省哈尔滨市...</view>
+        <view>
+        <view class='category_line3'>
+           <view class='category_line3_left'>
+           <image class="category_line3_img"mode="aspectFill"src="../../../mock/images/index_59.png"></image>
+          </view>
+          <view class='category_line3_right'>
+            <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_44.png"></image>
+          <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_45.png"></image>   
+          </view>     
+        </view>       
+       </view>
+      </view>
+      <view class='category_right'>
+        <view class='category_left_message'>数量：1000吨</view>
+        <view class='category_left_message'>规格：水分1.0</view>
+        <view class='category_left_message'>
+            <icon type="waiting" size="17"/>
+            {{hourMinute}}
+        </view>
+      
+      </view>
+    </view>  
+  </view>
+
+  <!--5  -->
+    <view class='recommend_category'>
+    <view class='recommend_category_title'>
+      <view class='category_left'>
+        <image class="detail_nav_img" src="../../../mock/images/index_29.png" mode="aspectFill">    </image>
+        <view class='category_left_name'>玉米</view>
+      </view>
+      <view class='category_right'>
+        ￥1400元/吨
+      </view>
+    </view>
+
+    <view class='recommend_category_message'>
+      <view class='category_left'>
+        <view class='category_left_message'>品牌：玉米</view>
+        <view class='category_left_message'>交货地：黑龙江省哈尔滨市...</view>
+        <view>
+        <view class='category_line3'>
+           <view class='category_line3_left'>
+           <image class="category_line3_img"mode="aspectFill"src="../../../mock/images/index_59.png"></image>
+          </view>
+          <view class='category_line3_right'>
+            <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_44.png"></image>
+          <image class="sellers_auto_img"mode="aspectFill"src="./../../mock/images/index_45.png"></image>   
+          </view>     
+        </view>       
+       </view>
+      </view>
+      <view class='category_right'>
+        <view class='category_left_message'>数量：1000吨</view>
+        <view class='category_left_message'>规格：水分1.0</view>
+        <view class='category_left_message'>
+            <icon type="waiting" size="17"/>
+            {{hourMinute}}
+        </view>
+      
+      </view>
+    </view>  
+  </view>
+  
+</view>
+
+
+<!-- Recommend end -->
+
+
+<!--footer start  -->
+<view class='buy_footer'>
+  <view class='buy_footer_box1'>收藏</view>
+  <view class='buy_footer_box2'>和我联系</view>
+  <view class='buy_footer_box3'bindtap='points'>获取积分</view>
+</view>
+
+<!--footer end  -->

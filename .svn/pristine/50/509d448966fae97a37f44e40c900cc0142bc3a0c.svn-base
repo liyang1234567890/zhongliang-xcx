@@ -1,0 +1,43 @@
+<import src="./myrich/myrich.wxml"></import>
+
+
+<!--导航条-->  
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>  
+  
+<!--致富光荣榜-->  
+<view class='glorylist' hidden="{{currentTab!==0}}">  
+<scroll-view scroll-y="ture" class='scrollList'>
+  <!-- regin start  -->
+  <view class='region'>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        选择地点：{{region[0]}} {{region[1]}} {{region[2]}}
+      </view>
+    </picker>
+  </view>
+  <!-- regin end  -->
+
+  <!-- richbox start  -->
+  <view class='richBox flex-wrap' wx:for="{{objectRich}}" >
+      <image src='http://img4.imgtn.bdimg.com/it/u=3205307428,2144053348&fm=27&gp=0.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view class='fontColor'>姓名：<text>{{item.name}}</text></view>
+        <view class='fontColor'>地区：<text>{{item.place}}</text></view>
+        <view class='fontColor'>时间：<text>{{item.time}}</text></view>
+      </view>
+  </view>
+  <!-- richbox end  -->
+
+</scroll-view>
+</view>  
+  
+
+<!--我要致富-->  
+<view hidden="{{currentTab!==1}}">  
+  <template is="myrich" data="{{...myrich}}"></template>
+</view>  
+  
+ 
+

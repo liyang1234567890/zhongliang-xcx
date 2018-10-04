@@ -1,0 +1,90 @@
+// pages/free/publish/publish.js
+Page({
+  data: {
+    array:['我要出售','我要收购'],
+    objectArray:[
+      {
+        id:0,
+        name:'我要出售'
+      },
+      {
+        id:1,
+        name:'我要收购'  
+      }
+    ],
+    index:0,
+    secArray: ['水果', '蔬菜', '禽畜牧蛋肉', '中药材', '种苗', '坚果干果', '农副/副食', '粮油作物', '水产', '绿化苗木', '食用菌', '特种养殖', '经济作物', '花卉盆景'],
+    objectSecArray:[
+      {
+        id:0,
+        name:'水果'
+      },
+      {
+        id:1,
+        name: '蔬菜'
+      },
+      {
+        id:2,
+        name: '禽畜牧蛋肉'
+      },
+      {
+        id:3,
+        name: '中药材'
+      },
+      {
+        id:4,
+        name: '种苗'
+      },
+      {
+        id:5,
+        name: '坚果干果'
+      },
+      {
+        id:6,
+        name: '农副/副食'
+      },
+      {
+        id:7,
+        name: '粮油作物'
+      },
+      {
+        id:8,
+        name: '水产'
+      },
+      {
+        id:9,
+        name: '绿化苗木'
+      },
+      {
+        id:10,
+        name: '食用菌'
+      },
+      {
+        id:11,
+        name: '特种养殖1'
+      },
+      {
+        id:12,
+        name: '经济作物'
+      },
+      {
+        id:13,
+        name: '花卉盆景'
+      }
+    ],
+    secIndex:0,
+  }
+})
+
+
+
+
+
+
+
+
+toPublish: function() {
+  wx.navigateTo({
+    url: '../free/publish/publish',
+  })
+},

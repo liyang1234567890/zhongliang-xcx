@@ -1,0 +1,19 @@
+<!--pages/help/helpmore/povertyMessage/povertyMessage.wxml-->
+<view class="pM-title">黑龙江省哈尔滨市宁安县</view>
+<view class="line-css"></view>
+<view class="pM-container">
+    <view class="table">
+        <view class="thead left">
+            <view class="th" wx:for="{{listData}}">{{item.headerLeft}}</view>
+        </view>
+        <view class="tcontent left">
+            <view class='td' wx:for="{{listData}}">{{item.contentLeft}}</view>
+        </view>
+        <view class="thead right">
+            <view class="th" wx:for="{{listData}}">{{item.headerRight}}</view>
+        </view>
+        <view class="tcontent right">
+            <view class='td' wx:for="{{listData}}">{{item.contentRight}}</view>
+        </view>
+    </view>
+</view>

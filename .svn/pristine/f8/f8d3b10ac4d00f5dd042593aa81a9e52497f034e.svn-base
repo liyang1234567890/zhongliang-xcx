@@ -1,0 +1,42 @@
+/* pages/free/integral/integral.wxss */
+.container{
+  margin: 80rpx 40rpx 80rpx 40rpx;
+}  
+.order{
+  font-family: "Microsoft YaHei";
+  font-size: 28rpx;
+  color: #FF3030;
+}
+.total{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx; 
+  font-size: 28rpx; 
+}
+.award{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30rpx; 
+
+}
+button{
+  /* border: 1px solid #ccc; */
+  font-size: 28rpx;
+  text-align: center;
+  background-color: #7fc7a1;
+  color: #fff;
+}
+.rule{
+  border: 2px solid #ccc;
+  word-break: break-all;
+  margin-top: 70rpx; 
+  font-size: 28rpx; 
+  line-height: 50rpx;  
+  padding: 20rpx;
+}
+.title{
+  font-weight: bold;
+  font-size: 32rpx;
+}

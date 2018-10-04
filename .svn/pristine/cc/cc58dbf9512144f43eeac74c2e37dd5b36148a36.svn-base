@@ -1,0 +1,81 @@
+/* pages/mine/realName/realName.wxss */
+page{
+  height: 100%;
+  background: #efefef;
+}
+.msg{
+  display: flex;
+  height: 100rpx;
+  padding-left: 30rpx;
+  line-height: 100rpx; 
+  font-size: 32rpx;  
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+.title{
+  flex: 1;
+}
+.msg input{
+  flex: 3;
+  height: 100rpx;
+  color: #000;
+}
+.titleImg{
+  font-size: 32rpx;  
+  margin-top: 30rpx;
+  background: #fff;
+  padding-left: 30rpx;   
+  padding-top: 20rpx;
+  border-top: 1px solid #ccc;  
+}
+.imgBox{
+  padding-left: 30rpx; 
+  padding-right: 30rpx;   
+  padding-top: 20rpx;     
+  height: 220rpx;
+  background: #fff;
+  display: flex;   
+}
+.imgBoxLast{
+  padding-bottom: 30rpx;
+   border-bottom: 1px solid #ccc;      
+}
+.uploadImg{
+  height: 200rpx;
+  margin-right: 30rpx;
+  flex: 1;
+  text-align: center;
+  line-height: 200rpx;
+  border: 1px solid #ccc;
+  color: #bbb;
+  font-size: 32rpx;
+}
+.demeImg{
+  height: 200rpx;
+  flex: 1;
+  position: relative;  
+}
+.demoMsg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #1195db;
+}
+
+.setMsg{
+  font-size: 32rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20rpx;    
+  width: 90%;
+  bottom: 20rpx;  
+  background: #1195db;
+}
+.setText{
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,271 @@
+/* pages/order/order.wxss */
+
+Page {
+    background: #ddd;
+    font-size: 28rpx;
+    overflow: hidden;
+  }
+  /*头部品类和地区选择模块开始*/
+  .header {
+    position: fixed;
+    width: 100%;
+    background: #eee;
+    font-size: 28rpx;
+  }
+  
+  .header .kind {
+    padding: 20rpx 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header .kind view {
+    width: 90rpx;
+    height: 90rpx;
+    font-size: 28rpx;
+    background:#ddd;
+    border-radius: 50%;
+  }
+  
+  .kind image {
+    margin: 2rpx auto;
+    width: 40rpx;
+    height: 40rpx;
+    display: flex;
+  }
+  
+  .header .kind text {
+    margin-left: 20rpx;
+  }
+  
+  
+  /*头部品类和地区选择模块结束*/
+  
+  /*订单信息展示开始*/
+  .order {
+    padding-top: 160rpx;
+    height: 750rpx;
+  }
+  
+  .order image {
+    width: 40rpx;
+    height: 40rpx;
+    display: inline-block;
+  }
+  
+  .order .order-message {
+    background-color: #fff;
+    margin-bottom: 20rpx;
+  }
+  .order-header {
+    display: flex;
+    align-items: center;
+    margin-left: 20rpx; 
+    padding-top: 20rpx;
+  }
+  .order-left {
+    font-size: 30rpx;
+    margin-left: 20rpx;
+  }
+  .order-right {
+    margin-left: 390rpx;
+    color: #888888;
+  }
+  .order-footer {
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    padding-bottom:20rpx;
+  }
+  
+  .order-footer text {
+    margin-left: 14rpx;
+  }
+  .order-footer .meg{
+    color:#888888;
+  }
+  .order-footer image {
+    width: 30rpx;
+    height: 30rpx;
+    color: #fff;
+  }
+  /*订单信息展示结束*/
+  
+  
+  
+  
+  .footer {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 17rpx;
+    height: 416rpx;
+  
+  }
+  .footer-meg {
+    height: 200rpx;
+  }
+  .footer-meg image{
+    width: 50rpx;
+    height: 50rpx;
+  }
+  .footer-tip{
+    width: 320rpx;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: 14rpx;
+  }
+  .footer-tip image{
+    margin-top: 2rpx;
+  }
+  .footer-meg button{
+    width: 500rpx;
+    height: 100rpx;
+    background-color: #1AAD19;
+    color: #fff;
+  }
+  .footer .member {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .member {
+    width: 100%;
+    background-color: #7fc7a1;
+    font-size: 30rpx;
+    color: #fff;
+    bottom: 0rpx;
+    height: 63rpx;
+    position: fixed;
+    text-align: center;
+    line-height: 63rpx;
+  }
+  
+  .member image {
+    width: 34rpx;
+    height: 34rpx;
+  }
+  
+  .message {
+    height: 164rpx;
+    font-size: 28rpx;
+    color: #413b3b;
+    border-top: 8rpx solid #7fc7a1;
+  }
+  
+  .message text {
+    color: #000;
+  }
+  
+  .message-a {
+    width: 314rpx;
+    position: absolute;
+    left: 13rpx;
+    padding-top: 10rpx;
+  }
+  
+  .message-b {
+    width: 314rpx;
+    position: absolute;
+    right: -19rpx;
+    top: 2rpx;
+    font-size: 28rpx;
+    padding-top: 10rpx;
+  }
+  
+  .message text {
+    margin-left: 20rpx;
+  }
+  
+  .Situation {
+    font-size: 28rpx;
+    position: absolute;
+    top: 152rpx;
+    border-top: 3rpx dashed #888;
+  }
+  
+  .Situation view {
+    width: 254rpx;
+    display: inline-block;
+  }
+  
+  .Situation image {
+    width: 42rpx;
+    height: 33rpx;
+  }
+  
+  .Situation-rihgt {
+    margin-left: 204rpx;
+  }
+  
+  .Situation-left {
+    margin-left: 14rpx;
+  }
+  
+  .Situation-a {
+    position: absolute;
+    left: 13px;
+    top: 202rpx;
+    font-size: 28rpx;
+  }
+  
+  .Situation-b {
+    position: absolute;
+    left: 240px;
+    top: 202rpx;
+    display: inline-block;
+    font-size: 28rpx;
+  }
+  /*遮罩层开始*/
+  .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(83, 45, 83, 0.295);
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    font-size: 28rpx;
+    z-index: 1000;
+    overflow: hidden
+  }
+  .introduction {
+    color: #888888;
+  }
+  .introduce image{
+    width: 100%;
+    height: 370rpx;
+  }
+  .introduction view {
+    margin: 0 auto;
+  }
+  .mask .introduce {
+    width: 583rpx;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    top: 152rpx;
+  }
+  .compare {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .content {
+    color: #888888;
+  } 
+  .introduce .title {
+    width: 100%;
+    font-size: 34rpx;
+    font-weight: bolder;
+  }
+  .mask button{
+    font-size: 36rpx;
+    color: #1AAD19;
+  }
+  .header .kind .selectKind{
+    background-color: #1AAD19;
+  }
+  /*遮罩层结束*/
+  
+  
+  

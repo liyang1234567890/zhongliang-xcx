@@ -1,0 +1,30 @@
+
+
+          <image class="header" src="../../../mock/images/rich/login/0180426110003.png"></image>
+
+<form action="#" methods="post">
+     <view class="phone">
+          <view class="phone-num">
+           <image src='../../../mock/images/rich/login/photo.svg' class='photo'></image>
+               <input name="phoneNum" placeholder='请输入手机号' />
+          
+          <view class="code">发送验证码</view>
+          </view>
+     </view>
+          <view class="phone">
+     <view class="phone-num">
+           <image src='../../../mock/images/rich/login/YDUI.svg' class='photo'></image>
+               <input name="phoneNum" placeholder='请输入6位手机验证码' />
+          </view>
+     </view>
+     <view class="footer">
+          <!-- <input name="register" placeholder='注册' placeholder-style='text-align: center' />
+     <input name="register" placeholder='登录' placeholder-style='text-align: center' /> -->
+          <button type="primary">登陆</button>
+    <text>还没有注册？<text class='register'>立即注册</text></text>
+     </view>
+     <view class='footWY'>
+          <view class='flexFoot'><view  class='line'></view><view>无央科技版权所有</view><view  class='line'></view></view>
+     </view>
+
+</form>

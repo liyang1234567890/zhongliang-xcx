@@ -1,0 +1,43 @@
+<!--pages/help/helpmore/helpmore.wxml-->
+<view class="helpmore">
+  <view class='nav-text'>
+    <text>宁安县\n精准扶贫</text>
+  </view>
+  <view class='content'>
+    <view class='content-btn'>
+      <text>扶贫政策白皮书\n</text>
+    </view>
+    <text>1.规定了...\n\n2.规定了...\n\n3.规定了...\n</text>
+    <button class='content-more'>查看更多...</button>
+  </view>
+  <view class='program'>
+    <view class='program-btn'>
+      <button bindtap='closeok'>已解决</button>
+      <button bindtap='closeno'>未解决</button>
+    </view>
+    <view class="section__title">
+    <picker mode="date" value="2016-06-06" start="2015-09-01" end="2017-09-01">
+      <view class="picker">
+        2018-06-06 <text>选择时间</text> 
+      </view>
+    </picker>
+    </view>
+    <view wx:if='{{bol}}'>
+      <view class='program-ok1'>
+        <text class='program-con1'>被帮扶人姓名：李XX\n帮扶单位：无央集团\n帮扶时间：2018-06-06</text>
+        <view class='program-more1'><button >查看详细</button></view>
+      </view>
+      <view class='program-ok2'>
+        <text class='program-con2'>被帮扶人姓名：李XX\n帮扶单位：无央集团\n帮扶时间：2018-06-06</text>
+        <view class='program-more2'><button >查看详细</button></view>
+      </view>
+      <view class='program-ok3'>
+        <text class='program-con3'>被帮扶人姓名：李XX\n帮扶单位：无央集团\n帮扶时间：2018-06-06</text>
+        <view class='program-more3'><button >查看详细</button></view>
+      </view>
+    </view>
+    <view wx:if='{{bool}}'>
+     <text class='program-con1'>被帮扶人姓名：李XX\n帮扶单位：无央集团\n帮扶时间：2018-06-06</text>
+    </view>
+  </view>
+</view>

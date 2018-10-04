@@ -1,0 +1,10 @@
+<!--pages/mine/category/cateSub/cateSub.wxml-->
+<view>
+  <view class='cateSub' wx:for='{{category[0].sub}}'>
+    <view class='sub-title'>{{item.subName}}</view>
+    <view class='sub-cont'>
+      <view class='sub-sub' wx:for='{{item.subSub}}'>{{item}}</view>
+    </view>
+  </view>
+  <button class='myButton'>加入品类</button>
+</view>

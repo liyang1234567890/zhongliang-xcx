@@ -1,0 +1,35 @@
+<!--pages/mine/integration/integrationDetail/integretionDetail.wxml-->
+<!-- <text>pages/mine/integration/integrationDetail/integretionDetail.wxml</text> -->
+<import src='../../common/empty.wxml' /> 
+
+<block wx:if="{{val==1}}">
+<view>
+<view id='detail'>
+  <view id='detail-left'>
+    <view id='detail-ttext'>交易成功</view>
+    <view id='detail-rtext'>余额：400</view>
+  </view>
+  <view id='detail-right'>
+    <view id='detail-btext'>+50</view>
+    <view id='detail-rtext'>2018-4-21</view>
+  </view>
+</view>
+<image id='detail-image' src='../../../../mock/images/line.png'></image>
+</view>
+<view>
+<view id='detail'>
+  <view id='detail-left'>
+    <view id='detail-ttext'>兑换礼品</view>
+    <view id='detail-rtext'>余额：400</view>
+  </view>
+  <view id='detail-right'>
+    <view id='detail-btext'>-150</view>
+    <view id='detail-rtext'>2018-4-21</view>
+  </view>
+</view>
+<image id='detail-image' src='../../../../mock/images/line.png'></image>
+</view>
+</block>
+<block wx:else>
+ <template is='empty' data="{{text:'您的数据是空哒~'}}" />
+</block> 

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<image class="bg" src='../../mock/images/common/index_bg.jpg'></image>
+<view class="index" bindtap="bindViewTap">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="../../mock/images/common/logo.jpg"></image>
+      <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+       <image class="userinfo-icon" src="../../mock/images/common/index_icon.png"></image>   
+      <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+      </view>
+    </block>
+  </view>
+</view>

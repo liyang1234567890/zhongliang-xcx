@@ -1,0 +1,87 @@
+<!--pages/order/order.wxml-->
+
+<!-- header start -->
+<view class="header">
+    <view class="header-region">请选择地区:</view>    
+    <picker mode="region"  value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange">
+        <view class="region">省/市/县</view>
+    </picker>
+    <view class="kind-btn">
+            <button bindtap="clickMe" class="aaa">玉米</button>
+            <button>小麦</button>
+            <button>大豆</button>
+            <button>水稻</button>
+    </view> 
+</view>
+<!-- header end -->
+
+
+<view class="kind-meg">
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>   
+     <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>    
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>   
+     <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+</view>
+<!-- <view class="footer-meg">
+    <view class="footer-text">你未开通订单买卖</view>
+    <button>点我去开通订单买卖</button>
+</view> -->
+
+<view class="footer-meg">
+    <view>会员信息</view>
+    <view>合作社:牡丹江</view>
+    <view>土地:300亩土地:300亩土地:300亩土地:300亩土地:300亩</view>
+    <view>品类:玉米</view>
+    <view>卖出价格:2400元/吨</view>
+    <view>订单:中粮订单</view>
+    <view>....</view>
+    <view>合作社:牡丹江</view>
+    <view>合作社:牡丹江</view>
+    <view>合作社:牡丹江</view>
+
+
+
+</view>
+
+<view class="aa" wx:if="{{bol}}">
+    <view class="bb">
+        我是遮罩层
+    </view>
+    <button bindtap="close">我已经了解</button>
+</view>

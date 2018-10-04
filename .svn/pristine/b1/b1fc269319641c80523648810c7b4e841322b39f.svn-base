@@ -1,0 +1,16 @@
+// pages/help/showMore/showMore.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    
+  },
+  iknow:function(){
+    wx.navigateBack({
+      
+    })
+  }
+
+})

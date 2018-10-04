@@ -1,0 +1,60 @@
+/* pages/order/order.wxss */
+page{
+    /* height: 100%; */
+}
+.select{
+    background-color: black;
+}
+.topbar{
+    height: 52px;
+    background-color: rgba(22, 155, 213, 1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.title{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    color: #FF0000;
+    text-align: center;
+    line-height: 52px;
+}
+.kind-btn{
+    background-color: #fff;
+}
+.kind-btn button{
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 10px;
+}
+picker{
+    font-size: 28px;
+    text-overflow:ellipsis; 
+    overflow: hidden; 
+}
+.kind-btn .picker {
+    font-size: 28px;
+    display: inline-block;
+    width: 60px;
+    height: 52px;
+    border: 1px solid #000;
+}
+.kind-meg {
+    padding: 100px 0 130px 0;
+}
+.kind-meg scroll-view{
+    border-bottom: 2px solid #000;
+    box-shadow: #fff;
+    height: 100px;
+}
+.footer-meg{
+    height: 100px;
+    background-color: rgba(22, 155, 213, 1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+}

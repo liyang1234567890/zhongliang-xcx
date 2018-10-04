@@ -1,0 +1,75 @@
+/* pages/help/helpmore/applyPoverty/applyPoverty.wxss */
+.apply{
+  border:20rpx rgb(231,231,231) solid;
+  height: 1146rpx;
+}
+.apply .applyContainer{
+  position: relative;
+  border-radius: 50rpx;
+  height: 1120rpx;
+}
+input,.focusInputn,.focusInputp{
+  border:4rpx #ccc solid;
+  float: left;
+  width: 320rpx;
+  height: 66rpx;
+  background-color:  rgb(249,249,249);
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+input{ color: rgb(152,152,152);}
+.focusInputn{color:#000}
+.focusInputp{color:#000}
+textarea{
+  border:4rpx #ccc solid;
+  float: left;
+  width: 260rpx;
+  height: 220rpx;
+  background-color:  rgb(249,249,249);
+}
+.app-name,.app-phone,.app-mor,.app-dem{
+  overflow: hidden;
+  width: 480rpx;
+  margin: 40rpx auto 50rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+
+.app-name view{
+  float: left;
+}
+.app-phone view{
+  float: left;
+}
+.app-mor view{
+  float:left;
+}
+.app-dem view{
+  float:left;
+}
+.demand{
+  left: 80rpx;
+}
+.sub button{
+  width: 200rpx;
+  height: 50rpx;
+  position: absolute;
+  bottom: 60rpx;
+  right: 50%;
+  margin-right: -100rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  background-color: rgb(112,204,155);
+  color: #fff;
+}
+.section__title{
+  font-size: 32rpx;
+  width: 250rpx;
+   margin: 40rpx 40rpx auto 115rpx;
+}
+.picker{
+  font-size: 32rpx;
+  display: block;
+  width: 550rpx;
+  margin: 40rpx 40rpx auto 115rpx;
+  }

@@ -1,0 +1,56 @@
+<!--pages/mine/pubInfor/pubInfor.wxml-->
+<!-- <text>pages/mine/pubInfor/pubInfor.wxml</text> -->
+ <import src='../common/empty.wxml' /> 
+
+<block wx:if="{{bol==1}}">   
+  <!-- Recommend start -->
+<view class='recommend_Information'>
+  <!--1  -->
+  <view class='recommend_category' wx:for='{{blocks}}'>
+    <view class='recommend_category_title'>
+      <view class='category_left'>
+        <image class="detail_nav_img" src="../../../mock/images/index_19.png" mode="aspectFill">    </image>
+        <view class='category_left_name'>{{item.name}}</view>
+      </view>
+      <view class='category_right'>
+        <image class="detail_nav_img" id='money' src='../../../mock/images/icon/index_22.png'></image>
+        {{item.price}}元/吨
+      </view>
+    </view>
+
+    <view class='recommend_category_message'>
+      <view class='category_left'>
+        <view class='category_left_message'>品牌：{{item.brand}}</view>
+        <view class='category_left_message'>交货地：{{item.address}}</view>
+        <view>
+        <view class='category_line3'>
+           <view class='category_line3_left'>
+            <image class="sellers_auto_img" id='sellers_auto_img59' mode="aspectFill"src="../../../mock/images/icon/index_78.png"></image>
+          </view>
+          <view class='category_line3_right'>
+            <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_40.png"></image>
+          <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/index_41.png"></image>   
+          </view>     
+        </view>       
+       </view>
+      </view>
+      <view class='category_right'>
+        <view class='category_left_message'>数量：1000吨</view>
+        <view class='category_left_message'>规格：水分1.0</view>
+        <view class='category_left_message'>
+            <image id='time' src='../../../mock/images/icon/index_48.png'></image>
+            <view id='time-hm'>{{hourMinute}}</view>
+
+        </view>
+      </view>
+    </view>  
+  </view>
+
+</view>
+
+
+<!-- Recommend end -->
+</block>  
+<block wx:else>
+ <template is='empty' data="{{text:'您的数据是空哒~'}}" />
+</block>   

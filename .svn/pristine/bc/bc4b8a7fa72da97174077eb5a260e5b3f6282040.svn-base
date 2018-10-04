@@ -1,0 +1,11 @@
+/* pages/rich/rich.wxss */
+.gloryList{
+  display: inline-block;
+  width: 375rpx;
+  text-align: center;
+}
+.wantRich{
+  display: inline-block;
+  width: 375rpx;
+   text-align: center;
+}  

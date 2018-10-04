@@ -1,0 +1,54 @@
+<!--pages/mine/notice/notice.wxml-->
+<import src='../common/empty.wxml' />
+
+<view id='recIntent'>
+   <block wx:if='{{intentions.length==0}}'>
+    <template is='empty' data="{{text:'您还未关注其他用户'}}" />
+  </block> 
+   <block wx:else> 
+    <view wx:for='{{notices}}' wx:key='{{index}}'>
+      <view class='intention'>
+        <view class='intention-sponsor'>
+          <view class='i-s-up'>
+            <view class='i-s-left'>
+              <block wx:if="{{item.headPortrait}}">
+          <image class="sellers_img" src="http://{{item.headPortrait}}" mode="aspectFill">
+          </image> 
+        </block>
+        <block wx:else>
+          <image class="sellers_img" src="{{item.wxHeadPottarat}}" mode="aspectFill">  
+          </image> 
+        </block>
+            </view>
+            <view class='i-s-center'>
+              <view class='i-s-name'>{{item.username}}</view>
+              <view class='i-s-business'>{{item.business}}</view>
+            </view>
+            <view class='i-s-right'>
+              <navigator url="../home/home?openid={{item.openid}}" hover-class='none'>
+                <button size='mini' type='default'>查看详细</button>
+              </navigator>
+            </view>
+          </view>
+          <!-- <view class='i-s-down'> -->
+            
+    <!-- <image wx:if="{{true}}" class='mark' src='../../../mock/images/common/index_13.png'></image>
+                     <image wx:else class='mark' src='../../../mock/images/common/index_34.png'></image>
+    <view>个人</view>
+    <image wx:if="{{userInfo.realNameIdentity}}" class='mark' src='../../../mock/images/common/index_12.png'></image>
+                    <image wx:else class='mark' src='../../../mock/images/common/index_36.png'></image>
+     <view>实名认证</view> 
+     <image wx:if="{{userInfo.ismember}}"  class='mark' src='../../../mock/images/common/index_21.png'></image>
+                    <image wx:else class='mark' src='../../../mock/images/common/index_02.png'></image> 
+     <view>无央会员</view> 
+     <image wx:if="{{userInfo.serviceAuthority}}"  class='mark' src='../../../mock/images/common/index_14.png'></image>
+                    <image wx:else class='mark' src='../../../mock/images/common/index_03.png'></image>  
+     <view>服务商</view>     -->
+  
+            <!-- <button size='mini' type='default' bindtap='call' data-tel="{{item.tel}}"></button> -->
+          <!-- </view> -->
+        </view> 
+      </view>
+    </view>
+  </block> 
+</view>

@@ -1,0 +1,84 @@
+/**publish.wxss**/
+
+.container {
+  padding: 20rpx;
+}
+
+.header {
+  text-align: center;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 400rpx;
+}
+
+.input {
+  border: 1px solid #ccc;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.title {
+  font-size: 28rpx;
+  width: 20%;
+  margin: 18rpx;
+}
+
+.publish {
+  position: center;
+  border: 1px solid #ccc;
+}
+
+.uploadPic {
+  border: 1px solid #ccc;
+}
+
+.describe {
+  border: 1px solid #ccc;
+  font-size: 28rpx;
+}
+
+.addPicTitle {
+  font-size: 28rpx;
+  line-height: 520rpx;
+  width: 20%;
+  padding: 18rpx;
+}
+
+.picker {
+  border: 1px solid #ccc;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.publish {
+  background-color: #7fc7a1;
+  color: white;
+  margin-top: 70rpx;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.model {
+  flex: 1;
+  margin: 18rpx;
+}

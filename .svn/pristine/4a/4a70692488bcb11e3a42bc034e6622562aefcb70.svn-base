@@ -1,0 +1,4 @@
+<view>
+<view bindtap='toglorylist' class='gloryList'>致富光荣榜</view>
+<view bindtap='towantrich' class='wantRich'>我要致富</view>
+</view>

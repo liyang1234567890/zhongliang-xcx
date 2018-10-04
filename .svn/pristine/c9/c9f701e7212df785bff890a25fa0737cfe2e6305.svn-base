@@ -1,0 +1,262 @@
+// pages/help/helpmore/helpmore.js
+var util = require('../../../utils/util.js');
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    date: '2018-04-20',
+    active: 'active',
+    none: '',
+    bol: true,
+    bool: false,
+    mask: false,
+
+    joincodec: 'join-code',
+    joincoden: 'join-code',
+    code: '扶贫码',
+    name: '姓名',
+    clauses: [
+      { "stipulate": "1.规定了:扶持农民专业合作社和龙头企业发展。" },
+      { "stipulate": "2.规定了:加快发展农民专业合作社，开展示范社建设行动。" },
+      { "stipulate": "3.规定了:加强合作社人员培训，各级财政给予经费支持。" }
+    ],
+    helpPreson: [
+      {
+        "name": "李XX",
+        "company": "无央集团",
+        "time": "2018-06-06"
+      },
+      {
+        "name": "李XX",
+        "company": "无央集团",
+        "time": "2018-06-06"
+      },
+      {
+        "name": "李XX",
+        "company": "无央集团",
+        "time": "2018-06-06"
+      }
+    ],
+    applyPerson: []
+  },
+  /**
+  * 生命周期函数--监听页面显示
+  */
+  onShow: function () {
+    var that = this;
+
+    wx.getStorage({
+      key: 'addData',
+      success: function (res) {
+        var time = util.now(new Date());
+        that.setData({
+          addData: res.data,
+          applyPerson: [
+            {
+              "name": "康兴硕",
+              "time": "2018-02-06"
+            },
+            {
+              "name": "齐杰玉",
+              "time": "2018-02-09"
+            },
+            {
+              "name": "冯建东",
+              "time": "2018-02-09"
+            },
+            {
+              "name": "王宝强",
+              "time": "2018-02-14"
+            },
+            {
+              "name": "刘志刚",
+              "time": "2018-02-16"
+            },
+            {
+              "name": res.data,
+              "time": time
+            }
+          ]
+        })
+      }
+
+    })
+  },
+  //动态更改数据
+  watchData: function (e) {
+    this.setData({
+      name: e.detail.value
+    })
+  },
+  // 点击跳转验证成功页面
+  verifySuccess: function () {
+    console.log(this.data.name);
+    if (this.data.name && this.data.name != '姓名') {//验证是否为空
+      wx.navigateTo({
+        url: 'applyPoverty/applyPoverty',
+      })
+      wx.setStorage({
+        key: 'addData',
+        data: this.data.name,
+      })
+    } else {
+      wx.showModal({
+        title: '扶贫码和姓名为空',
+        content: '请输入扶贫码和姓名',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定');
+          }
+        }
+      })
+    }
+  },
+  // 当前日期
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  //已解决
+  closeok: function () {
+    var active = 'active';
+    var none = '';
+    var bol = this.data.bol;
+    var bool = this.data.bool;
+    if (bool == true) {
+      this.setData({
+        bool: false,
+        active,
+        none
+      })
+    }
+    if (bol == false) {
+      this.setData({
+        bol: true
+      })
+    }
+  },
+  //未解决
+  closeno: function () {
+    var active = '';
+    var none = 'active';
+    var bol = this.data.bol;
+    var bool = this.data.bool;
+
+    if (bool == false) {
+      this.setData({
+        active,
+        none,
+        bool: true
+      })
+    }
+    if (bol == true) {
+      this.setData({
+        bol: false
+      })
+    }
+
+
+  },
+  joinin: function () {
+    var mask = this.data.mask;
+    this.setData({
+      mask: true
+    })
+  },
+  close: function () {
+    var mask = this.data.mask;
+    this.setData({
+      mask: false
+    })
+  },
+
+  //扶贫码
+  focusInputc: function () {
+    var joincodec = 'joincodeInputc';
+    var code = '';
+    this.setData({
+      joincodec,
+      code
+    })
+  },
+  focusInputn: function () {
+    var joincoden = 'joincodeInputn';
+    var name = '';
+    this.setData({
+      joincoden,
+      name
+    })
+  },
+  //跳转回扶贫省页
+  backhelp: function () {
+    wx.switchTab({
+      url: '../help',
+    })
+  },
+  // 点击跳转扶贫个人信息
+  presonal_poverty: function () {
+    wx.navigateTo({
+      url: 'povertyMessage/povertyMessage'
+    })
+  },
+  //点击跳转扶贫政策
+  showMore: function () {
+    wx.navigateTo({
+      url: '../showMore/showMore',
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

@@ -1,0 +1,4 @@
+/* pages/mine/notice/notice.wxss */
+
+@import '../common/common.wxss';
+@import '../pubInfor/pubInfor.wxss';

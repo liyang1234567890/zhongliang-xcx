@@ -1,0 +1,53 @@
+// pages/mine/category/cateSub/cateSub.js
+var util = require('../../../../utils/util.js');
+Page({
+  data: {
+    sub: [],
+    selected: 0
+  },
+  onLoad: function (options) {
+    var category_id = options.category_id
+    var that = this
+    wx.request({
+      url: util.APP_HOST + 'category/findall?level=2&parent_id=' + category_id,
+      method: 'get',
+      success: function (res) {
+        // console.log(res.data.categoryList)
+        that.setData({
+          sub: res.data.categoryList
+        })
+        // 修改页面标题
+        wx.setNavigationBarTitle({
+          title: options.category_name
+        })
+      }
+    })
+    
+  },
+  click: function(e){    
+    this.setData({
+      selected: e.currentTarget.dataset.id
+    })
+  },
+  add: function(){
+    var that = this
+    wx.request({
+      url: util.APP_HOST + `my/catesave`,
+      method: 'POST',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        cateParam: that.data.selected,
+        user_oid: '12345678'
+      },
+      success: function(res){
+        console.log(res.data)
+        wx.showToast({
+          title: '成功',
+          icon: 'success'
+        })
+      }
+    })
+  }
+})

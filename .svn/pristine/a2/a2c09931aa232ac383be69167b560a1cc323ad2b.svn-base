@@ -1,0 +1,34 @@
+<!--pages/free/exchange/exchange.wxml-->
+<view class='header'>积分兑换</view>
+<view class='current'>当前积分：200000</view>
+<view class="content">  
+    <view class='sum'>
+    <view class='product {{class}}' bindtap='changeColor'><text>华为手机\n(10000分)</text></view>
+    <image  class='phone' src='../../../mock/images/phone.jpg'></image>
+    </view>  
+
+    <view class='sum'>
+    <view class='product' bindtap='changeColor'><text>吹风机\n（3000分)</text></view>
+    <image  class='phone' src='../../../mock/images/phone.jpg'></image>
+    </view>  
+
+    <view class='sum'>
+    <view class='product' bindtap='changeColor'><text>电脑\n（20000分）</text></view>
+    <image  class='phone' src='../../../mock/images/phone.jpg'></image>
+    </view>  
+
+    <view class='sum'>
+    <view class='product' bindtap='changeColor'><text>耳机\n（1000分）</text></view>
+    <image  class='phone' src='../../../mock/images/phone.jpg'></image>
+    </view>  
+
+    <view class='sum'>
+    <view class='product' bindtap='changeColor'><text>电视机\n（90000分）</text></view>
+    <image  class='phone' src='../../../mock/images/phone.jpg'></image>
+    </view>  
+
+    <view class='sum'>
+    <view class='product' bindtap='changeColor'><text>平衡车\n（80000分）</text></view>
+    <image  class='phone' src='../../../mock/images/phone.jpg'></image>
+    </view>  
+</view>  

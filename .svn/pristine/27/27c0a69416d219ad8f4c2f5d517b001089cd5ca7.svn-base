@@ -1,0 +1,85 @@
+/* pages/free/integral/integral.wxss */
+.header{
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+.header .gain,.header .now{
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  color: white;
+}
+.header .gain{
+  left: 10%;
+}
+.header .now{
+  
+  left: 60%;
+}
+.order{
+  font-size: 32rpx;
+  color: white;
+  position: absolute;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+}
+.all{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  }
+.award{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30rpx;  
+}
+.award-left,.award-right{
+  margin-right: 50rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  display: inline-block;
+}
+.award-left{
+  margin-left: 50rpx;
+}
+.award-right{
+  margin-left: 120rpx;
+}
+.award-left image{
+   vertical-align: middle;
+}
+ .award-right image{
+  vertical-align: middle;
+} 
+button::after{
+  border: none;
+}
+button{
+  height: 200rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: white;
+  line-height: 200rpx;
+}
+.draw{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+.rule{
+  border: 2px solid #ccc;
+  word-break: break-all;
+  margin-top: 50rpx; 
+  font-size: 28rpx; 
+  line-height: 50rpx;  
+  padding: 20rpx;
+}
+.title{
+  font-weight: bold;
+  font-size: 32rpx;
+}

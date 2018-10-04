@@ -1,0 +1,139 @@
+
+Page({
+  data: {
+    array: ['土豆', '玉米', '大豆', '蔬菜'],
+    objectArray: [
+      {
+        id: 0,
+        name: '美国'
+      },
+      {
+        id: 1,
+        name: '中国'
+      },
+      {
+        id: 2,
+        name: '巴西'
+      },
+      {
+        id: 3,
+        name: '日本'
+      }
+    ],
+    index: 0,
+
+
+    multiIndex: [0, 0, 0],
+    date: '2016-09-01',
+    time: '12:01',
+    region: ['黑龙江', '哈尔滨市', '宁安县'],
+    customItem: '全部',
+    bol:true,
+    bloo:true,
+    orderym:[
+      {
+        "ym":"玉米订单",
+        "zl":"中粮订单",
+        "dq":"牡丹江合作社",
+        "pl":"玉米",
+        "cl":"12000吨/亩"
+      },
+      {
+        "ym":"玉米订单",
+        "zl":"中粮订单",
+        "dq":"牡丹江合作社",
+        "pl":"玉米",
+        "cl":"12000吨/亩"
+      },
+      {
+        "ym":"玉米订单",
+        "zl":"中粮订单",
+        "dq":"牡丹江合作社",
+        "pl":"玉米",
+        "cl":"12000吨/亩"
+      },
+      {
+        "ym":"玉米订单",
+        "zl":"中粮订单",
+        "dq":"牡丹江合作社",
+        "pl":"玉米",
+        "cl":"12000吨/亩"
+      },
+      {
+        "ym":"玉米订单",
+        "zl":"中粮订单",
+        "dq":"牡丹江合作社",
+        "pl":"玉米",
+        "cl":"12000吨/亩"
+      }
+    ],
+    category:[
+      '玉米',
+      '小麦',
+      '水稻',
+      '大豆'
+    ],
+    currentId:0,
+    status:false,
+    animationData:{}
+  },
+
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  selectKind:function(e){ 
+    this.setData({
+        currentId:e.currentTarget.dataset.id
+      })
+    },
+  close: function(){
+    var bol = this.data.bol;
+    this.setData({
+      bol:!bol
+    })
+  },
+  change: function(){
+    var boll = this.data.boll;
+    if(boll){
+      this.animation.translate(0,300).step()
+        
+      }else{
+       this.animation.translate(0,0).step()
+        
+      }
+ 
+    this.setData({
+      boll:!boll
+    })
+    // var animation = wx.createAnimation({
+    //   duration:1000,
+    //   timingFunction:'ease'
+    // })
+    // this.animation = animation
+  
+    this.setData({
+      animationData:this.animation.export()
+    })
+ 
+  },
+  bindRegionChange: function (e) {
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  catch:function(){
+  },
+  onShow:function(){
+
+    var animation = wx.createAnimation({
+
+      duration:1000,
+      timingFunction:'ease'
+
+    })
+    this.animation=animation
+  }
+})

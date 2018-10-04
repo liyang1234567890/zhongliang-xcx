@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/free/free",
+    "pages/order/order",
+    "pages/help/help",
+    "pages/rich/rich",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "微信",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/free/free",
+        "text": "自由买卖"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单买卖"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "精准扶贫"
+      },
+      {
+        "pagePath": "pages/rich/rich",
+        "text": "致富"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+
+<view class='msg'>
+  <view class='title'>邮 箱</view>
+  <input placeholder='请输入邮箱号'></input>
+</view>
+
+<navigator>
+  <view class='setMsg'>
+    <view class='setText'>确定</view>
+  </view>
+</navigator>

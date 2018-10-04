@@ -1,0 +1,6 @@
+/* pages/free/adress/adress.wxss */
+.input{
+  border: 1px solid #ccc;
+  width: 300rpx;
+  
+}

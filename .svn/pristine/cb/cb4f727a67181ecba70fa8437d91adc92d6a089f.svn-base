@@ -1,0 +1,18 @@
+<!--pages/free/free.wxml-->
+<view class='header' bindtap='toOrder'>
+<text class='ordername'>中粮订单</text>
+</view>
+<swiper class='swiper' indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+<block wx:for="{{swiper}}" wx:for-index="index">    
+        <swiper-item>    
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
+        </swiper-item>    
+      </block>    
+</swiper> 
+<view class='searchbox'>
+<input class='search' type='text' placeholder-style="color:black" placeholder="关键字：规格，交货地，品牌" bindtap=''></input>
+</view>
+<view class='bigChoose'>
+  <button class='kind'>品类</button>
+  <button class='area'>地区</button>
+</view>

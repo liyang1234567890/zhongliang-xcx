@@ -1,0 +1,11 @@
+// pages/free/exchange/exchange.js
+Page({
+  data:{
+    
+  },
+  toNavigate: function () {
+    wx.navigateTo({
+      url: '../address/address',
+    })
+  },
+})

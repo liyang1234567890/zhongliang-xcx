@@ -1,0 +1,37 @@
+// pages/mine/home/home.js
+Page({
+  data: {
+    // name: '',
+    // cont: '',
+    // arr : []
+  },
+  onLoad: function(){
+    // var that = this;
+    // wx.request({
+    //   url: 'http://192.168.99.190:60001/FreeBusiness/findFreeBus?fb_id=65',
+    //   success: function (res) {
+    //     that.setData({
+    //       name: res.data.freeBusinessesList[0].brand,
+    //       cont: res.data.freeBusinessesList[0].category,
+    //       arr: res.data.freeBusinessesList
+    //     })
+    //     console.log(res.data.freeBusinessesList[0].brand);
+    //   }
+    // })
+  },
+  fellow: function(){
+    wx.showToast({
+      title: '关注成功',
+      icon: 'success',
+      duration: 3000
+    })
+  },
+  call: function(){
+    wx.makePhoneCall({
+      phoneNumber: '111-1111-1111',
+      success: function(){
+        
+      }
+    })
+  }  
+})

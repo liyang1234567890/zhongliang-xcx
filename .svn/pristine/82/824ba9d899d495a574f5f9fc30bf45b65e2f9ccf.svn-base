@@ -1,0 +1,45 @@
+/* pages/free/free.wxss */
+.header{
+  height: 74rpx;
+  text-align: center;
+  line-height: 74rpx;
+  
+}
+.ordername{
+  font-size: 64rpx;
+  font-weight: 400;
+}
+.swiper{
+  height: 260rpx;
+  width: 100%;
+  
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.searchbox{
+  text-align: center;
+  position: absolute;
+  top:74rpx;
+  left: 75rpx;
+}
+.search{
+  width: 600rpx;
+  height: 54rpx;
+  border: 1px solid #000;
+  display: inline-block;
+  background-color:#eee;  
+  /* border-radius: 20rpx; */
+}
+.bigChoose{
+  height: 124rpx;
+  display: flex;  
+}
+.kind,.area{
+  flex-grow:1; 
+  font-size: 40rpx;
+  border: 1px solid #000;
+  
+}

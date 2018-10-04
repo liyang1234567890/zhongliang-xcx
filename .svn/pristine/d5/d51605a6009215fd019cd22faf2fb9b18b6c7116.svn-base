@@ -1,0 +1,114 @@
+//publish.js
+//获取应用实例
+const app = getApp()
+Page({
+  data: {
+    multiIndex: [0, 0, 0],
+    region: ['省', '市', '区/县'],
+    customItem: '全部',
+    tempFilePaths:[],
+
+    /* 选择服务picker */
+    array: ['我要收购', '我要出售'],
+    index: 0,
+    typeArray: ['水果', '蔬菜', '禽畜牧蛋肉', '中药材', '种苗', '坚果干果', '农副/副食', '粮油作物', '水产', '绿化苗木', '食用菌', '特种养殖', '经济作物', '花卉盆景'],
+    typeIndex: 0,
+    imgArray: ''
+  },
+
+  /* button交互/跳转 */
+  formSubmit: function (data) {
+    wx.navigateBack({
+      url: '../free',
+    })
+    var that = this;
+    
+    console.log("aaaaa");
+
+    var typ = data.detail.value.ser;
+    var category = this.data.typeArray[data.detail.value.typ];
+    var region = data.detail.value.place;
+    var amount = data.detail.value.count;
+    var standard = data.detail.value.spec;
+    var params = {
+      "type":typ,
+      "category":category,
+      "amount":amount,
+      "region":region,
+      "standard":standard
+    };
+    wx.request({
+      url: 'http://39.107.253.90:60001/freebusiness/save',
+      method: "POST",
+      data: params,
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+       console.log(JSON.stringify(res.data));
+      }
+    })
+
+
+
+    /* 上传图片 */
+    if(that.data.imgArray!=''){
+      console.log(that.data.imgArray[0])
+      var address = that.data.imgArray[0];
+      wx.uploadFile({
+        url: 'http://39.107.253.90:60001/freebusiness/save',
+        filePath: address,
+        name: 'file',
+        formData: {
+          'user': 'test'
+        },
+        success: function (res) {
+          var data = res.data
+          //do something
+        }
+      })
+    }
+  },
+
+  /* 品类picker */
+  bindPickerChange: function (data) {
+    console.log(data.detail.value)
+    this.setData({
+      index: data.detail.value
+    })
+  },
+
+  /* 选择服务picker */
+  bindPickerChange2: function (data) {
+    console.log(data.detail.value)
+    this.setData({
+      typeIndex: data.detail.value
+    })
+  },
+
+
+  /* 省市区选择器 */
+  bindRegionChange: function (data) {
+    console.log('picker发送选择改变，携带值为', data.detail.value)
+    this.setData({
+      region: data.detail.value
+    })
+  },
+
+  /* 获取图片 */
+  getImage: function () {
+    var that = this;
+    wx.chooseImage({
+      count: 3,
+      sizeType: ['original', 'compressed'],
+      success: function (res) {
+        //do sth
+        console.log(res.tempFilePaths)
+        console.log(res)
+        that.setData({
+          imgArray: res.tempFilePaths
+        })
+      }
+    })
+  },
+})

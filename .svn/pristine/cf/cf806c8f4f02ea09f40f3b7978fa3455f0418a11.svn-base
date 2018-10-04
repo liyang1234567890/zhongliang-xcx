@@ -1,0 +1,49 @@
+<!--pages/free/publish/publish.wxml-->
+<view class='header'>
+  <text class='name'>发布信息</text>
+</view>
+<view class='content'>
+  <view class="section_1">
+    <picker bindchange="bindPickerChange" value="index" range="array">
+      <view class="picker_1">
+        选择服务：{{array[index]}}
+      </view>
+    </picker>
+    <picker bindchange="bindPickerChange" value="secIndex" range="secArray">
+      <view class="picker_2">
+        品类：{{secArray[secIndex]}}
+      </view>
+    </picker>
+  </view>
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells__title">交货地</view>
+      <view class="weui-cells weui-cells_after-title">
+       <view class="weui-cell weui-cell_input">
+         <input class="weui-input"/>
+       </view>
+      </view>
+      <view class="weui-cells__title">数量</view>
+      <view class="weui-cells weui-cells_after-title">
+       <view class="weui-cell weui-cell_input">
+         <input class="weui-input"/>
+       </view>
+      </view>
+      <view class="weui-cells__title">规格</view>
+      <view class="weui-cells weui-cells_after-title">
+       <view class="weui-cell weui-cell_input">
+         <input class="weui-input"/>
+       </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+
+
+
+
+
+<button bindtap='toPublish'>aaa</button>

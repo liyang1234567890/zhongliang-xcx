@@ -1,0 +1,9 @@
+<!--pages/mine/recIntent/recIntent.wxml-->
+<import src='../common/empty.wxml' />
+
+<view class='contianer'>
+<block wx:if='{{intention.length==0}}'>
+  <template is='empty' data="{{text:'您的数据是空哒~'}}" />
+</block>
+
+</view>

@@ -1,0 +1,68 @@
+
+.header{
+  height: 200rpx;
+}
+.header-box{
+  line-height: 200rpx;
+  height: 100%;
+  position: relative; 
+}
+.box{
+   margin: 0 5% 0 10%;  
+   display: flex;
+   justify-content: space-between; 
+}
+.box-btn{
+  color: #ccc;
+  font-size: 28rpx;
+}
+.box-btnS{
+  color: #f00;
+  font-size: 28rpx;
+}
+.mImg{
+  height: 90%;
+  width: 180rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; 
+  right: 0;
+   transform: translateY(-50%); 
+}
+
+
+.mFun{
+  /* margin-top: 30rpx; */
+  background: #fff;
+}
+.mFun>view{
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  font-size: 32rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.mFun .mFun-last{
+  border-bottom: 1px solid #bbb;
+  border-top: none;
+}
+.mFunSpe{
+  margin-top: 20rpx;
+}
+
+.setMsg{
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20rpx;    
+  width: 90%;
+  bottom: 20rpx;  
+  background: #1195db;
+}
+.setText{
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,16 @@
+<view class='box'>
+<!-- 照片接口 -->
+  <view class='uploadImg' bindtap='openImg'>
+    <view class='explain'>点击上传实力照片<image src='../../../../mock/images/empty.png'></image></view>
+  </view>
+  <view class='uploadImg'>
+    <view class='explain'>最多可上传四张实力照片<image ></image></view>
+  </view>
+</view>
+
+
+
+
+<view class='setMsg'>
+  <view bindtap='logout' class='setText'>提交</view>
+</view> 

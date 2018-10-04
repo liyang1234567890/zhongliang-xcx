@@ -1,0 +1,33 @@
+<!--pages/free/exchange/exchange.wxml-->
+<view class='header'>
+  <view class='header-left'>
+    <image class='person'     src='../../../mock/images/person.png'></image>
+    <view class='content-right'>
+      <view class='name'>李女士</view>
+      <view class='identity'>综合经营</view>
+    </view>
+  </view>
+
+  <view class='header-right'>
+    <view class='mine'>我的积分</view>
+    <view class='total-integral'>
+      <image class='money' src='../../../mock/images/money.png'></image>
+      <view class='amount'>2000</view>
+    </view>
+  </view>
+</view>
+
+<view class='introduce' wx:for='{{array}}'>
+  <view class='gift'>
+  <image src='../../../mock/images/red.png'></image>
+  </view>
+    <view class='content'>
+      <view class='prize'>{{item.gift}}</view>
+      <view class='count'>{{item.count}}</view>
+      <view class='information'>{{item.information}}</view>
+    </view>
+      <view class='button'>
+        <navigator url='../address/address'>兑换</navigator>
+      </view>
+</view>
+

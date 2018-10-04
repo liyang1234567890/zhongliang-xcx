@@ -1,0 +1,110 @@
+/* swiper start */
+.swiper{
+  margin-bottom: 40rpx;
+}
+.slide-image{
+  width: 100%
+}
+/* swiper end */
+
+/* buy_product_detail  start*/
+.buy_product_detail{
+  height: 500rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.product_detail_nav{
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 30rpx;
+}
+.product_detail_nav .group{
+  /* width: 30rpx;
+  height: 30rpx; */
+  float: left;
+  margin-right: 60rpx;
+}
+.product_detail_name{
+  float: left;
+  color: #2c2b2b
+}
+.product_detail_price{
+  float: right;
+  color:red
+}
+.product_detail_message{
+  font-size: 30rpx;
+  margin-top: 40rpx;
+}
+.product_detail_message view{
+  margin-top: 40rpx;
+}
+.product_detail_time .group{
+  float: left; 
+}
+.product_detail_time{
+  /* height: 70rpx;
+  line-height: 70rpx; */
+  float: right; 
+  font-size: 35rpx;
+  margin-top: 30rpx;
+}
+/* buy_product_detail  end*/
+
+
+/* sellers_Information  start */
+.sellers_Information{
+  height: 500rpx;
+  margin: 0 30rpx;
+  border-top:5px solid #ddd;
+  border-bottom:5px solid #ddd;  
+}
+.sellers_message{
+  height: 170rpx;
+  margin-top: 50rpx;
+}
+ .sellers_message_name{
+  width: 50%;
+  height: 170rpx;
+  border-right: 1px solid #ddd;
+  float: left
+} 
+.sellers_img{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  /* margin-left: 40rpx; */
+}
+.sellers_message_left{
+  float: left;
+  margin-right: 30rpx;
+}
+.sellers_message_right{
+  height: 75rpx;
+  line-height: 75rpx;
+  float: left;
+}
+.sellers_phones{
+  width: 48%;
+  float: right;
+}
+.sellers_phones_img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.sellers_phones{
+  float: left;
+  margin-left: 10rpx;
+  padding-top: 25rpx;
+}
+.sellers_phones_left{
+  float: left;
+  margin-right: 20rpx;
+}
+.sellers_phones_right{
+  float: left
+}
+.sellers_phones_btn{
+  background-color: #3285ff
+}
+/* sellers_Information  end */

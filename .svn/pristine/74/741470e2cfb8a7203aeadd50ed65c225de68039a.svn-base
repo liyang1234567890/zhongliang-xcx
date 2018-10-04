@@ -1,0 +1,14 @@
+// pages/mine/recIntent/recIntent.js
+Page({
+  data: {
+    intention: [
+      {
+        name: 'zhangsan',
+        business: '综合经营',
+        personalImg: '',
+        item: ['玉米'],
+        time: ''
+      }
+    ]
+  }
+})

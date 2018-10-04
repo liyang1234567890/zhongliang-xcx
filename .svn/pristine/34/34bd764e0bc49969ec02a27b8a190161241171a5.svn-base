@@ -1,0 +1,66 @@
+<!--pages/order/order.wxml-->
+<view class="topbar">
+    <view class="title">订单买卖</view>
+    <view class="kind-btn">
+            <button bindtap="clickMe" class="aa">玉米</button>
+            <button>小麦</button>
+            <button>大豆</button>
+            <button>水稻</button>
+            <picker mode="region"  value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange">
+                <view class="picker">
+                <!-- {{region[1]}}-{{region[2]}} -->
+                </view>
+              </picker>
+        </view> 
+</view>
+
+
+
+<view class="kind-meg">
+
+
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>   
+     <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>    
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>   
+     <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+    <scroll-view >
+        <view>地区:中粮订单</view>
+        <view>品类:玉米</view>
+        <view>产量:120万亩</view>
+    </scroll-view>
+</view>
+<view class="footer-meg">
+    <view>你未开通订单买卖</view>
+    <view>点我去开通订单买卖</view>
+</view>

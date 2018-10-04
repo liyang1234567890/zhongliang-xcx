@@ -1,0 +1,27 @@
+<view class='msg'>
+  <view class='title'>用户名:</view>
+  <view class='content'>sdk18846444888</view>
+</view>
+<view class='msg'>
+  <view class='title'>名 称:</view>
+  <input placeholder='点击填写名称'></input>
+</view>
+<view class='msg'>
+  <view class='title'>电 话:</view>
+  <view class='content'>188****4888</view>
+</view>
+<view class='msg'>
+  <view class='title'>地 区:</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+<!-- 显示数据 -->
+  <view class='contentS'>点击选择地区</view>
+  </picker>
+</view>
+<view class='msg msgS'>
+  <view class='title'>详 细:</view>
+  <input placeholder='点击输入详细地址' class='inputS'></input>
+</view>
+
+<view class='setMsg' bindtap='sendMsg'>
+  <view bindtap='logout' class='setText'>提交</view>
+</view>

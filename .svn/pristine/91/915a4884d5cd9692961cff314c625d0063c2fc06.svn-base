@@ -1,0 +1,23 @@
+<!--pages/mine/means/means.wxml-->
+
+<view class='mFun'>
+  <view>
+    <navigator>
+      <view bindtap='clearCache' class='box'>清空缓存</view>    
+    </navigator>
+  </view>
+  <view>
+    <navigator url='feedback/feedback'>
+      <view class='box'>意见反馈</view>    
+    </navigator>
+  </view>
+  <view>
+    <navigator url='about/about'>
+      <view class='box'>关于我们</view>    
+    </navigator>
+  </view>
+</view>
+
+<view class='setMsg'>
+  <view bindtap='logout' class='setText'>注销登录</view>
+</view>

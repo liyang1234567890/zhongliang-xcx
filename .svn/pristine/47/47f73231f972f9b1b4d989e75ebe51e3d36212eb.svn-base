@@ -1,0 +1,47 @@
+// pages/rich/login/login.js
+var util = require('../../../utils/util.js');
+Page({
+  data:{
+      usertelphone:''
+  },
+
+
+  userNameInput: function (e) {
+
+    this.setData({
+      usertelphone: e.detail.value
+    })
+    console.log(this.data.usertelphone)
+  },
+
+
+  priBotton:function(){
+  wx.navigateTo({
+    url: '../../order/dredge/dredge',
+  })
+  },
+  headerBack:function(){
+    wx.switchTab({
+      url: '../rich'
+    })
+  },
+  index: function(){
+    wx.switchTab({
+      url: 'index/index'
+    })
+  },
+  code:function(){
+    var that = this;
+    wx.request({
+      url: 'http://39.107.253.90:60001/customer/getVerifyCode',
+      data: {
+        phoneNumbers:that.data.usertelphone
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(that.data.usertelphone)
+         console.log(res.data)
+  }
+})
+  }
+})

@@ -1,0 +1,89 @@
+/**publish.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 400rpx;
+}
+
+.input{
+  border: 1px solid #1195db;
+  margin-top: 30rpx;
+  position: absolute;
+  margin-left: 188rpx;
+}
+
+.tittle{
+  margin-top: 30rpx;
+}
+
+.publish{
+  position: center;
+  border: 1px solid #1195db;
+  margin-top: 30rpx;
+  top: 50rpx;
+}
+
+.specification.input{
+  position: fixed;
+  margin-right: 100rpx; 
+}
+
+.uploadPic{
+  border: 1px solid #1195db;
+  float: right;
+  height: 300rpx;
+  margin-top: 300rpx;
+  width: 500rpx;
+  margin-left: 38rpx;
+}
+
+.describe{
+  border: 1px solid #1195db;
+  margin-top: 30rpx;
+  position: absolute;
+  margin-left: 188rpx;
+  width: 500rpx;
+}
+
+.addPicTittle{
+  margin-top: 300rpx;
+}
+
+.picker{
+  border:  1px solid #1195db;
+  margin-top: 30rpx;
+  position: absolute;
+  margin-left: 188rpx;
+  width: 434rpx;
+}
+
+.addVideoTittle{
+  margin-top: 30rpx;
+  border: 1px solid #1195db;
+  right: 22rpx;
+  line-height: 300rpx;
+}
+
+.uploadVideo{
+  border: 1px solid #1195db;
+  height: 300rpx;
+  margin-top: 30rpx;
+  width: 500rpx;
+  right: 16rpx;
+}
+

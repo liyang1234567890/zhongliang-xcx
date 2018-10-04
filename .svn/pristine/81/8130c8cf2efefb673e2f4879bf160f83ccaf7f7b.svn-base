@@ -1,0 +1,3 @@
+/* pages/mine/checkHistory/checkHistory.wxss */
+@import '../common/common.wxss';
+@import '../pubInfor/pubInfor.wxss';

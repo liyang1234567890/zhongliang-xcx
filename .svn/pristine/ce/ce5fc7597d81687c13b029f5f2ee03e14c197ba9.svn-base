@@ -1,0 +1,87 @@
+/* pages/help/helpmore/povertyMessage/povertyMessage.wxss */
+.pM-title{
+  z-index: 2;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  font-size: 34rpx;
+  font-weight: 600;
+}
+/*蓝线  */
+.line-css{
+  height: 30rpx;
+  background-color: #fff;
+  border-bottom: 5rpx solid #2aa7de;
+  width: 720rpx;
+  margin: 0 auto 20rpx;
+  position: relative;
+  top: -20rpx;
+}
+.line-css::before{
+  z-index: -1;
+  content: "";
+  background-color: #fff;
+  width: 660rpx;  
+  height: 20rpx;  
+  position: absolute;
+  top: 1rpx;   
+  right: 30rpx;   
+  /*旋转  */
+  transform:rotate(2deg);
+  -ms-transform:rotate(2deg); 	/* IE 9 */
+  -moz-transform:rotate(2deg); 	/* Firefox */
+  -webkit-transform:rotate(2deg); /* Safari 和 Chrome */
+  -o-transform:rotate(2deg); 	/* Opera */  
+   /*阴影*/
+  -webkit-box-shadow: 0 12rpx 20rpx rgba(0, 0, 0, 0.3);   
+  -moz-box-shadow: 0 12rpx 20rpx rgba(0, 0, 0, 0.3);   
+  -o-box-shadow: 0 12rpx 20rpx rgba(0, 0, 0, 0.3);   
+  box-shadow: 0 12rpx 16rpx rgba(0, 0, 0, 0.3);   
+  
+}
+.line-css::after{
+  z-index: -2;
+  content: "";
+  background-color: #fff;
+  width: 660rpx;  
+  height: 20rpx;  
+  position: absolute;
+  top: 1rpx;
+  left: 30rpx;   
+  /*旋转  */
+  transform:rotate(-2deg);
+  -ms-transform:rotate(-2deg); 	/* IE 9 */
+  -moz-transform:rotate(-2deg); 	/* Firefox */
+  -webkit-transform:rotate(-2deg); /* Safari 和 Chrome */
+  -o-transform:rotate(-2deg); 	/* Opera */ 
+  /*阴影  */
+  -webkit-box-shadow: 0 12rpx 20rpx rgba(0, 0, 0, 0.3);   
+  -moz-box-shadow: 0 12rpx 20rpx rgba(0, 0, 0, 0.3);   
+  -o-box-shadow: 0 12rpx 20rpx rgba(0, 0, 0, 0.3);   
+  box-shadow: 0 12rpx 16rpx rgba(0, 0, 0, 0.3);   
+}
+.table {
+  width: 98%;
+  display: -webkit-box; 
+}
+.thead{
+  text-align: left;
+}
+.thead.left{
+  -webkit-box-flex: 1;
+}
+.thead.right{
+  -webkit-box-flex: 1;
+}
+.th{
+  background-color:#f0eff5;  
+}
+.th,.td{
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: left;
+  border-bottom:5rpx solid #e5e5e7; 
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}

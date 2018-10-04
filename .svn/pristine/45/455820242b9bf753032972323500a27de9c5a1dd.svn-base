@@ -1,0 +1,15 @@
+.empty-wrapper{
+  margin: 30rpx 0;
+}
+.empty-image{
+  text-align: center;
+}
+.empty-image image{
+  width: 391rpx;
+  height: 228rpx;
+  margin-top: 200rpx;
+}
+.empty-text{
+  text-align: center;
+  color: #ccc;
+}

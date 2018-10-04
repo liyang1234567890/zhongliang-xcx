@@ -1,0 +1,118 @@
+<view class="search-box">
+    <view class='searchbox'>
+  <input class='search' placeholder='请输入规格，交货地，品牌' placeholder-style='color:#7fc7a1 ;font-size:28rpx' bindtap='tosearch'></input>
+</view>
+  <button bindtap='search' class="btn-search" >搜索</button>
+</view>
+<view class="classitify">
+     <view class="varieties comm">
+     <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" custom-item="{{customItem}}">
+               <text>品种</text>
+          </picker>
+     </view>
+     <view class="region comm">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+               <text>地区</text>
+          </picker>
+     </view>
+     <view class="buy comm">
+          <picker mode="selector" range="{{arrayBusiness}}" value="{{indexBusiness}}" bindchange="listenerBusinessPickerSelected">
+               <text>买卖</text>
+          </picker>
+     </view>
+     <view class="select comm" bindtap="showDialogBtn">筛选</view>
+</view>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+     <view class="unit">单位</view>
+     <view class="weight">
+          <view data-unit='{{index}}' class="weight-comm {{currentUnit==index?'unit-selected':''}}" wx:for='{{unit}}' wx:key="{{index}}" bindtap='changeUnit'>{{item}}</view>
+     </view>
+     <form bindsubmit="formSubmit" bindreset="formReset">
+          <view class="num">数量范围</view>
+          <view class="range">
+               <view class="range-comm">
+                    <input placeholder="最低数量" name="minnummber" placeholder-style="text-align:center;color:#7fc7a1" />
+               </view>
+               <view class="range">——</view>
+               <view class="range-comm">
+                    <input placeholder="最低数量" name="maxnummber" placeholder-style="text-align:center;color:#7fc7a1" />
+               </view>
+          </view>
+          <view class="price">价格区间</view>
+          <view class="range">
+               <view class="range-comm">
+                    <input placeholder="最低价格" name="minPrice" placeholder-style="text-align:center;color:#7fc7a1" />
+               </view>
+               <view class="range">——</view>
+               <view class="range-comm">
+                    <input placeholder="最低价格" name="maxPrice" placeholder-style="text-align:center;color:#7fc7a1" />
+               </view>
+          </view>
+          <view class="btn-footer">
+               <button class="footer-comm reset" form-type='reset'>重置</button>
+               <button class="footer-comm" bindtap='hideDialogBtn' form-type='submit'>确定</button>
+          </view>
+     </form>
+</view>
+ <scroll-view scroll-y='true' style="height: 1000rpx;">
+      <block wx:for="{{freeBusinessesList}}" wx:key="{{index}}">
+           <view class='message-buy'  wx:if='{{item.type==1}} ' bindtap='toBuy'>
+            <view class='mesheader'>
+              <view class='sbkind'><image src='../../../mock/images/icon/index_19.png' class='iconsellbuy'></image><view class='meskind'>{{item.category}}</view>
+              </view>
+              <view class='sbprice'><image src='../../../mock/images/icon/index_22.png' class='icon-bprice'></image><view class='mes-bprice'>{{item.price}}元/{{item.unit}}</view> 
+            </view>
+            </view>
+            <view class='mescontent'>
+            <view class='mctop'>
+              <view class='brand'><text class='mes' decode='true'>品&emsp;牌：</text><text class='mestext'>{{item.brand}}</text></view>
+              <view class='quantity'><text class='mes' decode='true'>数量：</text><text class='mestext'>{{item.amount}}{{item.unit}}</text></view>
+            </view>
+            <view class='mcmid'>
+              <view class='del-place'><text class='mes' decode='true'>交货地：</text><text class='mestext'>{{item.place}}</text></view>
+              <view class='norms'><text class='mes' decode='true'>规格：</text><text class='mestext'>{{item.standard}}</text></view>
+            </view>
+            <view class='mcbottom'>
+              <view class='mcbleft'><image class='onlinebuy' src='../../../mock/images/icon/index_78.png'></image>
+              <image class='personal' src='../../../mock/images/icon/index_40.png'></image>
+              <image class='realname' src='../../../mock/images/icon/index_41.png'></image>
+              </view>
+              <view class='mcbright'>
+              <image class='time' src='../../../mock/images/icon/index_48.png'></image><text class='mestext'>{{item.create_time}}</text>
+              </view>
+            </view>
+            </view>
+          </view> 
+          <view class='message-sell' wx:if='{{item.type==2}}'  bindtap='tosellers'>
+            <view class='mesheader'>
+              <view class='sbkind'><image src='../../../mock/images/icon/index_29.png' class='iconsellbuy'></image><view class='meskind'>{{item.category}}</view>
+              </view>
+              <view class='sbprice'><image src='../../../mock/images/icon/index_30.png' class='icon-bprice'></image><view class='mes-sprice'>{{item.price}}元/{{item.unit}}</view> 
+            </view>
+            </view>
+            <view class='mescontent'>
+            <view class='mctop'>
+              <view class='brand'><text class='mes' decode='true'>品&emsp;牌：</text><text class='mestext'>{{item.brand}}</text></view>
+              <view class='quantity'><text class='mes' decode='true'>数量：</text><text class='mestext'>{{item.amount}}{{item.unit}}</text></view>
+            </view>
+            <view class='mcmid'>
+              <view class='del-place'><text class='mes' decode='true'>交货地：</text><text class='mestext'>{{item.place}}</text></view>
+              <view class='norms'><text class='mes' decode='true'>规格：</text><text class='mestext'>{{item.standard}}</text></view>
+            </view>
+            <view class='mcbottom'>
+              <view class='mcbleft'><image class='onlinebuy' src='../../../mock/images/icon/index_59.png'></image>
+              <image class='personal' src='../../../mock/images/icon/index_44.png'></image>
+              <image class='realname' src='../../../mock/images/icon/index_36.png'></image>
+              </view>
+              <view class='mcbright'>
+              <image class='time' src='../../../mock/images/icon/index_48.png'></image><text class='mestext'>{{item.create_time}}</text>
+              </view>
+            </view>
+            </view>
+          </view>
+      </block>
+      </scroll-view>
+  
+   

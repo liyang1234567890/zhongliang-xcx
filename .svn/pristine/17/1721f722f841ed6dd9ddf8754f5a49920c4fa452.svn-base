@@ -1,0 +1,20 @@
+<!--pages/free/money/money.wxml-->
+<view class='container'>
+  <view class='price-draw'>积分抽奖</view>
+  <view class='price-type'>
+    <button class='one'>单次抽奖</button>
+    <button class='continue'>连续抽奖</button>
+  </view>
+  <view class="container-out">
+    <view class="circle" wx:for="{{circleList}}" 
+    style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;   background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};"></view>
+  <view class="container-in">
+    <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};">
+      <image class="award-image" src="{{item.imageAward}}"></image>
+    </view>
+    <view class="start-btn" bindtap="startGame" style=" background-color:{{isRunning?'#e7930a':'#ffe400'}}">START</view>
+  </view>
+</view>
+<button class='receive' bindtap='toNavigate'>领取奖品</button>
+</view>
+

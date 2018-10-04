@@ -1,0 +1,33 @@
+var qcloud = require('./vendor/wafer2-client-sdk/index')
+var config = require('./config')
+
+App({
+  globalData:{
+    openid: ''
+  },
+    onLaunch: function () {
+        qcloud.setLoginUrl(config.service.loginUrl)
+        var that = this
+        wx.login({
+          success: function (res) {
+            if (res.code) {
+              //发起网络请求
+              wx.request({
+                url: `https://api.weixin.qq.com/sns/jscode2session?appid=wx10031d2233afbcba&secret=759c54e1f897391b2f9bfb07a0fb66fd&js_code=${res.code}&grant_type=authorization_code`,
+                success: function (res) {
+                  that.globalData.openid = res.data.openid
+                  //判断 openidReadyCallback 是否已经定义
+                  //若没定义，说明这段代码是在Page.onLoad 定义 openidReadyCallback 之前运行的，说明app.globalInfo.openid 已经被赋值了
+                  //若已经定义，说明Page.onLoad在该语句返回的success结果之前已经运行了。此时的app.globalInfo.openid 的值是空的，所以还需要再重新对其进行赋值
+                  if (that.openidReadyCallback){
+                    that.openidReadyCallback(res.data)
+                  }
+                }
+              })
+            } else {
+              console.log('登录失败！' + res.errMsg)
+            }
+          }
+        })
+    }
+})

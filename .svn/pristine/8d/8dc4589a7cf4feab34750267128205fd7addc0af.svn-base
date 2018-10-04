@@ -1,0 +1,33 @@
+/* pages/free/integral/integral.wxss */
+.container{
+  margin: 80rpx 40rpx 80rpx 40rpx;
+}  
+.order{
+  font-family: "Microsoft YaHei";
+  font-size: 60rpx;
+  color: #FF3030;
+}
+.total{
+  display: flex;
+  flex-direction: column;
+  margin-top: 70rpx;  
+}
+.award{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70rpx;  
+  width: 100%;
+}
+button{
+  width: 250rpx;
+  height: 100rpx;
+  border: 1px solid #ccc;
+}
+.rule{
+  height: 800rpx;
+  border: 2px solid #ccc;
+  word-break: break-all;
+  margin-top: 70rpx;  
+}

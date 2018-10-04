@@ -1,0 +1,110 @@
+// pages/mine/category/cateSub/cateSub.js
+Page({
+  data: {
+    sub: [],
+    category: [{
+      name: '水果',
+      sub: [{
+        subName: '核果仁果类',
+        subSub: ['梨', '苹果', '毛桃', '李子', '黄桃', '冬枣', '水蜜桃','红枣','油桃','石榴','蟠桃','黄皮果']
+      }, {
+      subName: '瓜果类',
+      subSub: ['西瓜','甜瓜', '哈密瓜','香瓜']
+      }, {
+        subName: '浆果类',
+        subSub: ['葡萄', '猕猴桃', '无花果', '蓝莓', '圣女果', '柿子', '树莓', '草莓']
+      },{
+      subName: '热带水果',
+      subSub: ['芒果','百香果','火龙果','柠檬']
+      }, {
+      subName: '柑橘类',
+      subSub: ['柑橘', '脐橙', '砂糖橘', '枸橘果']
+      }]
+    }, {
+      name: '蔬菜',
+      sub: [{
+        subName: '当季热门',
+        subSub: ['鲜辣椒', '土豆', '红薯', '冬瓜', '西红柿', '大蒜', '洋葱', '南瓜', '豆角', '莲藕', '黄瓜', '茄子']
+      }, {
+        subName: '茄果类',
+        subSub: ['鲜辣椒', '西红柿', '茄子', '青椒', '菜用玉米', '干辣椒']
+      }, {
+        subName: '芽苗类',
+        subSub: ['花生芽', '豆芽', '刺脑包', '空心菜亩', '芋芽菜', '刺龙芽菜', '苜宿芽', '宋柳芽苗菜']
+      }, {
+        subName: '笋类',
+        subSub: ['竹笋', '芦笋', '笋干', '酸笋']
+      }, {
+        subName: '根茎类',
+        subSub: ['萝卜', '百合', '魔芋', '芦蒿']
+      }]
+      }, {
+        name: '禽畜牧蛋肉',
+        sub: [{
+          subName: '当季热门',
+          subSub: ['鸡蛋', '土鸡', '鹅', '仔猪', '肉羊', '鸭']
+        }, {
+          subName: '蛋类',
+          subSub: ['鸡蛋', '鸭蛋', '鹅蛋', '松花蛋', '咸鸭蛋', '鸽子蛋']
+        }, {
+          subName: '活畜',
+          subSub: ['仔猪', '肉羊', '生猪', '肉牛', '肉兔', '母猪', '肉狗', '肉驴']
+        }, {
+          subName: '乳类',
+          subSub: ['乳扇', '羊奶', '酥油', '奶渣']
+        }, {
+          subName: '鲜肉类',
+          subSub: ['牛肉', '猪肉', '羊肉', '鸡肉']
+        }]
+      }, {
+      name: '中药材',
+      sub: []
+    }, {
+      name: '种苗',
+      sub: []
+    }, {
+      name: '坚果干果',
+      sub: []
+    }, {
+      name: '农副',
+      sub: []
+    }, {
+      name: '粮油作物',
+      sub: []
+    }, {
+      name: '水产',
+      sub: []
+    }, {
+      name: '绿化苗木',
+      sub: []
+    }, {
+      name: '食用菌',
+      sub: []
+    }, {
+      name: '特种养殖',
+      sub: []
+    }, {
+      name: '经济作物',
+      sub: []
+    }, {
+      name: '花卉盆景',
+      sub: []
+    }, {
+      name: '其他',
+      sub: []
+    }]
+  },
+  onLoad: function(options){
+    var index = options.index
+    this.setData({
+      sub: this.data.category[index].sub
+    })
+    // console.log(this.data.category[index].sub)
+    wx.setNavigationBarTitle({
+      title: this.data.category[index].name
+    })
+  },
+  onReady : function () {
+    
+  }
+})

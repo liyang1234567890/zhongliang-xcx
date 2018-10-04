@@ -1,0 +1,10 @@
+/* pages/free/publish/publish.wxss */
+
+.header{
+  text-align: center;
+  height: 100;
+  line-height: 100;
+}
+.page{
+  line-height: 2;
+}

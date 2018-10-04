@@ -1,0 +1,64 @@
+//input.js
+var utils = require('../../../../../utils/util');
+var openid = wx.getStorageSync('openid');
+
+Page({
+  data: {
+    focus: false,
+    pinlie: '',
+    shuliang: '',
+    jiage: '',
+    qita: '',
+  },
+  bindButtonTap: function() {
+    this.setData({
+      focus: true
+    })
+  },
+  pinlie: function(e) {
+    this.setData({
+      pinlie: e.detail.value
+    })
+  },
+  shuliang: function(e) {
+    this.setData({
+      shuliang: e.detail.value
+    })
+  },
+  jiage: function(e) {
+    this.setData({
+      jiage: e.detail.value
+    })
+  },
+  qita: function(e) {
+    this.setData({
+      qita: e.detail.value
+    })
+  },
+  queren:function(e){
+    var that = this
+    wx.getStorage({
+      key: 'key',
+      success: function(res) {
+        fb_id:res.fb_id
+      } 
+    })
+    wx.request({
+      url:utils.APP_HOST + "freebusiness/savedetail",
+      methods:"POST",
+      data:{
+        openid:openid,
+        fb_id:"fb_id",
+        inputValue:this.data.pinlie,
+        inputValue:this.data.shuliang,
+        inputValue:this.data.jiage,
+      },
+      success: function (res) {
+        console.log(res);
+      }
+    }),
+    wx.navigateTo({
+      url: `../../../../mine/hisTrace/hisTrace`,
+    })
+  }
+})

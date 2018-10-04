@@ -1,0 +1,168 @@
+<!--pages/order/order.wxml-->
+
+<!-- header start -->
+<view class="header">
+
+    <view class="kind">
+        <view bindtap="selectKind" wx:for='{{category}}' data-id='{{index}}' class="{{currentId==index?'selectKind':''}}">
+            <block wx:if='{{currentId==index}}'>
+                <image src="../../mock/images/order/category_select_{{index+1}}.png"></image>
+            </block>
+            <block wx:else>
+                <image src="../../mock/images/order/category{{index+1}}.png"></image>
+            </block>
+            <text>{{item}}</text>
+        </view>
+        <view class="area">
+            <image src="../../mock/images/order/pinlei.png"></image>
+            <picker mode="region" value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange">
+                <text>品类</text>
+            </picker>
+        </view>
+        <view class="area">
+            <image src="../../mock/images/order/diqu.png"></image>
+            <picker mode="region" value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange">
+                <text>地区</text>
+            </picker>
+        </view>
+    </view>
+
+</view>
+<!-- header end -->
+
+<!-- order start -->
+<scroll-view class="order" scroll-y="ture">
+    <view class="order-message " wx:for="{{orderym}}">
+
+        <view class="order-header ">
+            <image src="../../mock/images/order/dingdan.svg">
+
+            </image>
+            <text class="order-left">{{item.ym}}</text>
+            <view class="order-right">{{item.zl}}</view>
+
+        </view>
+
+        <view class="order-footer ">
+            <view>
+                <image src="../../mock/images/order/diqu.png"></image>
+                <text>地 区 : </text>
+                <text class="meg">{{item.dq}}</text>
+            </view>
+            <view>
+                <image src="../../mock/images/order/pinlei.png"></image>
+                <text>品 类 : </text>
+                <text class="meg">{{item.pl}}</text>
+            </view>
+            <view>
+                <image src="../../mock/images/order/chanliang.svg"></image>
+                <text>产 量 : </text>
+                <text class="meg">{{item.cl}}</text>
+            </view>
+        </view>
+
+    </view>
+</scroll-view>
+<!-- order end -->
+
+
+<!-- 会员信息开始 -->
+<view class="footer" wx:if="{{boll}}">
+    <view class="footer-message">
+        <view class="message">
+            <view class="vip">
+                <image src='../../mock/images/order/huiyuan.png'></image>
+                <text>会员信息</text>
+            </view>
+            <view class="message-name">
+                <view>
+                    合作社:
+                    <text>牡丹江</text>
+                </view>
+                <view>
+                    品类:
+                    <text>玉米</text>
+                </view>
+                <view>
+                    社员:
+                    <text>李某某</text>
+                </view>
+            </view>
+            <view class="message-area">
+                <view>
+                    拥有土地:
+                    <text>300亩</text>
+                </view>
+                <view>
+                    卖出价格:
+                    <text>2400元/吨</text>
+                </view>
+                <view>
+                    订单:
+                    <text>中粮订单</text>
+                </view>
+            </view>
+        </view>
+        <image src='../../mock/images/order/border.png' class="border"></image>
+        <view class="situat">
+            <view class="situat-left">
+                <view class="vip">
+                    <image src="../../mock/images/order/nongji.svg"></image>
+                    <text>农资、农机情况</text>
+                </view>
+                <view class="situat-nj">
+                    <view>农药:
+                        <text>101号</text>
+                    </view>
+                    <view>化肥:
+                        <text>施可丰</text>
+                    </view>
+                    <view>农机:
+                        <text>拖拉机</text>
+                    </view>
+                    <view>种子:
+                        <text>玉米</text>
+                    </view>
+                </view>
+            </view>
+            <view class="situat-rihgt">
+                <view class="vip">
+                    <image src="../../mock/images/order/chanliang.png"></image>
+                    <text>粮食买卖情况</text>
+                </view>
+
+                <view class="situat-ls">
+                    <view>物流:
+                        <text>顺丰</text>
+                    </view>
+                    <view>卖出时间:
+                        <text>2018-9-9</text>
+                    </view>
+                    <view>烘干塔:
+                        <text>5号</text>
+                    </view>
+                    <view>粮库:
+                        <text>6号</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+
+
+
+
+    </view>
+
+</view>
+
+<view class="member" bindtap="change">
+    <text>{{boll==true?"展开会员信息":"收起会员信息"}}</text>
+    <block wx:if='{{boll==true}}'>
+        <image src="../../mock/images/order/xiangshang.png"></image>
+    </block>
+    <block wx:else>
+        <image src="../../mock/images/order/xiangxia.png"></image>
+    </block>
+</view>
+<!-- 会员信息结束 -->

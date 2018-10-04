@@ -1,0 +1,31 @@
+<!--pages/help/helpmore/applyPoverty/applyPoverty.wxml-->
+<view class='container'>
+  <view class='form-item app-add'>
+    <label class='form-label'>选择地址：</label>
+    <picker class='form-input' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        {{region[0]}} {{region[1]}} {{region[2]}}
+      </view>
+    </picker>
+  </view>
+  <view class='form-item'>
+    <label class='form-label'>姓名：</label>
+    <input class='form-input {{focusInputn}}' value='{{addData}}' bindfocus='focusInputn' type='text'></input>
+  </view>
+  <view class='form-item'>
+    <label class='form-label'>电话：</label>
+    <input class='form-input {{focusInputp}}' value='{{phone}}' bindfocus='focusInputp' type='number'></input>
+  </view>
+
+  <view class='form-item'>
+    <label class='form-label moreaddress'>详细地址：</label>
+    <input bindinput='ressInput' class='form-input'></input>
+  </view>
+  <view class='form-item app-dem'>
+    <label class='form-label'>需求：</label>
+    <textarea bindinput='demInput' class='form-input textarea'></textarea>
+  </view>
+  <view class='sub'>
+    <button hover-class='none' type="primary" bindtap='submit'>提交</button>
+  </view>
+</view>

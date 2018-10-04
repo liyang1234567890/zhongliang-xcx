@@ -1,0 +1,46 @@
+/**index.wxss**/
+.bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.index {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 220rpx 0;  
+  box-sizing: border-box;
+  /* background-image: url("../../mock/images/common/index_bg.jpg");  */
+  /* background-size: cover; */
+} 
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+.userinfo-icon{
+  width: 32rpx;
+  height: 39rpx; 
+  margin-top: 100rpx;
+}
+.usermotto {
+  font-size: 28rpx;
+  color: #aaa;
+  height: 160rpx;
+  line-height: 160rpx; 
+}

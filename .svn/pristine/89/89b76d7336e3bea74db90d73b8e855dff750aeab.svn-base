@@ -1,0 +1,210 @@
+// pages/free/free.js
+
+var iutil = require('../../utils/util.js');
+var util = require('../free/getTime.js')
+// var appInstance = getApp()
+// console.log(appInstance.globalData.openid) 
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    newArr: [],
+    dataFree: [],
+    dataH: [],
+    freeBusinessesList: [],
+    swiper: [{
+      "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524479692029&di=12b6f1843b0a4dd0c66bf4e4e40b86e0&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Ddf48815fa7345982d187edd1649d5bd8%2Fb3b7d0a20cf431ad837a56124136acaf2edd9874.jpg"
+    }, {
+      "url": "http://pic.58pic.com/58pic/15/39/36/99j58PICCF7_1024.jpg"
+    }, {
+      "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524479796086&di=32b72341eb4dd52d76d4550eb9257ec3&imgtype=0&src=http%3A%2F%2Fpic32.photophoto.cn%2F20140818%2F0035035646153001_b.jpg"
+    }],
+    array: ['水果',
+      '蔬菜',
+      '禽畜蛋肉',
+      '中药材',
+      '种苗',
+      '坚果干果',
+      '农副',
+      '粮油作物',
+      '水产',
+      '绿化苗木',
+      '食用菌',
+      '特种养殖',
+      '经济作物',
+      '花卉盆景',
+
+    ],
+    currentTab: 0,
+    multiIndex: [0, 0, 0],
+    date: '2016-09-01',
+    time: '12:01',
+    region: ['黑龙江'],
+    customItem: '全部',
+
+    brand: [],
+    category: [],
+    place: [],
+    amount: [],
+    standard: [],
+    price: [],
+    unit: [],
+    freeBusinessesList: [],
+    history: [],
+    openid: '',
+    fb_id: ""
+  },
+  onLoad: function (options) {
+
+    var time = util.formatTime(new Date());
+    // 再通过setData更改Page()里面的data，动态更新页面的数据 
+    this.setData({
+      time: time
+    });
+    var that = this;
+    wx.request({
+      url: iutil.APP_HOST + '/freebusiness/findfreebus',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data),
+          that.setData({
+            freeBusinessesList: res.data.freeBusinessesList.reverse(),
+          }),
+          console.log(res.data.freeBusinessesList)
+      }
+    })
+  },
+  tosearch: function () {
+    wx.navigateTo({
+      url: '../free/search/search',
+    })
+  },
+  toOrder: function () {
+    wx.switchTab({
+      url: '../order/order',
+    })
+  },
+  bindRegionChange: function (e) {
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  bindPickerChange(e) {
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  swichNav: function (e) {
+    var that = this;
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current,
+      })
+    }
+    if (e.target.dataset.current == 2) {
+      wx.request({
+        url: iutil.APP_HOST + `my/findhis?user_oid=${that.data.openid}`,
+        success: function (res) {
+          that.setData({
+            history: res.data.freeBusinessesList
+          })
+        }
+      })
+    }
+  },
+  swiperChange: function (e) {
+    var that = this;
+    this.setData({
+      currentTab: e.detail.current,
+
+    })
+    if (e.detail.current == 2) {
+      wx.request({
+        url: iutil.APP_HOST + `my/findhis?user_oid=${that.data.openid}`,
+        success: function (res) {
+          that.setData({
+            history: res.data.freeBusinessesList
+          })
+          console.log(res.data.freeBusinessesList)
+        }
+      })
+    }
+
+  },
+  toBuy: function (e) {
+    var that = this;
+    that.setData({
+      fb_id: e.currentTarget.dataset.id
+    })
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          //发起网络请求
+          wx.request({
+            url: `https://api.weixin.qq.com/sns/jscode2session?appid=wx10031d2233afbcba&secret=759c54e1f897391b2f9bfb07a0fb66fd&js_code=${res.code}&grant_type=authorization_code`,
+            success: function (res) {
+              that.setData({
+                openid: res.data.openid
+              })
+              console.log(res.data.openid)
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    }),
+      wx.request({
+        url: iutil.APP_HOST + `my/hissave?fb_id=${that.data.fb_id}&user_oid=${that.data.openid}`,
+        method: 'POST',
+        dataType: "JSON",
+      })
+    wx.navigateTo({
+      url: '../free/buy/buy',
+    })
+  },
+  toSellers: function () {
+    var that = this;
+    that.setData({
+      fb_id: e.currentTarget.dataset.id
+    })
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          //发起网络请求
+          wx.request({
+            url: `https://api.weixin.qq.com/sns/jscode2session?appid=wx10031d2233afbcba&secret=759c54e1f897391b2f9bfb07a0fb66fd&js_code=${res.code}&grant_type=authorization_code`,
+            success: function (res) {
+              that.setData({
+                openid: res.data.openid
+              })
+              console.log(res.data.openid)
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    }),
+      wx.request({
+        url: iutil.APP_HOST + `my/hissave?fb_id=${that.data.fb_id}&user_oid=${that.data.openid}`,
+        method: 'POST',
+        dataType: "JSON",
+      })
+    wx.navigateTo({
+      url: '../free/sellers/sellers',
+    })
+  },
+  toPublish: function () {
+    wx.navigateTo({
+      url: '../free/publish/publish',
+    })
+  }
+
+})

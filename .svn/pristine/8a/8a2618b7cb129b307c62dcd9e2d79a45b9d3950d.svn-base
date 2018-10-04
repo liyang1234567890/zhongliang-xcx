@@ -1,0 +1,29 @@
+
+<view class='title'
+>请选择身份，方便我们为您提供精准服务</view>
+<view class='box'>
+  <button class='box-content'>粮点</button>
+  <button class='box-content'>粮库</button>
+  <button class='box-content'>直属库</button>
+  <button class='box-content'>贸易商</button>
+  <button class='box-content'>经销商</button>
+  <button class='box-content'>代理商</button>
+  <button class='box-content'>面粉厂</button>
+  <button class='box-content'>饲料厂</button>
+  <button class='box-content'>淀粉厂</button>
+  <button class='box-content'>米厂</button>
+  <button class='box-content'>油厂</button>
+  <button class='box-content'>养殖场</button>
+  <button class='box-content'>物流</button>
+  <button class='box-content'>酒精厂</button>
+  <button class='box-content'>粮油机械</button>
+  <button class='box-content'>综合经营</button>
+  <button class='box-content'>其他</button>    
+</view>
+
+
+
+
+<!-- <view class='setMsg'>
+  <view bindtap='logout' class='setText'>确定</view>
+</view> -->

@@ -1,0 +1,112 @@
+<!--pages/order/order.wxml-->
+
+<!-- header start -->
+<view class="header">
+    <view class="header-region">请选择地区:</view>
+    <picker mode="region" value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange">
+        {{region[0]}}
+        <!-- {{region[0]} -->
+    </picker>
+    <view class="kind">
+        <button bindtap="selectKind" class="{{select == '玉米'?'select':''}}" data-crop="玉米" data-aa="1">
+            <text>玉米</text>
+            <image src="../../mock/images/order/玉米.svg"></image>
+        </button>
+        <button bindtap="selectKind" class="{{select == '小麦'?'select':''}}" data-crop="小麦" data-aa="1">
+            <text>小麦</text>
+            <image src="../../mock/images/order/小麦.svg"></image>
+        </button>
+        <button bindtap="selectKind" class="{{select == '大豆'?'select':''}}" data-crop="大豆" data-aa="1">
+            <text>大豆</text>
+            <image src="../../mock/images/order/大豆.svg"></image>
+        </button>
+        <button bindtap="selectKind" class="{{select == '水稻'?'select':''}}" data-crop="水稻" data-aa="1">
+            <text>水稻</text>
+            <image src="../../mock/images/order/水稻.svg"></image>
+        </button>
+        <button>
+            <text>更多</text>
+            <image src="../../mock/images/order/更多.svg"></image>
+        </button>
+    </view>
+</view>
+<!-- header end -->
+
+
+<scroll-view class="order" scroll-y="ture">
+    <view class="order-message" wx:for="{{orderym}}">
+        <view class="order-header clear">
+            <image src="../../mock/images/order/订单.svg"></image>
+            <view class="order-left">{{item.ym}}</view>
+            <view class="order-right">{{item.zl}}</view>
+        </view>
+        <view class="order-footer">
+            <view><image src="../../mock/images/order/定位.svg"></image><text>地 区: </text><text></text>{{item.dq}}</view>
+            <view><image src="../../mock/images/order/计划数量设置.svg"></image><text>品 类:  </text>{{item.pl}}</view>
+            <view><image src="../../mock/images/order/砼产量统计.svg"></image><text>产 量: </text> {{item.cl}}</view>
+            <view class="soild"></view>
+        </view>
+    </view>
+</scroll-view>
+<!-- <view class="footer-meg">
+    <view class="footer-text">你未开通订单买卖</view>
+    <button>点我去开通订单买卖</button>
+</view>  -->
+
+<view class="footer">
+    <view class="member">
+        <image src="../../mock/images/order/头像.svg"></image>
+        会员信息
+    </view>
+
+    <view class="message">
+        <view class="message-a">
+            <view><text> 合作社:</text> 牡丹江</view>
+            <view><text> 品类: </text>{{orderym.pl}}</view>
+            <view><text> 社员:</text> 李某某</view>
+        </view>
+        <view class="message-b">
+            <view><text> 拥有土地:</text>300亩</view>
+            <view><text> 卖出价格:</text>2400元/吨</view>
+            <view><text> 订单:</text> 中粮订单</view>
+        </view>
+    </view>
+
+    <view class="Situation">
+        <view class="Situation-left"><image src="../../mock/images/order/农机.svg"></image>农资农机情况</view>
+        <view class="Situation-rihgt"><image src="../../mock/images/order/砼产量统计.svg"></image>粮食买卖情况</view>
+    </view>
+
+    <view class="Situation-a">
+        <view>农药: 101号</view>
+        <view>化肥: 施可丰</view>
+        <view>农机: 拖拉机</view>
+        <view>种子: 玉米</view>
+
+    </view>
+    <view class="Situation-b">
+        <view>物流: 顺丰</view>
+        <view>卖出时间: 2018-9-9</view>
+        <view>烘干塔: 5号</view>
+        <view>粮库: 6号</view>
+    </view>
+</view>
+
+
+
+<view class="mask" wx:if="{{bol}}">
+    <view class="introduce">
+        <view class='title'>了解中粮订单</view>
+        <view>
+            为什么选择中粮订单？
+            <view>订单农业又称合同农业、契约农业， 是近年来出现的一种新型农业生产经营模式， 农户根据其本身或其所在的乡村组织同农产品的购买者 之间所签订的订单，组织安排农产品生产的一种农业产 销模式。订单农业很好地适应了市场需要，避免了盲目生产。
+            </view>
+        </view>
+        <view>
+            中粮订单和普通订单的对比：
+        </view>
+
+        <button bindtap="close">我已经了解</button>
+
+    </view>
+</view>

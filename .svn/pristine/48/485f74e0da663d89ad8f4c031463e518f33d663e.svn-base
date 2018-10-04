@@ -1,0 +1,11 @@
+
+<view class='msg'>
+  <view class='title'>Q Q</view>
+  <input placeholder='请输入QQ号码'></input>
+</view>
+
+<navigator>
+  <view class='setMsg'>
+    <view class='setText'>确定</view>
+  </view>
+</navigator>

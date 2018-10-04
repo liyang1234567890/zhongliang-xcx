@@ -1,0 +1,124 @@
+//publish.js
+//获取应用实例
+const app = getApp()
+Page({
+  data: {
+    multiIndex: [0, 0, 0],
+    region: ['省', '市', '区/县'],
+    customItem: '全部',
+
+    /* 选择服务picker */
+    array: ['我要收购', '我要出售'],
+    index: 0,
+    typeArray: ['水果', '蔬菜', '禽畜牧蛋肉', '中药材', '种苗', '坚果干果', '农副/副食', '粮油作物', '水产', '绿化苗木', '食用菌', '特种养殖', '经济作物', '花卉盆景'],
+    typeIndex: 0,
+    imgArray: []
+  },
+
+  /* button跳转 */
+  toFree: function () {
+    wx.navigateBack({
+      url: '../free',
+    })
+  },
+
+  /* 品类picker */
+  bindPickerChange: function (data) {
+    this.setData({
+      index: data.detail.value
+    })
+  },
+
+  /* 选择服务picker */
+  bindPickerChange2: function (data) {
+    this.setData({
+      typeIndex: data.detail.value
+    })
+  },
+
+
+  /* 省市区选择器 */
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  },
+
+
+  formSubmit: function (data) {
+    var that = this;
+    var type = this.data.array[data.detail.value.ser];
+    var category = this.data.array[data.detail.value.typ];
+    var amount = data.detail.value.count;
+    var region = data.detail.value.place;
+    var standard = data.detail.value.spec;
+    console.log('pic:', this.data.imgArray[0])
+    // wx.request({
+    //   url: 'http://39.107.253.90:60001/freebusiness/save',
+    //   method:"POST",
+    //   data:{
+    //     type: "",//（参数名：参数值）
+    //     category:"",
+    //     amount:"",
+    //     spec:"",
+    //     region:"openid",
+    //     standard:"",
+    //   },
+    //   header:{
+    //     "content-type": "application/x-www-form-urlencoded"
+    //   },
+    //   success: function (res) {
+    //     console.log(JSON.stringify(res.data));
+    //   }    
+    // })
+
+    wx.request({  
+      url: 'https://localhost:8443/xiaochengxu/addBill.do',
+      data: e.detail.value,
+      method: 'POST',
+      header: { 'content-type': 'application/x-www-form-urlencoded' },  
+      success: function (res) {
+        console.log('submit success');
+      },
+      fail: function (res) {
+        console.log('submit fail');
+      },
+      complete: function (res) {
+        console.log('submit complete');
+      }
+})  
+    
+    /* 上传图片 */
+    wx.uploadFile({
+      url: 'http://39.107.253.90:60001/freebusiness/save',
+      filePath: tempFilePaths[0],
+      name: 'file',
+      formData: {
+        'user': 'test'
+      },
+      success: function (res) {
+        var data = res.data
+        //do something
+      }
+    })
+
+  },
+
+  /* 获取图片 */
+  getImage: function () {
+    var that = this;
+    wx.chooseImage({
+      count: 3,
+      sizeType: ['original', 'compressed'],
+      success: function (res) {
+        //do sth
+        console.log(res.tempFilePaths)
+        console.log(res)
+        that.setData({
+          imgArray: that.data.imgArray.concat(res.tempFilePaths)
+        })
+      }
+    })
+  },
+})

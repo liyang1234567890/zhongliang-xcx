@@ -1,0 +1,293 @@
+/* pages/order/order.wxss */
+Page{
+    background-color: #ddd;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 28rpx;
+   
+}
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: #ddd;
+    font-size: 30rpx;
+    bottom: 638rpx;
+    z-index: 100;
+}
+.header-region{
+    width:200rpx;
+    display: inline-block;
+    font-size: 28rpx;
+}
+
+.header .kind{
+    margin-top: 10rpx ;
+    background-color: #fff;
+
+}
+.header .kind button{
+    width: 80rpx;
+    display: inline-block;
+    height: 80rpx;
+    font-size: 28rpx;
+    margin-left: 40rpx;
+    line-height: 60rpx;
+    text-align: center;
+    margin-top: 8rpx;
+}
+.header .area{
+    width: 80rpx;
+    display: inline-block;
+    height: 80rpx;
+    font-size: 28rpx;
+    margin-left: 40rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+.area image{
+    position: absolute;
+    right: 250px;
+    top: 23rpx;
+    width: 30prx;
+    height: 48rpx;
+}
+.header .kind  button image{
+    width: 30rpx;
+    height: 48rpx;
+    display: inline-block;
+    position: absolute;
+    top: 0rpx;
+    left: 26rpx;
+
+}
+.header .kind text{
+    position: absolute;
+    top: 28rpx;
+    left: 13rpx;
+}   
+.select{
+    background-color: #1AAD19;
+}
+.clear{
+    content: "";
+    display: inline-block;
+    clear: both;
+}
+.order {
+    width: 100%;
+    height: 750rpx;
+    position: absolute;
+    top:456rpx;
+    overflow: hidden;
+    background-color: #fff;
+    font-size:28rpx;
+}
+.order image{
+    width: 60rpx;
+    height: 40rpx;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+
+}
+.order .order-message{
+    height: 200rpx;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+    color: rgba(41, 37, 37, 0.466);
+    width: 95%;
+    margin: 10rpx auto;
+
+
+
+}
+.order-footer {
+    position: absolute;
+    left: 140rpx;
+    font-size: 28rpx;
+}
+.order-footer text{
+    position: absolute;
+    left: -90rpx;
+    color: #000000;
+    font-size: 30rpx;
+}
+.order-footer image{
+    width: 30rpx;    
+    height: 30rpx;
+    position: absolute;
+    left: -128rpx;
+    color: #fff;
+}
+.order-left{
+    float: left;
+    position: absolute;
+    left: 80rpx;
+    color: #000;
+    
+}
+
+.order-right{
+    float: right;
+}
+.order-header{
+    width: 100%;
+    border-bottom: 2rpx dashed #ddd;
+}
+.soild{
+    height:14rpx;
+    width:762rpx;
+    background-color:#ddd;
+    position:absolute;
+    left:-148rpx;
+    bottom:-23rpx;
+    box-shadow: 2rpx 2rpx 2rpx #ddd
+}
+
+
+
+
+
+
+.footer{
+    background-color: #fff;
+    font-size: 28rpx;
+    position: fixed;
+    width: 100%;
+    bottom:769rpx;
+    height:340rpx;
+    
+}
+.footer .member{
+    margin: 0 auto;
+    text-align: center;
+}
+.member{
+    width:280rpx;
+    background-color: #1AAD19;
+    border-radius :60rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
+.member image{
+    width: 34rpx;
+    height: 34rpx;
+}
+.message{
+    margin-bottom: 10rpx;
+    height: 70rpx;
+    font-size: 28rpx;
+    color: #413b3b;    
+}
+
+.message text{
+    color: #000;
+}
+.message-a{
+    width:314rpx;
+    position:absolute;
+    left:13rpx;
+
+
+}
+
+.message-b{
+    width: 314rpx;
+    position: absolute;
+    right:-19rpx;
+    top:41rpx;
+    font-size:28rpx;
+
+}
+.message text{
+    margin-left: 20rpx;
+}
+.Situation{
+    font-size: 28rpx;
+    position: absolute;
+    top:160rpx;
+}
+.Situation view{
+    width: 254rpx;
+    display: inline-block;
+}
+.Situation image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.Situation-rihgt{
+    margin-left: 204rpx;
+}
+.Situation-left{
+    margin-left: 14rpx;
+}
+.Situation-a{
+    position:absolute;
+    left:13px;
+    top:216rpx;
+    font-size: 22rpx;    
+}
+.Situation-b{
+    position:absolute;
+    left:240px;
+    top:213rpx;
+    display:inline-block;
+    font-size:22rpx;
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+.mask{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(83, 45, 83, 0.295);
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    font-size: 28rpx;
+    z-index: 1000 ;
+}
+.introduction{
+    color: #888;
+}
+.introduction view{
+    width: 90%;
+    margin: 0 auto;
+}
+.mask .introduce{
+    width: 600rpx;
+    height: 700rpx;
+    margin: 0 auto; 
+    background: #fff;
+    color: #000;
+    position: relative;
+    text-align: center;
+    top: 200rpx;
+    box-shadow: 10rpx 10rpx 10rpx #ddd; 
+    border-radius: 20rpx;  
+    
+}
+.compare{
+    color: #888;
+    width: 90%;
+    margin: 0 auto;    
+}
+.mask .introduce button{
+    position: relative;
+    width: 260rpx;
+    top: 102rpx;
+    background-color: #1AAD19;
+    color: #FFFFFF;
+
+}

@@ -1,0 +1,41 @@
+<!--pages/help/helpmore/povertyMessage/povertyMessage.wxml-->
+<view class="pM-title">黑龙江省哈尔滨市宁安县</view>
+<view class="line-css"></view>
+<view class="pM-container">
+    <view class="table">
+        <view class="thead left">
+            <view class="th">户主现姓名</view>
+            <view class="th">耕地面积</view>
+            <view class="th">2017年人均收入</view>
+            <view class="th">扶贫措施</view>
+            <view class="th">扶贫时间</view>
+            <view class="th">人均增收目标</view>
+            <view class="th">帮扶责任人姓名</view>
+        </view>
+        <view class="tcontent left">
+            <view class='td'>{{data.poorName}}</view>
+            <view class='td'>{{data.agriculturalAcreage}}亩</view>
+            <view class='td'>{{data.salary}}元</view>
+            <view class='td'>{{data.measure}}</view>
+            <view class='td'>{{data.assistTime}}</view>
+            <view class='td'>{{data.target}}元</view>
+            <view class='td'>{{data.assistantMan}}</view>
+        </view>
+        <view class="thead right">
+            <view class="th">家庭人口数</view>
+            <view class="th">劳动力人口数</view>
+            <view class="th">致贫原因</view>
+            <view class="th"></view>
+            <view class="th"></view>
+            <view class="th">单位</view>
+        </view>
+        <view class="tcontent right">
+            <view class='td'>{{data.family}}</view>
+            <view class='td'>{{data.labour}}</view>
+            <view class='td'>{{data.reason}}</view>
+            <view class='td'></view>
+            <view class='td'></view>
+            <view class='td'>{{data.assistant}}</view>
+        </view>
+    </view>
+</view>

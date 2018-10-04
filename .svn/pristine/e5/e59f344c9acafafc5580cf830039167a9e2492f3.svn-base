@@ -1,0 +1,12 @@
+// pages/mine/means/strength/strength.js
+Page({
+  data: {
+  
+  },
+  openImg:function(){
+    
+  },
+  onLoad: function (options) {
+  
+  }
+})

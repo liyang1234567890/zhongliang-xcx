@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/order/order",
+    "pages/mine/mine",
+    "pages/free/free",
+    "pages/help/help",
+    "pages/rich/rich",
+    "pages/mine/recIntent/recIntent"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "微信",
+    "navigationBarTextStyle": "#2aa7de"
+  },
+  "tabBar": {
+    "backgroundColor": "#f00 ",
+    "color": "#fff",
+    "list": [{
+        "pagePath": "pages/free/free",
+        "text": "自由买卖",
+        "iconPath": "mock/images/icon/index_68.png"
+
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单买卖",
+        "iconPath": "mock/images/icon/index_64.png"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "精准扶贫",
+        "iconPath": "mock/images/icon/index_66.png"
+      },
+      {
+        "pagePath": "pages/rich/rich",
+        "text": "致富",
+        "iconPath": "mock/images/icon/index_68.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "mock/images/icon/index_70.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+/* pages/rich/search/search.wxss */
+page{
+  background: #f6f6f6;
+}
+.search-box{
+  display: flex;
+  margin-top: 20rpx;
+  margin-left: 45rpx;
+  align-items: center;
+}
+.searchbox{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.search{
+  margin-right: 20rpx;
+  width: 520rpx;
+  height: 60rpx;
+  border:5rpx solid #7fc7a1;
+  border-radius:10rpx;  
+  display: inline-block;
+  background: #fff;
+}
+
+.btn-search{
+   width: 120rpx; 
+   height: 70rpx;
+   font-size: 28rpx; 
+   line-height: 70rpx;
+   color: #7fc7a1;
+   margin: 0;
+}
+.btn-search::after{
+   border: 6rpx solid #7fc7a1;
+}
+.history{
+  display: flex;
+  flex-direction: row;
+  font-size: 32rpx;
+  position: relative;
+  margin-top: 20rpx;
+  margin-left: 45rpx;
+  width: 660rpx;
+}
+.history-search{
+  color: #333;  
+  font-size: 32rpx;
+}
+.history-record{
+      width: 628rpx;
+      margin-left: 60rpx;
+      margin-top: 16rpx; 
+      font-size: 28rpx;
+      display: flex;
+      flex-direction: row;
+}
+.history-comm{
+      padding: 8rpx;
+      background: rgb(223,224,226);
+      margin-right: 16rpx;
+      border-radius: 10rpx;
+      font-size: 28rpx;
+      color: #333;
+}
+.delete{
+  position: absolute;
+  right: 16rpx;
+  font-size: 32rpx;
+}
+.hot{
+  margin-top: 100rpx;
+  color: #333333;
+  font-size: 32rpx;
+  margin-left: 45rpx;
+}
+.hot-search{
+  display: flex;
+  flex-direction: row;
+  font-size: 32rpx;
+  color: #333333;
+  margin-left: 60rpx;
+  margin-top: 16rpx;
+  width: 660rpx;
+}
+.corns{
+  background: #e8e8e8;
+  height: 60rpx;
+  margin-right: 16rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.corn{
+  width: 184rpx;
+}
+.cob{
+  width: 128rpx;
+}
+.wheat{
+  width: 100rpx;
+}

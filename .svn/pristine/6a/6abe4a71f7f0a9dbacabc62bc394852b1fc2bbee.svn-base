@@ -1,0 +1,165 @@
+// pages/rich/rich.js
+var util = require('../../utils/util.js');
+Page({
+  data: {
+    // richRule: [],
+    hiddenData:true,
+    objectRich: [],
+    navbar: ['致富光荣榜', '我要致富'],
+    currentTab: 0  ,
+    // myrich
+    myrich:{
+      richRuleShow: false,
+      textDisabled: false,
+      suggetionContent: "",
+      defaultContent: "",
+      //传过来的数据
+      myWtorich:null
+    },
+    
+    // suggetionContent: "",
+
+    multiIndex: [0, 0, 0],
+    date: '2016-09-01',
+    time: '12:01',
+    region: ['黑龙江省', '哈尔滨市','通河县'],
+    customItem: '全部',
+  },
+  // 地点
+  OnMyEvent: function (e) {
+    this.setData({
+      areaInfo: e.detail
+    })
+    console.log(this.data.areaInfo)
+   
+  },
+  bindFormSubmit(e) {
+    var that = this;
+    var str = "myrich.suggetionContent"
+    // 获取需求
+    var suggestion = e.detail.value.suggestion;
+    this.setData({
+      [str]: ""
+    });
+    
+   wx.request({
+     url: util.APP_HOST + 'wtorich/updatewtorich',
+     method: 'POST',
+     data:{
+       userOid: 88888,
+       requirement: suggestion
+     },
+     success(res) {
+        wx.showModal({
+          title: '提交成功...'
+        })
+        console.log(res)
+     }
+   })
+   console.log(1)
+
+  },
+  // 弹出框的显示隐藏
+  hideRichRule() {
+    var richRuleShow = true;
+    var textDisabled = true;
+
+    this.setData({
+      ["myrich.richRuleShow"]: richRuleShow,
+      ["myrich.textDisabled"]: textDisabled
+    });
+  },
+  textareaBlur(e) {
+    var suggetionContent = e.detail.value;
+    this.setData({
+      ['myrich.suggetionContent']: suggetionContent
+    });
+  },
+  showRichRule(){
+    var richRuleShow = false;
+    var textDisabled = false;
+
+    this.setData({
+      ["myrich.richRuleShow"]: richRuleShow,
+      ["myrich.textDisabled"]: textDisabled
+    });
+  },
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  },
+  bindRegionChange: function (e) {
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  cityCancel: function () {
+    this.address.cityCancel()
+  },
+  citySure: function () {
+    this.address.citySure()
+
+  },
+  selectDistrict: function () {
+    this.address.selectDistrict()
+  },
+  cityChange() {
+    this.address.cityChange()
+  },
+  catch:function(){
+    
+  },
+  onLoad: function () {
+    var that = this;
+    wx.login({
+      success:function(res){
+        wx.request({
+          url: `https://api.weixin.qq.com/sns/jscode2session?appid=wx10031d2233afbcba&secret=759c54e1f897391b2f9bfb07a0fb66fd&js_code=${res.code}&grant_type=authorization_code`,
+          success:function(res){
+            that.setData({
+              openid:res.data.openid
+            })
+          }
+        })
+      }
+    })
+    this.address = this.selectComponent("#address")
+    this.address.onon()
+    
+    wx.request({
+      url: util.APP_HOST + 'wtorichrule/getallwtorichrule',
+      method: 'get',
+      success: function (res) {
+        // console.log(res)
+        that.setData({
+          ["myrich.myWtorich"]: res.data.wtorichrule,
+        });
+        // console.log(that.data.myrich.myWtorich)
+      }
+    })
+
+
+
+
+    wx.request({
+      url: util.APP_HOST + 'wtorich/getallbyregion?region1=' + areaInfo.area[0] + '&region2=' + areaInfo.area[1] + '&region3=' + areaInfo.area[2],
+      method: 'get',
+      success: function (res) {
+        if (res.data.wtorich.length != 0) { 
+          that.setData({
+            hiddenData: false
+          })
+        }
+
+        that.setData({
+          objectRich: res.data.wtorich,
+         
+        });
+      }
+    })
+  },
+  onShow:function(){
+    console.log(this.address.data.citys)
+  }
+})

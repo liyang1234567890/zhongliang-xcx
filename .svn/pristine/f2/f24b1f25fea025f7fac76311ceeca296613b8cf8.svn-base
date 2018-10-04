@@ -1,0 +1,44 @@
+<!--pages/mine/mine.wxml-->
+<view class='m'>
+  <view class='mBox'>
+    <view class='mMine'>
+      <image class='mImg'  src='../../mock/images/head.JPG'></image> 
+      <view class='mContent'>
+        <view>微信名/手机号</view> 
+        <view>身份</view>
+        <view class='mLogo'>
+          <view class='mLogo-first'>个</view>
+          <view>实</view>
+          <view>V</view>
+          <view>M</view>        
+        </view>
+      </view> 
+      <button class='mLogin'>登录</button>
+    </view>
+  </view>
+  <view class='mMsg'>
+    <view class='mMsg-first'>发布的信息</view>
+    <view>收藏</view>
+    <view>关注</view>    
+  </view>
+  <view class='mFun'>
+    <navigator url='recIntent/recIntent'>
+      <view>收到的意向</view>
+    </navigator>
+    <view class='mFun-middle'>观看历史</view>
+    <view>历史交易</view>    
+  </view>
+  <view class='mFun'>
+    <view>我的品类</view>
+    <view class='mFun-middle'>我的资料</view>
+    <view>我的主页</view>
+    <view class='mFun-middle'>我的积分</view>    
+    <view>我的设置</view>    
+  </view>
+  <view class='mFun'>
+    <view>开通贸易商</view>
+    <view class='mFun-middle'>实名认证</view>
+    <view class='mFun-last'>客服电话</view>
+    <view class='mFun-last'>特权服务</view>    
+  </view>
+</view>

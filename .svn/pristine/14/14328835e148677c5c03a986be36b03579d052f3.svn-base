@@ -1,0 +1,43 @@
+// pages/rich/rich.js
+Page({
+  data: {
+    navbar: ['致富光荣榜', '我要致富'],
+    currentTab: 0  ,
+    // myrich
+    richRuleShow: false ,
+    textDisabled: true,
+
+    multiIndex: [0, 0, 0],
+    date: '2016-09-01',
+    time: '12:01',
+    region: ['黑龙江'],
+    customItem: '全部'
+  },
+  // 弹出框的显示隐藏
+  hideRichRule() {
+    var richRuleShow = true;
+    var textDisabled = false;
+    this.setData({
+      richRuleShow,
+      textDisabled
+    });
+  },
+  showRichRule(){
+    var richRuleShow = false;
+    var textDisabled = true;;
+    this.setData({
+      richRuleShow,
+      textDisabled
+    });
+  },
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  },
+  bindRegionChange: function (e) {
+    this.setData({
+      region: e.detail.value
+    })
+  }
+})

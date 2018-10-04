@@ -1,0 +1,25 @@
+<view class='container'>
+  <view class='order'>订单已完成</view>
+    <view class='total'>
+      <view>获取积分:800</view>
+      <view>当前积分：2200</view>
+      <view>总积分：3000</view>
+    </view>
+      <view class='award'>
+        <button bindtap='toNavigate'>积分抽奖</button>
+        <button>积分兑换</button>
+      </view>
+        <view class='rule'>
+          <text>
+          积分规则：
+          1、如何获取积分：
+          在线支付订单完成后将获得每次订单等额的积分（即1元=1点积分）,积分将在商家确认订单后增加。
+          2、每位用户每天最多可以获得2000积分。积分不可以转移账户，积分永久有效。
+          3、积分可以做什么：
+          积分可以用来兑换礼品或者进行抽奖
+          4、礼品兑换很多天后还没收到怎么办:
+          礼品从兑换日起，3个工作日（周末不算）内处理发货，发货后，通常会在三日内到达。
+          </text>
+        </view>
+</view>
+<!-- <button class='integral'  bindtap='toIntegral'>积分</button>  -->

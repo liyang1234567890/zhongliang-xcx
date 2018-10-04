@@ -1,0 +1,20 @@
+// pages/free/integral/integral.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+  
+  },
+  toNavigate1:function(){
+    wx.navigateTo({
+      url: '../money/money',
+    })
+  },
+  toNavigate2: function () {
+    wx.navigateTo({
+      url: '../exchange/exchange',
+    })
+  },
+})

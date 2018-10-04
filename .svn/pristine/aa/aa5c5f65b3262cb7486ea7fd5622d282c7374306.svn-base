@@ -1,0 +1,30 @@
+
+.container {
+  padding: 20rpx;
+}
+
+
+.form-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.form-label {
+  width: 30%;
+}
+
+.form-input {
+  flex: 1;
+  border: 1rpx #ccc solid;
+  background-color: rgb(249, 249, 249);
+  border-radius: 6rpx;
+  padding: 10rpx;
+}
+
+.form-item .textarea{
+  height: 300rpx;
+}
+
+

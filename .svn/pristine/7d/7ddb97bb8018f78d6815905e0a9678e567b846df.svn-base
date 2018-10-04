@@ -1,0 +1,323 @@
+/* pages/order/order.wxss */
+
+Page {
+  background-color: #ddd;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 28rpx;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #ddd;
+  font-size: 30rpx;
+}
+
+.header-region {
+  width: 200rpx;
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.header .kind {
+  padding: 0rpx 20rpx;
+  background-color: #fff;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .kind button {
+  width: 80rpx;
+  display: inline-block;
+  height: 80rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.header .area {
+  width: 80rpx;
+  display: inline-block;
+  height: 80rpx;
+  font-size: 28rpx;
+  margin-left: 40rpx;
+  line-height: 42rpx;
+  text-align: center;
+}
+
+.area image {
+  position: absolute;
+  right: 250px;
+  top: 23rpx;
+  width: 30prx;
+  height: 48rpx;
+}
+
+.header .kind  button image {
+  width: 30rpx;
+  height: 48rpx;
+  display: inline-block;
+  position: absolute;
+  top: 0rpx;
+  left: 26rpx;
+}
+
+.header .kind text {
+  position: absolute;
+  top: 28rpx;
+  left: 13rpx;
+}
+
+.select {
+  background-color: #7fc7a1;
+  color: #fff;
+}
+
+.clear {
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+
+.order {
+  width: 100%;
+  height: 924rpx;
+  position: absolute;
+  top: 100rpx;
+  overflow: hidden;
+  background-color: #fff;
+  font-size: 28rpx;
+}
+
+.order image {
+  width: 60rpx;
+  height: 40rpx;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+
+.order .order-message {
+  height: 200rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  color: rgba(41, 37, 37, 0.466);
+  width: 95%;
+  margin: 25rpx auto;
+}
+
+.order-footer {
+  position: absolute;
+  left: 140rpx;
+  font-size: 28rpx;
+}
+
+.order-footer text {
+  position: absolute;
+  left: -90rpx;
+  color: #000;
+  font-size: 30rpx;
+}
+
+.order-footer image {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: -128rpx;
+  color: #fff;
+}
+
+.order-left {
+  float: left;
+  position: absolute;
+  left: 80rpx;
+  color: #000;
+}
+
+.order-right {
+  float: right;
+}
+
+.order-header {
+  width: 100%;
+  border-bottom: 2rpx dashed #ddd;
+}
+
+.soild {
+  height: 14rpx;
+  width: 762rpx;
+  background-color: #f8f8f8;
+  position: absolute;
+  left: -148rpx;
+  bottom: -23rpx;
+  box-shadow: 2rpx 2rpx 2rpx #f8f8f8;
+}
+
+.footer {
+  background-color: #fff;
+  font-size: 28rpx;
+  position: fixed;
+  width: 100%;
+  bottom: 17rpx;
+  height: 416rpx;
+}
+
+.footer .member {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.member {
+  width: 100%;
+  background-color: #7fc7a1;
+  font-size: 30rpx;
+  color: #fff;
+  bottom: 0rpx;
+  height: 63rpx;
+  position: fixed;
+  text-align: center;
+  line-height: 63rpx;
+}
+
+.member image {
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.message {
+  height: 164rpx;
+  font-size: 28rpx;
+  color: #413b3b;
+  border-top: 8rpx solid #7fc7a1;
+}
+
+.message text {
+  color: #000;
+}
+
+.message-a {
+  width: 314rpx;
+  position: absolute;
+  left: 13rpx;
+  padding-top: 10rpx;
+}
+
+.message-b {
+  width: 314rpx;
+  position: absolute;
+  right: -19rpx;
+  top: 2rpx;
+  font-size: 28rpx;
+  padding-top: 10rpx;
+}
+
+.message text {
+  margin-left: 20rpx;
+}
+
+.Situation {
+  font-size: 28rpx;
+  position: absolute;
+  top: 152rpx;
+  border-top: 3rpx dashed #888;
+}
+
+.Situation view {
+  width: 254rpx;
+  display: inline-block;
+}
+
+.Situation image {
+  width: 42rpx;
+  height: 33rpx;
+}
+
+.Situation-rihgt {
+  margin-left: 204rpx;
+}
+
+.Situation-left {
+  margin-left: 14rpx;
+}
+
+.Situation-a {
+  position: absolute;
+  left: 13px;
+  top: 202rpx;
+  font-size: 28rpx;
+}
+
+.Situation-b {
+  position: absolute;
+  left: 240px;
+  top: 202rpx;
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(83, 45, 83, 0.295);
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  font-size: 28rpx;
+  z-index: 1000;
+}
+
+.introduction {
+  color: #888;
+}
+
+.introduction view {
+  margin: 0 auto;
+}
+
+.mask .introduce {
+  width: 600rpx;
+  margin: 0 auto;
+  background: #fff;
+  color: #000;
+  position: relative;
+  top: 152rpx;
+  /* box-shadow: 10rpx 10rpx 10rpx #ddd;  */
+  border-radius: 6rpx;
+  padding: 20rpx 40rpx;
+}
+
+.compare {
+  color: #888;
+  margin: 0 auto;
+}
+
+/* .mask .introduce button {
+  width: 280rpx;
+  color: #7fc7a1;
+  border: 1px solid #7fc7a1;
+  background-color: transparent;
+  height: 71rpx;
+  line-height: 71rpx;
+} */
+
+.introduce .title {
+  width: 100%;
+  font-size: 36rpx;
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: 1rpx solid #999;
+  color: #7fc7a1;
+}
+
+.introduction .content {
+  padding-top: 20rpx;
+}
+
+.content {
+  padding-top: 20rpx;
+}

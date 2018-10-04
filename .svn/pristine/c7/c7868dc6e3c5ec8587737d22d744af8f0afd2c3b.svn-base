@@ -1,0 +1,31 @@
+<!--pages/free/adress/adress.wxml-->
+<view class='box'>
+  <view class='harvest-address'>收货地址</view>
+<view class="itemView">
+  <label class='contact'>用户：</label>
+  <input class="input" name="userName" placeholder=""
+    bindinput ="userNameInput" type='text'/>
+</view>
+
+<view class="itemView">
+  <label class='call'>电话：</label>
+  <input class="input" number placeholder=""
+     bindinput="phoneInput" type='number'/>
+</view>
+
+<view class="itemView">
+  <label class='location'>地址：</label>
+  <input class="input" bindinput='ressInput' maxlength='-1'></input>
+</view>
+</view>
+
+
+
+<view class="viewName">
+  <navigator  url='../free' open-type='switchTab' hover-class='none'>
+  <button class="submitBtn">
+    确认提交
+    </button>
+  </navigator>
+</view>
+

@@ -1,0 +1,40 @@
+/* pages/help/showMore/showMore.wxss */
+/*背景  */
+.show-container{
+  width: 710rpx;
+  height: 1140rpx;
+  background-color: #F4F4F4;
+  padding-top: 20rpx;
+  margin: 20rpx auto;
+}
+/*顶部横线  */
+.line-css{
+    height: 2rpx;
+    background: #fff;
+    margin: 0 60rpx 30rpx;
+}
+/*规定条目*/
+.show-details.choice:nth-child(2){ 
+  box-shadow:0 -8rpx 0 #e6e6e6; 
+}
+.show-details.choice:nth-last-child(2){ 
+  border-bottom:0;
+}
+/*显示白皮书中所有的政策  */
+.show-details{
+  width: 610rpx;
+  background-color: #fff; 
+  font-size:24rpx;
+  color: #000;
+  margin: 0 auto;
+  padding: 35rpx 0;
+  border-bottom: 4rpx dashed #e6e6e6;
+  padding-left: 16rpx; 
+}
+/*底部按钮  */
+.button-iknow{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  border-radius: 80rpx;
+}

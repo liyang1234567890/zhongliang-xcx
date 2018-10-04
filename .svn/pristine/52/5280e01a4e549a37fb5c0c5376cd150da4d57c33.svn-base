@@ -1,0 +1,46 @@
+<!--publish.wxml-->
+<view class="container">
+  <view class='tittle' style="">发布信息</view>
+  <form bindsubmit="formSubmit" bindreset="">
+    <view class='picker_1' style="display:flex;">
+      <label class='tittle'>选择服务：</label>
+      <picker class='picker' name="ser" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view style="margin-left:50px">
+          {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class='picker_2' style="display:flex;">
+      <label class='tittle'>品类：</label>
+      <picker class='picker' name="type" bindchange="bindPickerChange2" value="{{typeIndex}}" range="{{typeArray}}">
+        <view style="margin-left:87px">
+          {{typeArray[typeIndex]}}
+        </view>
+      </picker>
+    </view>
+    <view style="display:flex;">
+      <label class='tittle'>交货地：</label>
+      <input class='input' name="palce"></input>
+    </view>
+    <view style="display:flex;">
+      <label class='tittle'>数量：</label>
+      <input class='input' name="count"></input>
+    </view>
+    <view class='specification' auto-height='true' style="display:flex;">
+      <label class='tittle'>规格描述：</label>
+      <textarea class='describe' name="spec"></textarea>
+    </view>
+    <view class='addPic' style="display:flex;">
+      <label class='addPicTittle'>添加图片</label>
+      <image class='uploadPic' name="img" bindtap='getImage'  src="{{imgArray}}"></image>
+    </view>
+    <view class='addVideo' style="display:flex;">
+      <button class='addVideoTittle' bindtap="getVideo">获取视频</button>
+      <video class='uploadVideo' src="{{src}}"></video>
+    </view>
+    <view bindtap='toFree' >
+      <button class='publish' formType="submit">确认发布</button>
+    </view>
+  </form>
+</view>
+

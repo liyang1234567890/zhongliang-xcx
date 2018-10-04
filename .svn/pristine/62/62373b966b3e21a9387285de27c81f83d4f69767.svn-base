@@ -1,0 +1,37 @@
+/* pages/free/adress/adress.wxss */
+.box{
+  margin: 60rpx 40rpx;
+}
+.contact,.call,.location {
+  float: left;
+  font-size: 28rpx;
+}
+.input{
+  border: 1px solid #ccc;
+  width: 500rpx;
+}
+
+.contact,.call,.location{
+  margin-left: 39rpx;
+}  
+.itemView{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx 0; 
+  
+}
+.harvest-address{
+  font-size: 28rpx;
+  text-align: center;
+}
+.submitBtn{
+  width: 300rpx;
+  height: 100rpx; 
+  margin-top: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  background-color: #7fc7a1; 
+  color: #fff;
+}

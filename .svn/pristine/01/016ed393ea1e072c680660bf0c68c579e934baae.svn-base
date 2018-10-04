@@ -1,0 +1,95 @@
+/* pages/mine/recIntent/recIntent.wxss */
+@import '../common/common.wxss';
+view{
+  font-size: 32rpx;
+}
+#recIntent{
+  margin: 0 40rpx;
+}
+/*image*/
+.mark{
+  width: 36rpx;
+  height: 36rpx;
+  margin: 2rpx;
+}
+.online{
+  width: 218rpx;
+  height: 60rpx;
+}
+.buy{
+  width: 52rpx;
+  height: 52rpx;
+}
+.time{
+  width: 36rpx;
+  height: 32rpx;
+}
+.image-wrapper image{
+  vertical-align: middle;
+}
+.image-wrapper view{
+  display: inline-block;
+}
+.i-i-marks image{
+ vertical-align: middle;
+ margin: 2rpx;
+}
+/*intention-sponsor start*/
+.i-s-up,.i-s-down{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.i-s-left{
+  flex-grow: 1;
+}
+.i-s-left image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 20rpx;
+}
+.i-s-center{
+  flex-grow: 1;
+}
+.i-s-right{
+  flex-grow: 1;
+  border-left: 2rpx solid #ccc;
+}
+.i-s-right button{
+  margin: 10rpx;
+}
+.i-s-name{
+  font-size: 46rpx;
+}
+/*intention-sponsor end*/
+/*intention-item start*/
+.i-i-title,.i-i-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.i-i-title{
+  border-bottom: 2rpx solid #ccc;
+  margin-bottom: 20rpx;
+}
+.i-i-left{
+  flex-basis: 2;
+}
+.i-i-right{
+  flex-basis: 1;
+}
+.i-i-name{
+  display: inline;
+}
+.i-i-price{
+  color: red;
+}
+.notice{
+  font-size: 46rpx;
+  font-weight: bolder;
+}
+/*intention-item end*/

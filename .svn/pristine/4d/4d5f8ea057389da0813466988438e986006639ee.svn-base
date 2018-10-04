@@ -1,0 +1,113 @@
+// pages/rich/rich.js
+var util = require('../../utils/util.js');
+Page({
+  data: {
+    hiddenData:true,
+    objectRich: [],
+    navbar: ['致富光荣榜', '我要致富'],
+    currentTab: 0  ,
+    // myrich
+    myrich:{
+      richRuleShow: false,
+      textDisabled: false,
+      suggetionContent: "",
+      defaultContent: "",
+      //传过来的数据
+      myWtorich:null
+    },
+    // suggetionContent: "",
+
+    multiIndex: [0, 0, 0],
+    date: '2016-09-01',
+    time: '12:01',
+    region: ['黑龙江省', '哈尔滨市','通河县'],
+    customItem: '全部',
+  },
+  
+  bindFormSubmit(e) {
+    var str = "myrich.suggetionContent"
+    // 获取需求
+    var suggestion = e.detail.value.suggestion;
+    this.setData({
+      [str]: ""
+    });
+    // console.log(myrich);
+    wx.showModal({
+      title: '提交成功...'
+    })
+  },
+  // 弹出框的显示隐藏
+  hideRichRule() {
+    var richRuleShow = true;
+    var textDisabled = true;
+
+    this.setData({
+      ["myrich.richRuleShow"]: richRuleShow,
+      ["myrich.textDisabled"]: textDisabled
+    });
+  },
+  textareaBlur(e) {
+    var suggetionContent = e.detail.value;
+    this.setData({
+      ['myrich.suggetionContent']: suggetionContent
+    });
+  },
+  showRichRule(){
+    var richRuleShow = false;
+    var textDisabled = false;
+
+    this.setData({
+      ["myrich.richRuleShow"]: richRuleShow,
+      ["myrich.textDisabled"]: textDisabled
+    });
+  },
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  },
+  bindRegionChange: function (e) {
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  cityCancel: function () {
+    this.address.cityCancel()
+  },
+  citySure: function () {
+    this.address.citySure()
+
+  },
+  selectDistrict: function () {
+    this.address.selectDistrict()
+  },
+  cityChange() {
+    this.address.cityChange()
+  },
+  catch:function(){
+    
+  },
+  onLoad: function () {
+    this.address = this.selectComponent("#address")
+    this.address.onon()
+    var that = this;
+
+    wx.request({
+      url: util.APP_HOST + 'wtorich/getallbyregion',
+      method: 'get',
+      success: function (res) {
+        if (res.data.wtorich.length != 0) { 
+          that.setData({
+            hiddenData: false
+          })
+        }
+        console.log(res)
+        that.setData({
+          objectRich: res.data.wtorich,
+         
+        });
+      }
+    })
+
+  },
+})

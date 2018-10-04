@@ -1,0 +1,29 @@
+<!--pages/mine/integration/integretion.wxml-->
+<!-- <text>pages/mine/integration/integretion.wxml</text> -->
+
+<view>
+<view id='integ'>
+  <view style='position:absolute;color:#fff;font-size:32rpx;top:30rpx;left:20rpx'>可用积分</view> 
+  <view id='integ-left'>
+    <image id='integ-img' src='../../../mock/images/icon/index_11.png'></image>
+    <text></text>
+  </view>
+  <view id='integ-center'>
+    <view id='integ-center-box'>9999</view>
+  </view>
+  <view id='integ-right'>
+    <view id='integ-right-box'>
+      <navigator url='integrationDetail/integretionDetail'>查看明细</navigator>
+    </view>
+  </view>
+</view>
+<view id='integ-mid'>
+  <!-- <text>使用说明</text> -->
+  <view id='integ-mid-textt'>积分有什么用？</view>
+  <view id='integ-mid-textb'>积分可以用来兑换特权服务等......</view>
+</view>
+<view id='integ-bottom'>
+  <view id='integ-bottom-textt'>积分使用范围？</view>
+  <view id='integ-bottom-textb'>适用范围特别广</view>
+</view>
+</view>

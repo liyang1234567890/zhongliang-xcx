@@ -1,0 +1,8 @@
+// pages/free/integral/integral.js
+Page({
+  data: {
+    achieve:'800',
+    crurrent:'2200',
+    total:'3000',
+  },
+})

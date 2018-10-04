@@ -1,0 +1,210 @@
+<!--导航条-->  
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>  
+  
+<!--致富光荣榜-->  
+<view class='glorylist' hidden="{{currentTab!==0}}">  
+<scroll-view scroll-y="ture">
+  <!-- regin start  -->
+  <view class='region'>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        选择地点：{{region[0]}} {{region[1]}} {{region[2]}}
+      </view>
+    </picker>
+  </view>
+  <!-- regin end  -->
+
+  <!-- richbox start  -->
+  <view class='richBox flex-wrap' >
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524217387880&di=35cb66e02598ec55ae88911814016447&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2014-09-28%2F115349111.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view>姓名：</view>
+        <view>地区：</view>
+        <view>时间：</view>
+      </view>
+  </view>
+
+    <view class='richBox flex-wrap' >
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524217387880&di=35cb66e02598ec55ae88911814016447&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2014-09-28%2F115349111.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view>姓名：</view>
+        <view>地区：</view>
+        <view>时间：</view>
+      </view>
+  </view>
+
+    <view class='richBox flex-wrap' >
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524217387880&di=35cb66e02598ec55ae88911814016447&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2014-09-28%2F115349111.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view>姓名：</view>
+        <view>地区：</view>
+        <view>时间：</view>
+      </view>
+  </view>
+
+    <view class='richBox flex-wrap' >
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524217387880&di=35cb66e02598ec55ae88911814016447&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2014-09-28%2F115349111.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view>姓名：</view>
+        <view>地区：</view>
+        <view>时间：</view>
+      </view>
+  </view>
+
+    <view class='richBox flex-wrap' >
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524217387880&di=35cb66e02598ec55ae88911814016447&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2014-09-28%2F115349111.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view>姓名：</view>
+        <view>地区：</view>
+        <view>时间：</view>
+      </view>
+  </view>
+
+    <view class='richBox flex-wrap' >
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524217387880&di=35cb66e02598ec55ae88911814016447&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2014-09-28%2F115349111.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view>姓名：</view>
+        <view>地区：</view>
+        <view>时间：</view>
+      </view>
+  </view>
+
+    <view class='richBox flex-wrap' >
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524217387880&di=35cb66e02598ec55ae88911814016447&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2014-09-28%2F115349111.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view>姓名：</view>
+        <view>地区：</view>
+        <view>时间：</view>
+      </view>
+  </view>
+
+    <view class='richBox flex-wrap' >
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524217387880&di=35cb66e02598ec55ae88911814016447&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2014-09-28%2F115349111.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view>姓名：</view>
+        <view>地区：</view>
+        <view>时间：</view>
+      </view>
+  </view>
+
+    <view class='richBox flex-wrap' >
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524217387880&di=35cb66e02598ec55ae88911814016447&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2014-09-28%2F115349111.jpg' class='headPhoto'></image>
+      <view class='detail '>
+        <view>姓名：</view>
+        <view>地区：</view>
+        <view>时间：</view>
+      </view>
+  </view>
+
+  <!-- richbox end  -->
+
+</scroll-view>
+</view>  
+  
+
+<!--我要致富-->  
+<view hidden="{{currentTab!==1}}">  
+<!-- 个人消息/信息 -->
+<view class="person">
+  <image class="person-avatar" src="../../mock/images/rich/avatar.jpg"></image>
+  <view class="person-info">
+    <view class="person-name">李维嘉</view>
+    <view class="type">综合经营</view>
+  </view>
+  <view class="person-server">
+    <view class="p-server-item">
+      <image src="../../mock/images/rich/person.png" class="p-server-icon"></image>
+      <text class="p-server-name">个人</text>
+    </view>
+    <view class="p-server-item">
+      <image src="../../mock/images/rich/name.png" class="p-server-icon"></image>
+      <text class="p-server-name">实名认证</text>
+    </view>
+    <view class="p-server-item">
+      <image src="../../mock/images/rich/vip.png" class="p-server-icon"></image>
+      <text class="p-server-name">无央会员</text>
+    </view>
+    <view class="p-server-item">
+      <image src="../../mock/images/rich/seller.png" class="p-server-icon"></image>
+      <text class="p-server-name">贸易商</text>
+    </view>
+    
+  </view>
+</view>
+<!-- 服务列表 -->
+<scroll-view class="server-list" scroll-x="true">
+  <view class="server-item">
+    <view class="server-icon-wrap">
+      <image src='../../mock/images/rich/avatar.jpg' class="server-icon"></image>
+    </view>
+    <view class="server-name">医疗服务</view>
+  </view>
+  <view class="server-item">
+    <view class="server-icon-wrap">
+      <image src='../../mock/images/rich/avatar.jpg' class="server-icon"></image>
+    </view>
+    <view class="server-name">医疗服务</view>
+  </view>
+  <view class="server-item">
+    <view class="server-icon-wrap">
+      <image src='../../mock/images/rich/avatar.jpg' class="server-icon"></image>
+    </view>
+    <view class="server-name">医疗服务</view>
+  </view>
+  <view class="server-item">
+    <view class="server-icon-wrap">
+      <image src='../../mock/images/rich/avatar.jpg' class="server-icon"></image>
+    </view>
+    <view class="server-name">医疗服务</view>
+  </view>
+  <view class="server-item">
+    <view class="server-icon-wrap">
+      <image src='../../mock/images/rich/avatar.jpg' class="server-icon"></image>
+    </view>
+    <view class="server-name">医疗服务</view>
+  </view>
+  <view class="server-item">
+    <view class="server-icon-wrap">
+      <image src='../../mock/images/rich/avatar.jpg' class="server-icon"></image>
+    </view>
+    <view class="server-name">医疗服务</view>
+  </view>
+  <view class="server-item">
+    <view class="server-icon-wrap">
+      <image src='../../mock/images/rich/avatar.jpg' class="server-icon"></image>
+    </view>
+    <view class="server-name">医疗服务</view>
+  </view>
+
+</scroll-view>
+<!-- 提出建议 -->
+<view class="suggestion">
+  <view class="suggestion-title">提出需求</view>
+  <form bindsubmit="bindFormSubmit">
+    <textarea disabled="{{textDisabled}}" class="suggestion-content"></textarea>
+    <button class="rich-rule" catchtap="showRichRule">致富规则</button>
+    <button class="rich-submit" form-type="submit">提交</button>
+  </form>
+</view>
+<!-- 弹出框(致富规则) -->
+<view class="rule-content" hidden="{{richRuleShow}}">
+  <view class="rule-title">致富规则</view>
+  <scroll-view class="rule-policy" scroll-y>
+    <view class="policy-item">我是一条文本， 嘿嘿.....</view>
+    <view class="policy-item">我是一条文本， 嘿嘿.....</view>
+    <view class="policy-item">我是一条文本， 嘿嘿.....</view>
+    <view class="policy-item">我是一条文本， 嘿嘿.....</view>
+    <view class="policy-item">我是一条文本， 嘿嘿.....</view>
+    <view class="policy-item">我是一条文本， 嘿嘿.....</view>
+    <view class="policy-item">我是一条文本， 嘿嘿.....</view>
+  </scroll-view>
+  <!-- <view  style="display: inline-block"> -->
+    <button catchtap="hideRichRule" class="close">关闭</button>
+  <!-- </view> -->
+</view>
+</view>  
+  
+ 
+

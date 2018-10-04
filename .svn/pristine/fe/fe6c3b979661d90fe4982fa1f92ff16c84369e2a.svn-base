@@ -1,0 +1,73 @@
+<!--pages/help/helpmore/helpmore.wxml-->
+
+<view class='join' bindtap='joinin'>加入扶贫</view>
+<!-- 加入扶贫弹层 -->
+<view wx:if='{{mask}}' class='mask'>
+  <view bindtap='close' class='close'>×</view>
+  <view class='mask-code'>
+    <view class='mask-f'>扶贫码:</view>
+    <view class='{{joincodec}}'>
+      <input value='{{code}}' type='number'  bindfocus='focusInputc'></input>
+    </view>
+  </view>
+  <view class='mask-name'>
+     <view class='mask-s'>姓    名:</view>
+     <view class='{{joincoden}}'>
+      <input value='{{name}}' type='text' bindblur='watchData' bindfocus='focusInputn'></input>
+     </view> 
+  </view>
+  <view class='verify'>
+    <button bindtap='verifySuccess'>验       证</button>
+  </view>
+</view>
+<view class="helpmore">
+  <view class='content'>
+    <view class='content-btn'>
+      <text>扶贫政策白皮书\n</text>
+      <view class='backhelp' bindtap='backhelp'> <button  class=" mini-btn" size="mini"type="primary">返回扶贫</button> </view>
+    </view>
+    <view class="poverty-writeBook-details choice"  wx:for="{{clauses}}">
+          {{item.stipulate}}
+    </view>
+    <view class='content-more'>
+      <button class=" mini-btn" size="mini"type="primary" bindtap='showMore'>查看更多>></button>
+    </view>
+  </view>
+  <view class='program'>
+    <view class='program-btn'>
+      <button class='{{active}}' bindtap='closeok'>已解决</button>
+      <button bindtap='closeno' class='{{none}}'>未解决</button>
+    </view>
+    <view class="section__title">
+      <picker mode="date" value="2016-06-06" start="2015-09-01" end="2050-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          当前日期是:{{date}}
+          <view class='picktime'>
+             <button class=" mini-btn" size="mini"type="primary">选择时间</button> 
+          </view> 
+        </view>
+      </picker>
+    </view>
+   
+    <view class='program-list' wx:if='{{bol}}'>
+      <view class='program-ok1' wx:for="{{helpPreson}}">
+        <view class='program-con1'>
+          <view>被帮扶人姓名：{{item.name}}</view> 
+          <view>帮扶单位：{{item.company}}</view> 
+          <view>帮扶时间：{{item.time}}</view>
+        </view>
+        <view class='program-more1'>
+          <button class=" mini-btn" size="mini"type="primary" bindtap='presonal_poverty' >查看详细</button>
+        </view>
+      </view>
+    </view>
+    <view class='program-false' wx:if='{{bool}}'>
+      <view class='pro-con'>
+        <view class='program-no' wx:for="{{applyPerson}}">
+          <view class='name'>申请帮扶人姓名：{{item.name}}</view>
+          <view class='time'>申请时间：{{item.time}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

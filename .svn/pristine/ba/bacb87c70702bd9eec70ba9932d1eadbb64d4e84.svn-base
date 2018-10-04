@@ -1,0 +1,109 @@
+// pages/help/applyPoverty/applyPoverty.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    addData: '',
+    region: ['广东省', '广州市', '海珠区'],
+    customItem: '全部',
+    focusInputn: '',
+    focusInputp: '',
+    name: '姓名',
+    phone: '电话',
+  },
+  submit: function () {
+    wx.navigateTo({
+      url: '../helpmore',
+    })
+  },
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  },
+
+  //姓名焦点事件
+  focusInputn: function () {
+    var focusInputn = 'focusInputn';
+    var name = '';
+    this.setData({
+      focusInputn,
+      name
+    })
+  },
+  focusInputp: function () {
+    var focusInputp = 'focusInputp';
+    var phone = '';
+    this.setData({
+      focusInputp,
+      phone
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    var that = this;
+    wx.getStorage({
+      key: 'addData',
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          addData: res.data
+        })
+      },
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

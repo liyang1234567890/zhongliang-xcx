@@ -1,0 +1,89 @@
+// pages/order/order.js
+Page({
+    /**
+     * 页面的初始数据
+     */
+    data: {
+      multiIndex: [0, 0, 0],
+      date: '2016-09-01',
+      time: '12:01',
+      region: ['黑龙江', '哈尔滨市', '宁安县'],
+      customItem: '全部',
+      bol:true,
+      bloo:true,
+      // select:'玉米',
+      orderym:[
+        {
+          "ym":"玉米订单",
+          "zl":"中粮订单",
+          "dq":"牡丹江合作社",
+          "pl":"玉米",
+          "cl":"12000吨/亩"
+        },
+        {
+          "ym":"玉米订单",
+          "zl":"中粮订单",
+          "dq":"牡丹江合作社",
+          "pl":"玉米",
+          "cl":"12000吨/亩"
+        },
+        {
+          "ym":"玉米订单",
+          "zl":"中粮订单",
+          "dq":"牡丹江合作社",
+          "pl":"玉米",
+          "cl":"12000吨/亩"
+        },
+        {
+          "ym":"玉米订单",
+          "zl":"中粮订单",
+          "dq":"牡丹江合作社",
+          "pl":"玉米",
+          "cl":"12000吨/亩"
+        },
+        {
+          "ym":"玉米订单",
+          "zl":"中粮订单",
+          "dq":"牡丹江合作社",
+          "pl":"玉米",
+          "cl":"12000吨/亩"
+        }
+      ],
+      category:[
+        '玉米',
+        '小麦',
+        '水稻',
+        '大豆'
+      ],
+      currentId:0
+    },
+    selectKind:function(e){ 
+      
+      this.setData({
+          currentId:e.currentTarget.dataset.id
+          
+        })
+        
+      },
+    close: function(){
+      var bol = this.data.bol;
+      this.setData({
+        bol:!bol
+      })
+    },
+    change: function(){
+      var boll = this.data.boll;
+      this.setData({
+        boll:!boll
+      })
+    },
+    bindRegionChange: function (e) {
+      this.setData({
+        region: e.detail.value
+      })
+    },
+    catch:function(){
+  
+    }
+  })
+  

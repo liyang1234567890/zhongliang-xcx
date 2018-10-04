@@ -1,0 +1,31 @@
+<view class="search-box">
+    <view class='searchbox'>
+  <input class='search' placeholder='请输入规格，交货地，品牌' placeholder-style='color:#7fc7a1 ;font-size:28rpx' bindinput ="keyInput"></input>
+</view>
+  <button bindtap='search' class="btn-search" >搜索</button>
+</view>
+<view class='allsearch'>
+  <view class="history">
+        <view class="history-search">历史搜索</view>
+        <view class="delete">删除</view>
+  </view>
+  <view class="history-record">
+        <view class="history-comm">小米</view>
+        <view class="history-comm">绿化苗木</view>
+  </view>
+  <view class="hot">热门搜索</view>
+  <view class="hot-search">
+    <view class='col'>
+        <view class="corns"><text>黑龙江玉米</text></view>
+        <view class="corns"><text>玉米棒</text></view>
+    </view>
+    <view class='col'>
+        <view class="corns"><text>小麦</text></view>
+        <view class="corns"><text>大豆</text></view>  
+    </view>      
+  </view>
+</view>
+   
+   
+   
+     

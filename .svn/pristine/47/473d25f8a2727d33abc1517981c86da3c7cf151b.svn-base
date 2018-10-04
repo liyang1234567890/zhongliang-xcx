@@ -1,0 +1,83 @@
+<!--swiper start  -->
+<swiper class='swiper' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!--swiper end  -->
+
+<!--buy_product_detail start  -->
+<view class='buy_product_detail'>
+  <view class='product_detail_nav'>
+    <view class="group">
+      <block>
+        <icon type="success" size="30" color='green'/>
+      </block>
+    </view>
+    <view class='product_detail_name'>玉米</view>
+    <view class='product_detail_price'>￥1400元/吨</view>
+  </view>
+  <view class='product_detail_message'>
+    <view class='message_type'>
+      品牌：东北玉米
+    </view>
+    <view class='message_count'>
+      数量：2000kg
+    </view>
+    <view class='message_site'>
+      交货地：黑龙江省 哈尔滨市宁安县
+    </view>
+    <view class='message_time'>
+      规格：自然干玉米水分14，霉变0.5，容重760
+    </view>
+  </view>
+  <view class='product_detail_time'>
+    <view class='group'>
+      <block >
+        <icon type="waiting" size="20"/>
+      </block>
+    </view>
+    {{time}}
+  </view>
+</view>
+<!--buy_product_detail end  -->
+
+<!-- sellers_Information  start-->
+<view class='sellers_Information'>
+  <view class='sellers_Information_details'>
+    <view class='sellers_message'>
+      <view class='sellers_message_name'>
+        <view class='sellers_message_left'>
+          <image     class="sellers_img"src="../../../mock/images/head.JPG" mode="aspectFill">  
+        </image> 
+        </view>
+        <view class='sellers_message_right'>
+          <view class='sellers_name'>李XX</view>
+          <view class='sellers_type'>综合经营</view>
+        </view>
+      </view>
+      <view class='sellers_phones'>
+        <view class='sellers_phones_left'>
+          <image     class="sellers_phones_img"src="../../../mock/images/phone.png" mode="aspectFill">  
+        </image> 
+        </view>
+        <view class='sellers_phones_right'>
+          <button class='sellers_phones_btn'>查看详情</button>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+  <view class='sellers_Information_auto'></view>
+</view>
+
+<!-- sellers_Information  end -->
+
+
+
+<!--引入buy界面的button代码--Danile  -->
+<!-- <navigator hover-class='active' url='./buy/buy'>跳转buy界面</navigator> -->
+<!--引入buy界面的button代码--Danile  -->

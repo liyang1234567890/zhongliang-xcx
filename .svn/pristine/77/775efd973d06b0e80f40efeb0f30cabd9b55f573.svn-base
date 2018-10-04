@@ -1,0 +1,97 @@
+<!--pages/order/order.wxml-->
+
+<!-- header start -->
+<view class="header">
+    <view class="header-region">请选择地区:</view>
+    <picker mode="region" value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange">
+        省/市/县
+        <!-- {{region[0]} -->
+    </picker>
+    <view class="kind">
+        <button bindtap="selectKind" class="{{select == '玉米'?'select':''}}" data-crop="玉米" data-aa="1">玉米</button>
+        <button bindtap="selectKind" class="{{select == '小麦'?'select':''}}" data-crop="小麦" data-aa="1">小麦</button>
+        <button bindtap="selectKind" class="{{select == '大豆'?'select':''}}"  data-crop="大豆" data-aa="1">大豆</button>
+        <button bindtap="selectKind" class="{{select == '水稻'?'select':''}}" data-crop="水稻" data-aa="1">水稻</button>
+        <button>更多</button>
+    </view>
+</view>
+<!-- header end -->
+
+
+<scroll-view class="order" scroll-y="ture">
+    <view class="order-message"  wx:for="{{orderym}}">
+        <view class="order-header clear">
+            <view class="order-left">{{item.ym}}</view>
+            <view class="order-right">{{item.zl}}</view>
+        </view>
+        <view class="order-footer">
+            <view>地 区: {{item.dq}}</view>
+            <view>品 类: {{item.pl}}</view>
+            <view>产 量: {{item.cl}}</view>
+        </view>
+    </view>
+</scroll-view>
+<!-- <view class="footer-meg">
+    <view class="footer-text">你未开通订单买卖</view>
+    <button>点我去开通订单买卖</button>
+</view>  -->
+
+ <view class="footer">
+    <view class="member">
+        会员信息
+    </view>
+
+    <view class="message">
+        <view class="message-a">
+                <text>合作社: 牡丹江</text>
+                <text>品类: 玉米</text>
+                <text>社员: 李某某</text>
+        </view>
+        <view class="message-b">
+                <text>拥有土地: 300亩</text>
+                <text>卖出价格: 2400元/吨</text>
+                <text>订单: 中粮订单</text>
+        </view>
+    </view>
+
+    <view class="Situation">
+        <text>农资农机情况</text>
+        <text>粮食买卖情况</text>  
+    </view>
+
+    <view class="Situation-a">
+            <view>农药: 101号</view>
+            <view>化肥: 施可丰</view>
+            <view>农机: 拖拉机</view>
+            <view>种子: 玉米</view>
+
+    </view>
+    <view class="Situation-b">
+            <view>物流: 顺丰</view>
+            <view>卖出时间: 2018-9-9</view>
+            <view>烘干塔: 5号</view>
+            <view>粮库: 6号</view>
+    </view>
+</view>
+
+
+
+<view class="mask" wx:if="{{bol}}">
+    <view class="introduce">
+        了解中粮订单
+        <view>
+        为什么选择中粮订单？
+        订单农业又称合同农业、契约农业，
+        是近年来出现的一种新型农业生产经营模式，
+        农户根据其本身或其所在的乡村组织同农产品的购买者
+        之间所签订的订单，组织安排农产品生产的一种农业产
+        销模式。订单农业很好地适应了市场需要，避免了盲目生产。
+        </view>
+        <view>
+        中粮订单和普通订单的对比：
+        ...................
+        </view>
+        <button bindtap="close">我已经了解</button>
+        
+    </view>
+</view>

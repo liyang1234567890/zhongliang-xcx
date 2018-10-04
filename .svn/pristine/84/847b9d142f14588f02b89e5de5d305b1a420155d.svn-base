@@ -1,0 +1,94 @@
+/**publish.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 400rpx;
+}
+
+.input{
+  border: 1px solid #ccc;
+  margin-top: 50rpx;
+  position: absolute;
+  margin-left: 188rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.tittle{
+  margin-top: 50rpx;
+  font-size: 28rpx;
+}
+
+.publish{
+  position: center;
+  border: 1px solid #ccc;
+  margin-top: 50rpx;
+  top: 50rpx;
+}
+
+.specification.input{
+  position: fixed;
+  margin-right: 100rpx; 
+}
+
+.uploadPic{
+  border: 1px solid #ccc;
+  float: right;
+  height: 300rpx;
+  margin-top: 300rpx;
+  width: 500rpx;
+  margin-left: 76rpx;
+}
+
+.describe{
+  border: 1px solid #ccc;
+  margin-top: 50rpx;
+  position: absolute;
+  margin-left: 188rpx;
+  font-size: 28rpx;
+  width: 500rpx;
+}
+
+.addPicTittle{
+  margin-top: 300rpx;
+  font-size: 28rpx;
+}
+
+.picker{
+  border:  1px solid #ccc;
+  margin-top: 50rpx;
+  position: absolute;
+  margin-left: 188rpx;
+  width: 434rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.addVideoTittle{
+  margin-top: 50rpx;
+  right: 22rpx;
+  line-height: 300rpx;
+  font-size: 28rpx;
+}
+
+.uploadVideo{
+  border: 1px solid #ccc;
+  height: 300rpx;
+  margin-top: 50rpx;
+  width: 500rpx;
+}

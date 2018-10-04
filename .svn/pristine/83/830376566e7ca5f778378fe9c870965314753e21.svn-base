@@ -1,0 +1,11 @@
+<!--pages/free/free.wxml-->
+<view class="topbar">
+    <view class="title">订单买卖</view>
+</view>
+
+<view class="kind-btn">
+    <button>玉米</button>
+    <button>小麦</button>
+    <button>大豆</button>
+    <button>水稻</button>
+</view>

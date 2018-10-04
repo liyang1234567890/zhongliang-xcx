@@ -1,0 +1,96 @@
+/* pages/rich/rich.wxss */
+
+@import "./myrich/myrich.wxss";
+
+
+.navbar{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* glorylist start  */
+ .detail .fontColor{
+   color: #c0c0c0;
+ }
+  .detail .fontColor text{
+   color: #2f4f2f;
+ }
+.scrollList{
+    background-color: #c0c0c0;
+}
+
+.glorylist{
+  margin-top: 75rpx;
+}
+
+.glorylist .flex-wrap{
+  display: -webkit-flex;
+}
+.glorylist .region{
+  width: 750rpx;
+  margin-bottom: 4rpx;
+  margin-top: 4rpx;
+  padding-bottom: 20rpx;
+  padding-top:20rpx; 
+  background-color: white;
+}
+.glorylist .headPhoto{
+   width: 170rpx;
+  height: 170rpx; 
+  flex: 1;
+}
+.glorylist .detail{
+  padding-left: 20rpx;
+   padding-top:20rpx; 
+
+  flex: 2;
+}
+.glorylist .richBox{
+  margin-top: 6rpx;
+  margin-bottom: 6rpx;
+background-color: white;
+  height: 190rpx;
+}
+.glorylist .richBox image{
+  padding:10rpx 10rpx 10rpx 10rpx;
+}
+
+/* glorylist end  */
+/* topbar  begin*/
+ 
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: #ffffff;  
+  color: black;
+}  
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;  
+}  
+.navbar .item.active{  
+
+  color:#ff7f00;  
+}  
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+   height: 4rpx;  
+  background: #ff7f00;   
+}  
+/* topbar  end*/
+
+.myrich{
+  margin-top: 100rpx;
+}
+
+

@@ -1,0 +1,30 @@
+/* pages/free/adress/adress.wxss */
+.contact,.call,.location {
+  float: left;
+}
+.input{
+  border: 1px solid #ccc;
+  width: 500rpx;
+}
+ .call,.location{
+  margin-left: 39rpx;
+} 
+.itemView{
+  margin-top: 50rpx;
+}
+.bigInput{
+  border: 1px solid #ccc;
+  width: 500rpx;
+  height: 400rpx;
+}
+.harvest-address{
+  font-size: 60rpx;
+  text-align: center;
+}
+.submitBtn{
+  width: 300rpx;
+  height: 200rpx;
+  margin-top: 100rpx;
+  text-align: center;
+  line-height: 200rpx;
+}

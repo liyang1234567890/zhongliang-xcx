@@ -1,0 +1,95 @@
+// pages/order/order.js
+var util = require('../../utils/util');
+Page({
+    /**
+     * 页面的初始数据
+     */
+    data: {
+      data:[],
+      datanew:[],
+      multiIndex: [0, 0, 0],
+      date: '2016-09-01',
+      time: '12:01',
+      bol:true,
+      boll:true,
+      isflag:true,
+      region: ['选择地区'],
+      cata: ['选择品类', '玉米', '大豆', '水稻', '小麦', '高粱'],
+      customItem: '选择地区',
+      index: 0
+    },
+    // 未登录弹层
+    closesubmask: function () {
+      var isflag = this.data.isflag;
+      this.setData({
+        isflag: !isflag
+      })
+    },
+    // 立即注册跳转
+    regnow: function () {
+      wx.navigateTo({
+        url: 'dredge/dredge',
+      })
+    },
+    close: function(){
+      var bol = this.data.bol;
+      this.setData({
+        bol:!bol
+      })
+    },
+    change: function(){
+      var boll = this.data.boll;
+      this.setData({
+        boll:!boll
+      })
+    },
+    //选择地区
+    bindRegionChange: function (e) {
+      this.setData({
+        region: e.detail.value
+      })
+    },
+    // 选择品类
+    bindPickerChange: function(e){
+      console.log('picker发送选择改变，携带值为', e.detail.value)
+      this.setData({
+        index: e.detail.value
+      })
+      console.log(this.data.cata[this.data.index])
+    },
+    // 查看详细
+    showOrder: function(e){
+      // console.log(e.target);
+      // wx.navigateTo({
+      //   url: 'showOrder/showOrder'
+      // })
+      
+      var isflag = this.data.isflag;
+      this.setData({
+        isflag: !isflag
+      })
+    },
+    // 开通订单买卖
+    open: function(){
+      // wx.navigateTo({
+      //   url: 'dredge/dredge',
+      // })
+      var isflag = this.data.isflag;
+      this.setData({
+        isflag: !isflag
+      })
+    },
+    onLoad: function(){
+      var that = this;
+      wx.request({
+        url: util.APP_HOST+"torder/getallbyplace?id=1",
+        success: function(res){
+          that.setData({
+            data: res.data.torders,
+            datanew: res.data.tborder
+          })
+        }
+      })
+    }
+  })
+

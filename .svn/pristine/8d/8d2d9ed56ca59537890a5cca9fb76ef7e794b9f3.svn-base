@@ -1,0 +1,8 @@
+// pages/rich/rich.js
+Page({
+  toglorylist:function(){
+    wx.navigateTo({
+      url: 'wantrich/wantrich',
+    })
+  }
+})

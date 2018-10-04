@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/help/helpmore/helpmore",
+    "pages/mine/mine",
+    "pages/free/free",
+    "pages/order/order",
+    "pages/rich/rich"
+  ],
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2aa7de",
+    "navigationBarTitleText": "宁安县",
+    "navigationBarTextStyle": "white"
+  
+}

@@ -1,0 +1,24 @@
+{
+    "item": [{
+      "product_detail_name": "玉米",
+      "product_detail_price": "￥1400元/吨",
+      "message_type": "东北玉米",
+      "message_count": "2000kg",
+      "message_site": "黑龙江省 哈尔滨市宁安县",
+      "message_time": "自然干玉米水分14，霉变0.5，容重760"
+    },{
+      "category_left_name": "玉米",
+      "category_right": "￥1700元/ 吨",
+      "category_left_type": "东北玉米",
+      "category_left_site": "黑龙江省香坊区",
+      "category_left_count": "800吨",
+      "category_left_size": "水分2.0"
+    },{
+      "category_left_name1": "小麦",
+      "category_right1": "￥1000元/ 吨",
+      "category_left_type1": "南方小麦",
+      "category_left_site1": "湖南省长沙",
+      "category_left_count1": "670吨",
+      "category_left_size1": "水分1.8"
+    }]
+}

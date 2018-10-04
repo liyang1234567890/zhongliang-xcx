@@ -1,0 +1,22 @@
+Page({
+  data: {
+    date: '2018-04-20'
+  },
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  change: function () {
+    wx.navigateTo({
+      url: '../help/helpmore/helpmore',
+    })
+  },
+  showMore: function () {
+    wx.navigateTo({
+      url: '../help/showMore/showMore'
+
+    })
+  }
+})

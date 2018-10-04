@@ -1,0 +1,160 @@
+<!--引入buy界面的button代码--Danile  -->
+<!--swiper start  -->
+<swiper class='swiper' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!--swiper end  -->
+
+<!--buy_product_detail start  -->
+<view class='buy_product_detail'>
+  <view class='product_detail_nav'>
+    <view class="group">
+      <block>
+         <image     class="detail_nav_img"src="../../../mock/images/mine/index_19.png" mode="aspectFill">    </image>
+      </block>
+    </view>
+    <view class='product_detail_name'>{{dataDetail.category}}</view>
+    <view class='product_detail_price'>￥{{dataDetail.price}}元/吨</view>
+  </view>
+  <view class='product_detail_message'>
+    <view class='message_type'>
+      品牌：{{dataDetail.brand}}
+    </view>
+    <view class='message_count'>
+      数量：{{dataDetail.amount}}KG
+    </view>
+    <view class='message_site'>
+      交货地：{{dataDetail.place}}
+    </view>
+    <view class='message_time'>
+      规格：{{dataDetail.status}}
+    </view>
+  </view>
+  <view class='product_detail_time'>
+    <view class='group'>
+      <block >
+        <icon type="waiting" size="20" color='#7fc7a1'/>
+      </block>
+    </view>
+    {{dataDetail.brand}}
+  </view>
+</view>
+<!--buy_product_detail end  -->
+
+<!-- sellers_Information  start-->
+<view class='sellers_Information'>
+  <view class='sellers_Information_details'>
+    <view class='sellers_message'>
+      <view class='sellers_message_name'>
+        <view class='sellers_message_left'>
+          <image     class="sellers_img"src="../../../mock/images/rich/avatar.jpg" mode="aspectFill">  
+        </image> 
+        </view>
+        <view class='sellers_message_right'>
+          <view class='sellers_name'>李XX</view>
+          <view class='sellers_type'>综合经营</view>
+        </view>
+      </view>
+      <view class='sellers_phones'>
+        <view class='sellers_phones_left' bindtap="callService">
+          <image     class="sellers_phones_img"src="../../../mock/images/mine/phone.png" mode="aspectFill">  
+        </image> 
+        </view>
+        <view class='sellers_phones_right'>
+          <button class='sellers_phones_btn' bindtap='callSeller'>卖家电话</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='sellers_Information_auto'>
+     <view class='auto_message'>
+      <image     class="sellers_auto_img"src="../../../mock/images/mine/身份证(1)@2x.png" mode="aspectFill"> </image>  
+      个人
+    </view>
+     <view class='auto_message'>
+      <image     class="sellers_auto_img"src="../../../mock/images/mine/积分商城-实名认证@2x.png" mode="aspectFill">  </image> 
+     实名认证 
+    </view>
+    <view class='auto_message'>
+      <image     class="sellers_auto_img"src="../../../mock/images/mine/会员@2x.png" mode="aspectFill">  </image> 
+      无央会员
+    </view>
+    <view class='auto_message'>
+      <image     class="sellers_auto_img"src="../../../mock/images/mine/交易@2x.png" mode="aspectFill">  </image> 
+      贸易商
+    </view>  
+  </view>
+</view>
+
+<!-- sellers_Information  end -->
+
+<!-- Recommend start -->
+<view class='recommend_Information'>
+  <view class='recommend_title'>推荐</view>
+
+  <!--1  -->
+  <view class='recommend_category' wx:for="{{recomUrl}}">
+    <view class='recommend_category_title'>
+      <view class='category_left'>
+        <image class="detail_nav_img" src="../../../mock/images/mine/index_19.png" mode="aspectFill">    </image>
+        <view class='category_left_name'>{{item.category}}</view>
+      </view>
+      <view class='category_right'>
+        {{item.price}}
+      </view>
+    </view>
+
+    <view class='recommend_category_message'>
+      <view class='category_left'>
+        <view class='category_left_message'>品牌：{{item.brand}}</view>
+        <view class='category_left_message'>交货地：{{item.place}}</view>
+        <view>
+        <view class='category_line3'>
+           <view class='category_line3_left'>
+            <image class="category_line3_img"mode="aspectFill"src="../../../mock/images/mine/index_78.png"></image>
+          </view>
+          <view class='category_line3_right'>
+            <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/mine/index_40.png"></image>
+          <image class="sellers_auto_img"mode="aspectFill"src="../../../mock/images/mine/index_19.png"></image>   
+          </view>     
+        </view>       
+       </view>
+      </view>
+      <view class='category_right'>
+        <view class='category_left_message'>数量：{{item.amount}}{{item.unit}}</view>
+        <view class='category_left_message'>规格：{{item.standard}}</view>
+        <view class='category_left_message'>
+            <icon type="waiting" size="17" color='#7fc7a1'/>
+            {{item.create_time}}
+        </view>
+      
+      </view>
+    </view>  
+   </view> 
+</view>
+
+<!-- Recommend end -->
+
+
+<!--footer start  -->
+<view class='buy_footer'>
+  <view class='buy_footer_box1'>
+    <view class='bfb1'>
+        <image     class="detail_nav_img im"src="../../../mock/images/mine/在线客服@2x.png" mode="aspectFill"></image>
+        <text class='buy_kf'>客服</text>
+    </view>
+    <view class='bfb1'>
+        <image     class="detail_nav_img im"src="../../../mock/images/mine/收藏2@2x.png" mode="aspectFill"></image>
+       <text class='buy_sc'>收藏</text>
+    </view>
+  </view>
+  <view class='buy_footer_box2'>和我联系</view>
+  <view class='buy_footer_box3'bindtap='points'>获取积分</view>
+</view>
+
+<!--footer end  -->

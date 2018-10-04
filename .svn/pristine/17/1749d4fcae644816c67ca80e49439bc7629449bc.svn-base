@@ -1,0 +1,91 @@
+<!--pages/mine/home/home.wxml-->
+<view class='home'>
+  <view class='basic'>
+    <view class='basic-up'>
+      <image src='http://pic.pptbz.com/pptpic/201307/2013071821405775.jpg' mode='aspectFill'></image>
+    </view>
+    <view class='basic-down'>
+      <block wx:if="{{userInfo.headPortrait}}">
+        <image class="sellers_img" src="http://{{userInfo.headPortrait}}" mode="aspectFill">
+        </image>
+      </block>
+      <block wx:else>
+        <image class="sellers_img" src="{{userInfo.wxHeadPottarat}}" mode="aspectFill">
+        </image>
+      </block>
+      <view class='basic-info'>
+        <image class='im' src='../../../mock/images/common/register_people.png'></image>
+        <view class='b-i-title'>微信名:</view>
+        <view class='b-i-info'>{{userInfo.username}}</view>
+      </view>
+      <view class='basic-info'>
+        <image class='im' src='../../../mock/images/mine/home_name.jpg'></image>
+        <view class='b-i-title'>姓 名:</view>
+        <view class='b-i-info'>{{userInfo.realname?userInfo.realname:'未填写姓名'}}</view>
+      </view>
+      <view class='basic-info'>
+        <image class='im' src='../../../mock/images/mine/home_phone.jpg'></image>
+        <view class='b-i-title'>手 机:</view>
+        <view class='b-i-info'>{{userInfo.tel?userInfo.tel:'未填写手机号'}}</view>
+      </view>
+      <view class='basic-info'>
+        <image class='im' src='../../../mock/images/mine/home_idcard.jpg'></image>
+        <view class='b-i-title'>身 份:</view>
+        <view class='b-i-info' wx:if="{{userInfo.identityStatus}}">
+          {{userInfo.identityStatus}}
+        </view>
+        <view class='b-i-info' wx:else>
+          未设置身份
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='marks'>
+    <image wx:if="{{true}}" class='mark' src='../../../mock/images/common/index_13.png'></image>
+    <image wx:else class='mark' src='../../../mock/images/common/index_34.png'></image>
+    <view>个人</view>
+    <image wx:if="{{userInfo.realNameIdentity}}" class='mark' src='../../../mock/images/common/index_12.png'></image>
+    <image wx:else class='mark' src='../../../mock/images/common/index_36.png'></image>
+    <view>实名认证</view>
+    <image wx:if="{{userInfo.ismember}}" class='mark' src='../../../mock/images/common/index_21.png'></image>
+    <image wx:else class='mark' src='../../../mock/images/common/index_02.png'></image>
+    <view>无央会员</view>
+    <image wx:if="{{userInfo.serviceAuthority}}" class='mark' src='../../../mock/images/common/index_14.png'></image>
+    <image wx:else class='mark' src='../../../mock/images/common/index_03.png'></image>
+    <view>服务商</view>
+  </view>
+  <view class='detail'>
+    <view class='detail-info'>
+      <view class='d-i-title'>经营范围</view>
+      <view class='d-i-cont'>
+        {{userInfo.businessScope?userInfo.businessScope:'暂未设置'}}
+      </view>
+    </view>
+    <view class='detail-info'>
+      <view class='d-i-title'>所在地区</view>
+      <view class='d-i-cont'>
+        {{userInfo.region?userInfo.region:'暂未设置'}}
+        <!-- {{userInfo.detailedAddress?'详细地址'+userInfo.detailedAddress:''}} -->
+      </view>
+    </view>
+    <view class='detail-info'>
+      <view class='d-i-title'>客户实力</view>
+      <view class='d-i-cont' wx:if="{{imgList.length}}">
+        <block wx:for="{{imgList}}">
+          <image mode='aspectFit' src='http://{{item}}'></image>
+        </block>
+      </view>
+      <view class='d-i-cont' wx:else>暂未上传实力照片</view>
+    </view>
+
+    <!-- <view class='detail-info'>
+      <view class='d-i-title'>{{name}}</view>
+      <view class='d-i-cont'>{{cont}}</view>
+    </view> -->
+  </view>
+
+  <view class='bottom' wx:if="{{!myself}}">
+    <button class='fellow' bindtap='fellow'>关注</button>
+    <button class='call' bindtap='call'>打电话</button>
+  </view>
+</view>

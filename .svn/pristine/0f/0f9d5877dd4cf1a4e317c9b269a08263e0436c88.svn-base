@@ -1,0 +1,235 @@
+/* pages/help/helpmore/helpmore.wxss */
+/* 扶贫政策白皮书 */
+.content{
+  width: 100%;
+  height: 450rpx;
+  border: 2rpx #ccc solid;
+}
+.content-btn{
+  position: relative;
+  color: #2aa7de ;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 400;
+  background-color: #e9e9e9;
+}
+.backhelp{
+  position: absolute;
+  width: 140rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 2rpx  #ccc solid;
+  border-radius:10rpx;
+  left: 0;
+  top: 50%; 
+  margin-top: -20rpx;
+  font-size: 28rpx;
+  background-color: rgb(22,155,213);
+  color:#fff;
+}
+/*条目  */
+.poverty-writeBook-details{
+  background-color: #eeeeee;
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.content-more{
+  width: 30%; 
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: rgb(94,198,173);
+  border-radius:50rpx;
+  font-size: 30rpx;
+  color: #fff;
+  margin-top: 40rpx;
+}
+/* 加入扶贫 */
+.join{
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 36rpx;
+  background-color: rgb(184,205,238);
+  border: 3rpx #ccc solid;
+  border-radius: 50%;
+  text-align: center;
+  color:aliceblue;
+  position: fixed;
+  right: 0;
+  top:50%; 
+  z-index: 4;
+}
+/* 扶贫方案 */
+.program-btn button{
+  float:left;
+  width: 50%;
+  height: 80rpx;
+  border-radius: 0;
+}
+/* .button-hover{
+  background-color: #ccc;
+}
+.btn-hover{
+  background-color: rgb(22,155,213);
+} */
+.section__title{
+  border-bottom:2px  #ccc solid;
+}
+.picker{
+  text-align: center;
+}
+.picktime{
+  float:right;
+  background-color:rgb(22,155,213);
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  width: 130rpx;
+  margin-top: 7rpx;
+  margin-right: 7rpx;
+  }
+.active{
+  background-color: #2aa7de;
+  color:#fff; 
+}
+/* 已解决 */
+.program-list{
+  background-color: rgb(231,231,231);
+}
+.program-ok1,.program-ok2,.program-ok3{
+  background-color: #fff;
+  width:700rpx;
+  position: relative;
+  margin: 0 auto;
+  border:25rpx solid;
+  border-color:rgb(231,231,231);
+  border-radius: 40rpx;
+}
+.program-ok2{
+  border-top: 0;
+}
+.program-ok3{
+  border-top: 0;
+}  
+.program-con1 ,.program-con2,.program-con3{
+  width: 500rpx;
+  height: 160rpx;
+  display: block;
+  font-size: 28rpx;
+  padding-bottom:10rpx;
+}
+.program-con1 view,.program-con2 view,.program-con3 view{
+  padding-bottom: 20rpx;
+}
+.program-more1 button,.program-more2 button,.program-more3 button{
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  position: absolute;
+  right: 7rpx;
+  bottom:20rpx;
+  background-color: rgb(94,198,173);
+  color:#fff;
+}
+/* 未解决 */
+.program-false{
+  height: 600rpx;
+  background-color: rgb(231,231,231);
+  position: relative
+}
+.pro-con{
+  border-radius: 20rpx;
+  background-color: #fff;
+  overflow: hidden;
+  position: absolute;
+  top:20rpx;
+  left: 20rpx;
+  right: 20rpx;
+  bottom:20rpx;
+}
+.program-no{
+  float:left;
+  display: flex;
+  font-size: 28rpx;
+  width: 700rpx;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  box-shadow:0 4rpx 0 0 #ccc;
+}
+.program-no .name{
+  width: 55%;
+  font-weight: 400;
+  color:#000;
+}
+.time{
+  flex: 1;
+}
+/* 加入扶贫 */
+.mask{
+  position: fixed; 
+  width: 610rpx;
+  height: 400rpx;
+  top:30%;
+  left: 70rpx;
+  background-color: rgb(249,249,249);
+  border-radius: 20rpx;
+  z-index: 3;
+}
+.mask-f,.mask-s{
+  width: 120rpx;
+}
+.mask-code{
+  overflow: hidden;
+  width: 420rpx;
+  margin: 90rpx auto 40rpx;
+  /* margin: 90rpx 90rpx 40rpx 90rpx; */
+}
+.mask-name{
+  overflow: hidden;
+  width: 420rpx;
+  margin: 0 auto 40rpx;
+
+}
+.verify button{
+  width: 190rpx;
+  height: 50rpx;
+  background-color: rgb(22,155,213);
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 50rpx;
+}
+.mask-code view{
+   float:left; 
+}
+.mask-name view{
+    float:left;
+}
+.mask view{
+  font-size: 32rpx;
+}
+.join-code,.joincodeInputc,.joincodeInputn{
+  border:4rpx  rgb(231,231,231) solid; 
+  border-radius: 10rpx;
+  width: 292rpx;
+  height: 52rpx;
+  font-size: 28rpx;
+  box-shadow: -2rpx -2rpx 2rpx  rgb(231,231,231) ;
+}
+.join-code{color: rgb(231,231,231);}
+.joincodeInputc,.joincodeInputn{color: #000;}
+.mask .close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 60rpx;
+  color: rgb(22,155,213);
+  font-size: 60rpx;
+}

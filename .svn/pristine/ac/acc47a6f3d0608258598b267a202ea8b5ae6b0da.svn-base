@@ -1,0 +1,24 @@
+<view class="header">
+     <!-- <view class="close">X</view> -->
+     <view class="logo">
+          <image src="../../../mock/images/rich/avatar.jpg"></image>
+     </view>
+</view>
+<form action="#" methods="post">
+     <view class="phone">
+          <view class="phone-num">
+               <input name="phoneNum" placeholder='手机号' />
+          </view>
+          <view class="code">获取验证码</view>
+     </view>
+     <view class="code-num">
+          <input name="codeNum" placeholder='验证码' />
+     </view>
+
+     <view class="footer">
+          <!-- <input name="register" placeholder='注册' placeholder-style='text-align: center' />
+     <input name="register" placeholder='登录' placeholder-style='text-align: center' /> -->
+          <button>注册</button>
+          <button>登录</button>
+     </view>
+</form>

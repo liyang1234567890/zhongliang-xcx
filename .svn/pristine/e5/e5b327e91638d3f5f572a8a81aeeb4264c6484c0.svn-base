@@ -1,0 +1,86 @@
+<!--pages/mine/pubInfor/pubInfor.wxml-->
+<!-- <text>pages/mine/pubInfor/pubInfor.wxml</text> -->
+<view>
+  <view id='buy'>
+    <image id='buy-image' src='../../../mock/images/buy.png'></image>
+    <text id='pub-buy'>买</text>
+    <text id='buy-kind'>玉米</text>
+    <text id='buy-price'>￥1440元/吨</text>
+  </view>
+  <image id='buy-line-foot' src='../../../mock/images/line.png'></image>
+  <view id='buy-info'>
+    <view id="buy-list-left">品牌：东北玉米</view>
+    <view id="buy-list-left">交货地:黑龙江省哈尔滨市...</view>
+    <view id="buy-list-right">数量：1000吨</view>
+    <view id="buy-list-right">规格：水分1.0</view>
+  </view>
+  <view id='buy-logal'>
+    <view id='buy-logal-square'>
+      <view id='buy-logal-box'>
+        <view id='buy-logal-letter'>￥</view>
+      </view>
+      <view id='buy-logal-left'>在线买卖</view>
+       <view id='buy-local-ren'>
+          <view id='buy-local-renl'>个</view>
+          <view id='buy-local-renl'>实</view>       
+        </view> 
+    </view>
+  </view>
+  <image id='buy-line' src='../../../mock/images/line.png'></image>
+</view>
+<view>
+  <view id='buy'>
+    <image id='buy-image' src='../../../mock/images/buy.png'></image>
+    <text id='pub-buy'>买</text>
+    <text id='buy-kind'>玉米</text>
+    <text id='buy-price'>￥1440元/吨</text>
+  </view>
+  <image id='buy-line-foot' src='../../../mock/images/line.png'></image>
+  <view id='buy-info'>
+    <view id="buy-list-left">品牌：东北玉米</view>
+    <view id="buy-list-left">交货地:黑龙江省哈尔滨市...</view>
+    <view id="buy-list-right">数量：1000吨</view>
+    <view id="buy-list-right">规格：水分1.0</view>
+  </view>
+  <view id='buy-logal'>
+    <view id='buy-logal-square'>
+      <view id='buy-logal-box'>
+        <view id='buy-logal-letter'>￥</view>
+      </view>
+      <view id='buy-logal-left'>在线买卖</view>
+       <view id='buy-local-ren'>
+          <view id='buy-local-renl'>个</view>
+          <view id='buy-local-renl'>实</view>       
+        </view> 
+    </view>
+  </view>
+  <image id='buy-line' src='../../../mock/images/line.png'></image>
+</view>
+<view>
+  <view id='buy'>
+    <image id='buy-image' src='../../../mock/images/buy.png'></image>
+    <text id='pub-buy'>买</text>
+    <text id='buy-kind'>玉米</text>
+    <text id='buy-price'>￥1440元/吨</text>
+  </view>
+  <image id='buy-line-foot' src='../../../mock/images/line.png'></image>
+  <view id='buy-info'>
+    <view id="buy-list-left">品牌：东北玉米</view>
+    <view id="buy-list-left">交货地:黑龙江省哈尔滨市...</view>
+    <view id="buy-list-right">数量：1000吨</view>
+    <view id="buy-list-right">规格：水分1.0</view>
+  </view>
+  <view id='buy-logal'>
+    <view id='buy-logal-square'>
+      <view id='buy-logal-box'>
+        <view id='buy-logal-letter'>￥</view>
+      </view>
+      <view id='buy-logal-left'>在线买卖</view>
+     </view> 
+     <view id='buy-local-ren'>
+          <view id='buy-local-renl'>个</view>
+          <view id='buy-local-renl'>实</view>       
+        </view> 
+  </view>
+  <image id='buy-line' src='../../../mock/images/line.png'></image>
+</view>

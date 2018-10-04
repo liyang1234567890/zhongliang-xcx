@@ -1,0 +1,97 @@
+/* pages/mine/integration/integretion.wxss */
+#integ{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  width: 100%;
+  height: 300rpx;
+  background-color:#7fc7a1;
+}
+#integ-left{
+  /* flex-basis: 1; */
+  width: 180rpx;
+  text-align: center;
+  line-height: 300rpx;
+}
+#integ-center{
+  /* flex-basis: 2; */
+  width: 350rpx;
+  text-align: center;
+  line-height: 300rpx;
+  /* position: relative;   */
+}
+#integ-right{
+  /* flex-basis: 1; */
+  width: 220rpx;
+  text-align: center;
+  line-height: 300rpx;
+   /* position: relative;  */
+}  
+#integ-img{
+  /* position:absolute; 
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%); */
+  width:110rpx;
+  height:110rpx;
+  vertical-align: middle;
+}
+ #integ-center-box{
+  /* position:relative; */
+  /* top:50%;
+  left:50%;
+  transform:translate(-90%,-50%);
+  width: 300rpx;
+  height:84rpx; */
+  /* background-color:#fff; */
+  /* text-align: center;
+  line-height: 84rpx;
+  color: #efefef;
+  font-size: 45rpx; */
+  display: inline-block;
+  color: #efefef;
+} 
+#integ-num{
+  /* font-size:28rpx;
+margin-left:150rpx;
+margin-top:55rpx;
+color:#efefef; */
+display: inline-block;
+color:#efefef;
+
+}
+#integ-right-box{
+  display: inline-block;
+  width:150rpx;
+height:84rpx;
+background-color:#efefef;
+/* position:relative; */
+/* top:50%;
+left:50%;
+transform:translate(-90%,-50%); */
+text-align:center;
+line-height:84rpx;
+font-size:27rpx;
+color:grey;
+}
+#integ-mid{
+  margin:150rpx 45rpx;
+  font-size:32rpx;
+  border:4rpx solid #7fc7a1;
+  padding:50rpx;
+}
+#integ-mid-textb{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+#integ-bottom{
+  margin: 45rpx 45rpx;
+  font-size: 32rpx;
+  border:4rpx solid #7fc7a1;
+  padding:50rpx;
+  
+}
+#integ-bottom-textb{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}

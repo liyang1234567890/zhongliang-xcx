@@ -1,0 +1,61 @@
+<!--publish.wxml-->
+<view class="container">
+  <view class='header' style="" size="30">发布信息</view>
+  <form bindsubmit="formSubmit" bindreset="">
+    <!-- 单项选择器 picker -->
+    <view class='picker_1' style="display:flex;">
+      <label class='title'>选择服务：</label>
+      <picker class='picker' name="ser" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view>
+          {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <!-- 单项选择器 picker -->
+    <view class='picker_2' style="display:flex;">
+      <label class='title'>品类：</label>
+      <picker class='picker' name="type" bindchange="bindPickerChange2" value="{{typeIndex}}" range="{{typeArray}}">
+        <view>
+          {{typeArray[typeIndex]}}
+        </view>
+      </picker>
+    </view>
+    <!-- 省市区选择器 picker -->
+    <view class="picker_3" style="display:flex;">
+      <view class="title">收货地：</view>
+      <picker class="picker" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view>
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view> 
+    <!-- <view style="display:flex;">
+      <label class='title'>交货地：</label>
+      <input class='input' placeholder='交货地' name="palce"></input>
+    </view>  -->
+    <!-- input -->
+    <view style="display:flex;">
+      <label class='title'>数量：</label>
+      <input class='input' placeholder='数量' name="count"></input>
+    </view>
+    <!-- textarea -->
+    <view class='specification' auto-height='true' style="display:flex;">
+      <label class='title'>规格描述：</label>
+      <textarea class='describe' placeholder='规格详细描述' name="spec"></textarea>
+    </view>
+    <!-- 添加图片 -->
+    <view class='addPic' style="display:flex;">
+      <label class='addPicTitle'>添加图片</label>
+      <image class='uploadPic' name="img" bindtap='getImage' src="{{imgArray}}"></image>
+    </view>
+    <!-- 添加视频 -->
+    <view class='addVideo' style="display:flex;">
+      <button class='addVideoTitle' bindtap="getVideo">获取视频</button>
+      <video class='uploadVideo' src="{{src}}"></video>
+    </view>
+    <!-- button -->
+    <view>
+      <button bindtap='toFree' class='publish' formType="submit">确认发布</button>
+    </view>
+  </form>
+</view>

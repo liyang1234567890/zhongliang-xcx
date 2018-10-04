@@ -1,0 +1,17 @@
+<!--pages/free/adress/adress.wxml-->
+<view>收货地址</view>
+<view class="itemView">联系人：
+    <input class="input" name="userName" placeholder="" 
+    bindinput ="userNameInput"/>
+  </view>
+<view class="itemView">电    话：
+    <input class="input" password placeholder=""
+     bindinput="passWdInput" />
+  </view>
+  <view class=''>地    址：
+    <input class="input" adress placeholder=""
+     bindinput="adressInput" />
+  </view>
+  <view class="viewName" style="background-color:#fbf9fe">
+  <button class="submit" bindtap="submitClick">确认提交</button>
+</view>

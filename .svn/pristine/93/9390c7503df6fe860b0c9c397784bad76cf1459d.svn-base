@@ -1,0 +1,248 @@
+/* pages/help/helpmore/helpmore.wxss */
+/* @import '../../common/common.wxss'; */
+/* 扶贫政策白皮书 */
+.container{
+  padding: 20rpx;
+  display: inherit;
+}
+.content {
+  border: 2rpx #ccc solid;
+}
+
+.content-btn {
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-weight: 600;
+  background-color: #e9e9e9;
+  position: relative;
+
+}
+
+.btn-return{
+  position: absolute;
+  left: 20rpx;
+  color: #1aad19;
+}
+
+/*条目  */
+
+.poverty-writeBook-details {
+  padding: 20rpx;
+}
+
+.poverty-writeBook-details.choice:nth-of-type(2n){
+  background: #F4F4F4;
+} 
+
+.poverty-writeBook-details.choice:nth-of-type(2n+1){
+  background: #fff;
+  color: #1AAD19;
+}
+ 
+.content-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+
+/* 加入扶贫 */
+
+.join {
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  background-color: #1aad19;
+  border: 3rpx #ccc solid;
+  border-radius: 50%;
+  text-align: center;
+  color: aliceblue;
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 4;
+}
+
+/* 扶贫方案 */
+
+.program-btn {
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.program-btn text {
+  display: inline-block;
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: 1px solid #e9e9e9;
+}
+
+.program-btn text.active {
+  border-bottom: 2rpx #1aad19 solid;
+}
+
+.section__title {
+  padding: 20rpx;
+}
+
+.picker {
+  position: relative;
+}
+
+.picktime {
+  position: absolute;
+  color: #fff;
+  top: -20rpx;
+  right: 20rpx;
+}
+
+
+
+
+/* 已解决 */
+
+.program-list {
+  background-color: rgb(231, 231, 231);
+}
+
+.program-ok1 {
+  background-color: #fff;
+  border:  4rpx solid rgb(231, 231, 231);
+  display: flex;
+  flex-direction: row;
+}
+
+.program-con1 {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding: 20rpx;
+}
+
+.program-more1{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.program-ok1:nth-child(2), .program-ok1:nth-child(3) {
+  border-top: 0;
+}
+
+
+/* 未解决 */
+
+.program-false {
+
+  background-color: rgb(231, 231, 231);
+  
+}
+
+.pro-con {
+  background-color: #fff;
+  top: 20rpx;
+  left: 20rpx;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.program-no {
+  display: flex;
+  text-align: center;
+  line-height: 90rpx;
+  box-shadow: 0 4rpx 0 0 #ccc;
+  font-size: 25rpx;
+}
+
+.program-no .name {
+  flex:1;
+  font-weight: 400;
+  color: #000;
+}
+
+.time {
+  flex: 1;
+}
+
+/* 加入扶贫 */
+.maskall{
+  background-color: rgba(231,231,231,0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.maskall .mask {
+  position: fixed;
+  width: 610rpx;
+  height: 400rpx;
+  top: 30%;
+  left: 70rpx;
+  background-color: #fff;
+  z-index: 40;
+}
+
+.mask-f, .mask-s {
+  width: 120rpx;
+}
+
+.mask-code {
+  overflow: hidden;
+  width: 420rpx;
+  margin: 90rpx auto 40rpx;
+  /* margin: 90rpx 90rpx 40rpx 90rpx; */
+}
+
+.mask-name {
+  overflow: hidden;
+  width: 420rpx;
+  margin: 0 auto 40rpx;
+}
+
+.verify button {
+  width: 190rpx;
+  height: 50rpx;
+  background-color: #1aad19;
+  color: #fff;
+  line-height: 50rpx;
+}
+
+.mask-code view {
+  float: left;
+}
+
+.mask-name view {
+  float: left;
+}
+
+.mask view {
+}
+
+.join-code, .joincodeInputc, .joincodeInputn {
+  border: 4rpx rgb(231, 231, 231) solid;
+  width: 292rpx;
+  height: 52rpx;
+  box-shadow: -2rpx -2rpx 2rpx rgb(231, 231, 231);
+}
+
+.join-code {
+  color: rgb(231, 231, 231);
+}
+
+.joincodeInputc, .joincodeInputn {
+  color: #000;
+}
+
+.mask .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 60rpx;
+  color: #1aad19;
+  font-size: 60rpx;
+}

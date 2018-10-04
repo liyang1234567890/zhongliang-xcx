@@ -1,0 +1,141 @@
+/* pages/rich/rich.wxss */
+@import "./myrich/myrich.wxss";
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* glorylist start  */
+
+.detail .fontColor {
+  color: #c0c0c0;
+}
+
+.detail .fontColor text {
+  color: #777;
+}
+
+.detail .name {
+  font-size: 32rpx;
+}
+
+.detail .place {
+  font-size: 28rpx;
+}
+
+.detail .time {
+  font-size: 26rpx;
+}
+
+.scrollList {
+  background-color: #f8f8f8;
+}
+
+.glorylist {
+  margin-top: 75rpx;
+}
+
+.glorylist .flex-wrap {
+  display: -webkit-flex;
+}
+
+.glorylist .region {
+  width: 750rpx;
+  margin-bottom: 4rpx;
+  margin-top: 22rpx;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  background-color: white;
+}
+
+.picker {
+  display: flex;
+  flex-direction: row;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.selectRegion {
+  line-height: 60rpx;
+  margin-right: 8rpx;
+  margin-left: 8rpx;
+}
+
+.comm {
+  /* border: 1px solid #1aad19; */
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.glorylist .headPhoto {
+  padding: 20rpx;
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.glorylist .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  flex: 1;
+}
+
+.glorylist .richBox {
+  margin-top: 22rpx;
+  margin-bottom: 4rpx;
+  background-color: white;
+  height: 190rpx;
+}
+
+/* .glorylist .richBox image{
+  padding:10rpx;
+} */
+
+/* glorylist end  */
+
+/* topbar  begin*/
+
+.navbar {
+  flex: none;
+  display: flex;
+  background: #fff;
+  color: black;
+}
+
+.navbar .item {
+  position: relative;
+   flex: 2; 
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.navbar .item.active {
+  color: #1aad19;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: #1aad19;
+}
+
+/* topbar  end*/
+
+.myrich {
+  margin-top: 100rpx;
+}
